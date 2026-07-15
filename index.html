@@ -18,6 +18,7 @@
 <meta name="twitter:description" content="J'aide les indépendants, startups et PME à attirer plus de visiteurs qualifiés et à les convertir en clients.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -966,6 +967,17 @@ fetch('/posts/index.json')
     document.querySelectorAll('.blog-card.rv').forEach(el => obs.observe(el));
   })
   .catch(() => {});
+</script>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+    }
+  });
+}
 </script>
 </body>
 </html>
