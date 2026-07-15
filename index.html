@@ -218,10 +218,11 @@ h2 span{background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background
 /* BLOG */
 #blog{background:var(--bg);}
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;}
-.blog-card{background:var(--bg3);border:1px solid var(--border);overflow:hidden;transition:border-color .3s,transform .3s;display:flex;flex-direction:column;}
+.blog-card{background:var(--bg3);border:1px solid var(--border);overflow:hidden;transition:border-color .3s,transform .3s;display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer;}
 .blog-card:hover{border-color:rgba(139,92,246,.3);transform:translateY(-3px);}
-.blog-img{height:160px;background:linear-gradient(135deg,var(--bg2),var(--bg3));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-.blog-img-placeholder{font-size:2.5rem;opacity:.3;}
+.blog-img{width:100%;background:linear-gradient(135deg,var(--bg2),var(--bg3));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.blog-img img{width:100%;height:auto;display:block;}
+.blog-img-placeholder{font-size:2.5rem;opacity:.3;padding:2rem 0;}
 .blog-meta{display:flex;gap:.8rem;align-items:center;padding:1.2rem 1.5rem .5rem;}
 .blog-cat{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;color:var(--accent);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2);padding:.2rem .6rem;}
 .blog-date{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted);}
@@ -953,10 +954,10 @@ fetch('/posts/index.json')
     grid.innerHTML = '';
     articles.slice(0,3).forEach(a => {
       const thumb = a.cover
-        ? `<img src="${a.cover}" alt="${a.title}" style="width:100%;height:100%;object-fit:cover;">`
+        ? `<img src="${a.cover}" alt="${a.title}" style="width:100%;height:auto;display:block;">`
         : `<div class="blog-img-placeholder">${a.emoji || '📝'}</div>`;
       grid.innerHTML += `
-        <article class="blog-card rv">
+        <a class="blog-card rv" href="${a.url || '#'}">
           <div class="blog-img">${thumb}</div>
           <div class="blog-meta">
             <span class="blog-cat">${a.category || 'SEO'}</span>
@@ -964,8 +965,8 @@ fetch('/posts/index.json')
           </div>
           <h3 class="blog-title">${a.title}</h3>
           <p class="blog-excerpt">${a.excerpt || ''}</p>
-          <a class="blog-link" href="${a.url || '#'}">Lire l'article →</a>
-        </article>`;
+          <span class="blog-link">Lire l'article →</span>
+        </a>`;
     });
     document.querySelectorAll('.blog-card.rv').forEach(el => obs.observe(el));
   })
