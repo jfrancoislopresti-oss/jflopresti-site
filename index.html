@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -951,9 +952,12 @@ fetch('/posts/index.json')
     const grid = document.getElementById('blogGrid');
     grid.innerHTML = '';
     articles.slice(0,3).forEach(a => {
+      const thumb = a.cover
+        ? `<img src="${a.cover}" alt="${a.title}" style="width:100%;height:100%;object-fit:cover;">`
+        : `<div class="blog-img-placeholder">${a.emoji || '📝'}</div>`;
       grid.innerHTML += `
         <article class="blog-card rv">
-          <div class="blog-img"><div class="blog-img-placeholder">${a.emoji || '📝'}</div></div>
+          <div class="blog-img">${thumb}</div>
           <div class="blog-meta">
             <span class="blog-cat">${a.category || 'SEO'}</span>
             <span class="blog-date">${a.date || ''}</span>
@@ -963,7 +967,6 @@ fetch('/posts/index.json')
           <a class="blog-link" href="${a.url || '#'}">Lire l'article →</a>
         </article>`;
     });
-    // re-observe new cards
     document.querySelectorAll('.blog-card.rv').forEach(el => obs.observe(el));
   })
   .catch(() => {});
