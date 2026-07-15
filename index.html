@@ -344,9 +344,9 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
       <em>Je vous aide à créer, rendre visible et rentabiliser votre présence digitale.</em>
     </p>
     <div class="hero-btns">
-      <a href="/creation-site/" class="btn-outline" data-situation="creation">Créer mon site</a>
-      <a href="/attirer-visiteurs/" class="btn-outline" data-situation="visibilite">Attirer des visiteurs</a>
-      <a href="/conversion/" class="btn-outline" data-situation="conversion">Obtenir plus de clients</a>
+      <a href="/creation-site/" class="btn-outline">Créer mon site</a>
+      <a href="/attirer-visiteurs/" class="btn-outline">Attirer des visiteurs</a>
+      <a href="/conversion/" class="btn-outline">Obtenir plus de clients</a>
     </div>
   </div>
   <div class="hero-3d" aria-hidden="true">
@@ -382,17 +382,17 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
     <div class="sit-card rv">
       <div class="sit-title">Je n'ai pas de site</div>
       <p class="sit-text">Je crée un site professionnel simple et efficace pour présenter votre activité et permettre à vos clients de vous contacter facilement.</p>
-      <a href="/#contact" class="sit-cta" data-situation="creation">Créer mon site →</a>
+      <a href="/creation-site/" class="sit-cta">Créer mon site →</a>
     </div>
     <div class="sit-card rv d1">
       <div class="sit-title">J'ai un site mais pas de visiteurs</div>
       <p class="sit-text">Je vous aide à apparaître sur Google et à attirer des visiteurs qualifiés sur votre site, sans budget publicitaire.</p>
-      <a href="/#contact" class="sit-cta" data-situation="visibilite">Attirer des visiteurs →</a>
+      <a href="/attirer-visiteurs/" class="sit-cta">Attirer des visiteurs →</a>
     </div>
     <div class="sit-card rv d2">
       <div class="sit-title">J'ai des visiteurs mais pas de clients</div>
       <p class="sit-text">J'optimise votre site pour transformer vos visiteurs en demandes de contact et en clients réels.</p>
-      <a href="/#contact" class="sit-cta" data-situation="conversion">Améliorer mes résultats →</a>
+      <a href="/conversion/" class="sit-cta">Améliorer mes résultats →</a>
     </div>
   </div>
 </section>
@@ -416,19 +416,19 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
       <div class="price-title">Création de site</div>
       <div class="price-amount">À partir de 500 €</div>
       <p class="price-desc">Un site professionnel, clair et visible, livré en 2 à 3 semaines. Design soigné, formulaire de contact, affichage parfait sur mobile.</p>
-      <a href="/#contact" class="price-cta" data-situation="creation">Faire un diagnostic gratuit →</a>
+      <a href="/creation-site/" class="price-cta">En savoir plus →</a>
     </div>
     <div class="price-card rv d1">
       <div class="price-title">Visibilité sur Google</div>
       <div class="price-amount">À partir de 300 €</div>
       <p class="price-desc">Apparaître sur Google et attirer des visiteurs qui cherchent ce que vous proposez, sans payer de publicité.</p>
-      <a href="/#contact" class="price-cta" data-situation="visibilite">Faire un diagnostic gratuit →</a>
+      <a href="/attirer-visiteurs/" class="price-cta">En savoir plus →</a>
     </div>
     <div class="price-card rv d2">
       <div class="price-title">Amélioration du site</div>
       <div class="price-amount">À partir de 300 €</div>
       <p class="price-desc">Transformer vos visiteurs en clients grâce à un site plus clair, plus convaincant et plus facile à utiliser.</p>
-      <a href="/#contact" class="price-cta" data-situation="conversion">Faire un diagnostic gratuit →</a>
+      <a href="/conversion/" class="price-cta">En savoir plus →</a>
     </div>
   </div>
   <div style="margin-top:2rem;text-align:center;">
@@ -756,24 +756,23 @@ fetch('/posts/index.json').then(r=>r.ok?r.json():[]).then(articles=>{
 // Netlify Identity
 if(window.netlifyIdentity){window.netlifyIdentity.on('init',user=>{if(!user){window.netlifyIdentity.on('login',()=>{document.location.href='/admin/';});}});}
 
-// Pré-remplissage du formulaire via data-situation
+// Pré-remplissage du formulaire via paramètre URL (?situation=...)
 const situationMap = {
-  'creation': 'Je n\'ai pas de site — Créer mon site',
-  'visibilite': 'J\'ai un site mais pas de visiteurs',
-  'conversion': 'J\'ai des visiteurs mais pas de clients',
-  'diagnostic': 'Je ne sais pas par où commencer'
+  'creation':   "Je n'ai pas de site — Créer mon site",
+  'visibilite': "J'ai un site mais pas de visiteurs",
+  'conversion': "J'ai des visiteurs mais pas de clients",
+  'diagnostic': "Je ne sais pas par où commencer"
 };
-document.querySelectorAll('[data-situation]').forEach(el => {
-  el.addEventListener('click', e => {
-    const val = situationMap[el.dataset.situation];
-    if (!val) return;
-    const select = document.getElementById('fo');
-    if (!select) return;
-    Array.from(select.options).forEach(opt => {
-      if (opt.text === val) opt.selected = true;
-    });
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const sit = params.get('situation');
+  if (!sit || !situationMap[sit]) return;
+  const select = document.getElementById('fo');
+  if (!select) return;
+  Array.from(select.options).forEach(opt => {
+    if (opt.value === sit) opt.selected = true;
   });
-});
+})();
 </script>
 </body>
 </html>
