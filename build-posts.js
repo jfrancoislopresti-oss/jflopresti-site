@@ -16,7 +16,6 @@ function parseFrontMatter(content) {
   return { meta, body };
 }
 
-// Simple markdown to HTML converter
 function mdToHtml(md) {
   return md
     .replace(/^### (.+)$/gm, '<h3>$1</h3>')
@@ -27,9 +26,8 @@ function mdToHtml(md) {
     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>')
     .replace(/^- (.+)$/gm, '<li>$1</li>')
     .replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
-    .replace(/\n\n/g, '</p><p>')
-    .replace(/^(?!<[hul])/gm, '')
-    .split('\n').filter(l => l.trim()).map(l => l.match(/^<[h|u]/) ? l : `<p>${l}</p>`).join('\n');
+    .split('\n').filter(l => l.trim())
+    .map(l => l.match(/^<[hul]/) ? l : `<p>${l}</p>`).join('\n');
 }
 
 const files = fs.readdirSync(postsDir)
@@ -41,6 +39,18 @@ const articles = files.map(filename => {
   const { meta, body } = parseFrontMatter(content);
   const slug = filename.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace('.md', '');
   const url = `/posts/${slug}/`;
+  const cover = meta.cover || null;
+  const emoji = meta.emoji || '📝';
+
+  // Thumbnail HTML : image si dispo, sinon emoji
+  const thumbHtml = cover
+    ? `<img src="${cover}" alt="${meta.title || ''}" style="width:100%;height:100%;object-fit:cover;">`
+    : `<span style="font-size:3rem;opacity:.4;">${emoji}</span>`;
+
+  // Cover pour la page article
+  const articleCoverHtml = cover
+    ? `<img src="${cover}" alt="${meta.title || ''}" style="width:100%;max-height:420px;object-fit:cover;margin-bottom:2.5rem;">`
+    : `<span class="art-emoji">${emoji}</span>`;
 
   // Génère la page HTML de l'article
   const articleDir = path.join(__dirname, 'posts', slug);
@@ -53,6 +63,7 @@ const articles = files.map(filename => {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${meta.title || 'Article'} — Jean-François Lopresti</title>
 <meta name="description" content="${meta.excerpt || ''}">
+${cover ? `<meta property="og:image" content="https://jflopresti.fr${cover}">` : ''}
 <link rel="canonical" href="https://jflopresti.fr${url}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -80,7 +91,8 @@ h1{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:80
 .art-body li{margin-bottom:.5rem;}
 .art-body strong{color:var(--text);}
 .art-body a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(192,132,252,.3);}
-.art-footer{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;gap:1rem;}
+.art-body img{max-width:100%;margin:1.5rem 0;border:1px solid var(--border);}
+.art-footer{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;gap:1rem;flex-wrap:wrap;}
 .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.8rem 1.5rem;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-decoration:none;transition:all .3s;}
 .btn-outline{background:transparent;color:var(--text);border:1px solid var(--border);}
 .btn-outline:hover{border-color:var(--p1);color:var(--accent);}
@@ -97,7 +109,7 @@ h1{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:80
     <span class="art-cat">${meta.category || 'SEO'}</span>
     <span class="art-date">${meta.date || ''}</span>
   </div>
-  <span class="art-emoji">${meta.emoji || '📝'}</span>
+  ${articleCoverHtml}
   <h1>${meta.title || 'Article'}</h1>
   ${meta.excerpt ? `<p class="art-excerpt">${meta.excerpt}</p>` : ''}
   <div class="art-body">${mdToHtml(body)}</div>
@@ -115,7 +127,9 @@ h1{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:80
     title: meta.title || 'Sans titre',
     date: meta.date || '',
     category: meta.category || 'SEO',
-    emoji: meta.emoji || '📝',
+    emoji,
+    cover,
+    thumbHtml,
     excerpt: meta.excerpt || '',
     published: meta.published !== 'false',
     url,
