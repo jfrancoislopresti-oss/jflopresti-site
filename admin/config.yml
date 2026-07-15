@@ -17,7 +17,8 @@ collections:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "DD/MM/YYYY", date_format: "DD/MM/YYYY", time_format: false }
       - { label: "Catégorie", name: "category", widget: "select", options: ["SEO", "GEO", "CRO", "Acquisition", "Stratégie"] }
-      - { label: "Emoji", name: "emoji", widget: "string", default: "📝", hint: "Un emoji pour illustrer l'article (ex: 🎯)" }
+      - { label: "Image de couverture", name: "cover", widget: "image", required: false, hint: "Image affichée en haut de l'article et dans les cartes blog" }
+      - { label: "Emoji (si pas d'image)", name: "emoji", widget: "string", default: "📝", required: false, hint: "Utilisé uniquement si aucune image n'est sélectionnée" }
       - { label: "Extrait", name: "excerpt", widget: "text", hint: "2-3 lignes résumant l'article" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Publié", name: "published", widget: "boolean", default: true }
