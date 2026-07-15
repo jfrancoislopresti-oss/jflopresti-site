@@ -1,0 +1,23 @@
+# ═══════ Redirections ═══════
+[[redirects]]
+  from = "http://jflopresti.fr/*"
+  to = "https://jflopresti.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.jflopresti.fr/*"
+  to = "https://jflopresti.fr/:splat"
+  status = 301
+  force = true
+
+# ═══════ En-têtes de sécurité ═══════
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
