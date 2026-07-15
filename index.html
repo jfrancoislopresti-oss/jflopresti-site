@@ -107,8 +107,8 @@ h1 .l2{display:block;background:linear-gradient(90deg,var(--p1),var(--p3),var(--
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
 .btn-primary{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 2rem;background:linear-gradient(135deg,var(--p1),var(--p3));color:#fff;font-family:'DM Mono',monospace;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(139,92,246,.4);}
-.btn-outline{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 2rem;background:transparent;color:var(--text);font-family:'DM Mono',monospace;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid var(--border);transition:border-color .3s,color .3s;}
-.btn-outline:hover{border-color:var(--p1);color:var(--accent);}
+.btn-outline{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 2rem;background:transparent;color:var(--text);font-family:'DM Mono',monospace;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid var(--border);transition:border-color .3s,color .3s,background .3s,box-shadow .3s;}
+.btn-outline:hover{border-color:var(--p1);color:#fff;background:linear-gradient(135deg,var(--p1),var(--p3));box-shadow:0 8px 25px rgba(139,92,246,.35);}
 .btn-outline.sm{padding:.7rem 1.5rem;font-size:.72rem;}
 .hero-stats{display:flex;gap:3rem;margin-top:3rem;flex-wrap:wrap;}
 .stat{display:flex;flex-direction:column;gap:.3rem;}
@@ -188,7 +188,7 @@ h2 span{background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background
 .step-c{flex:1;padding-top:.6rem;}
 .step-t{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:.5rem;}
 .step-d{font-size:.88rem;color:var(--muted);line-height:1.7;}
-.step-i{font-size:1.8rem;padding-top:.3rem;flex-shrink:0;}
+
 
 /* BLOG */
 #blog{background:var(--bg2);}
@@ -344,14 +344,9 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
       <em>Je vous aide à créer, rendre visible et rentabiliser votre présence digitale.</em>
     </p>
     <div class="hero-btns">
-      <a href="/creation-site/" class="btn-primary"><span>Créer mon site</span></a>
-      <a href="/attirer-visiteurs/" class="btn-outline">Attirer des visiteurs</a>
-      <a href="/conversion/" class="btn-outline">Obtenir plus de clients</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat"><span class="stat-num">500€</span><span class="stat-lbl">À partir de</span></div>
-      <div class="stat"><span class="stat-num">48h</span><span class="stat-lbl">Diagnostic rapide</span></div>
-      <div class="stat"><span class="stat-num">0€</span><span class="stat-lbl">Premier échange</span></div>
+      <a href="/creation-site/" class="btn-outline" data-situation="creation">Créer mon site</a>
+      <a href="/attirer-visiteurs/" class="btn-outline" data-situation="visibilite">Attirer des visiteurs</a>
+      <a href="/conversion/" class="btn-outline" data-situation="conversion">Obtenir plus de clients</a>
     </div>
   </div>
   <div class="hero-3d" aria-hidden="true">
@@ -385,22 +380,19 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
   <h2 id="situation-title">Dans quelle situation <span>êtes-vous ?</span></h2>
   <div class="sit-grid">
     <div class="sit-card rv">
-      <div class="sit-ico">🏗️</div>
       <div class="sit-title">Je n'ai pas de site</div>
       <p class="sit-text">Je crée un site professionnel simple et efficace pour présenter votre activité et permettre à vos clients de vous contacter facilement.</p>
-      <a href="/creation-site/" class="sit-cta">Créer mon site →</a>
+      <a href="/#contact" class="sit-cta" data-situation="creation">Créer mon site →</a>
     </div>
     <div class="sit-card rv d1">
-      <div class="sit-ico">📡</div>
       <div class="sit-title">J'ai un site mais pas de visiteurs</div>
       <p class="sit-text">Je vous aide à apparaître sur Google et à attirer des visiteurs qualifiés sur votre site, sans budget publicitaire.</p>
-      <a href="/attirer-visiteurs/" class="sit-cta">Attirer des visiteurs →</a>
+      <a href="/#contact" class="sit-cta" data-situation="visibilite">Attirer des visiteurs →</a>
     </div>
     <div class="sit-card rv d2">
-      <div class="sit-ico">🎯</div>
       <div class="sit-title">J'ai des visiteurs mais pas de clients</div>
       <p class="sit-text">J'optimise votre site pour transformer vos visiteurs en demandes de contact et en clients réels.</p>
-      <a href="/conversion/" class="sit-cta">Améliorer mes résultats →</a>
+      <a href="/#contact" class="sit-cta" data-situation="conversion">Améliorer mes résultats →</a>
     </div>
   </div>
 </section>
@@ -421,25 +413,22 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
   <h2 id="pricing-title">Des solutions <span>claires et accessibles</span></h2>
   <div class="price-grid">
     <div class="price-card rv">
-      <div class="price-ico">🏗️</div>
       <div class="price-title">Création de site</div>
       <div class="price-amount">À partir de 500 €</div>
       <p class="price-desc">Un site professionnel, clair et visible, livré en 2 à 3 semaines. Design soigné, formulaire de contact, affichage parfait sur mobile.</p>
-      <a href="/creation-site/" class="price-cta">En savoir plus →</a>
+      <a href="/#contact" class="price-cta" data-situation="creation">Faire un diagnostic gratuit →</a>
     </div>
     <div class="price-card rv d1">
-      <div class="price-ico">📡</div>
       <div class="price-title">Visibilité sur Google</div>
       <div class="price-amount">À partir de 300 €</div>
       <p class="price-desc">Apparaître sur Google et attirer des visiteurs qui cherchent ce que vous proposez, sans payer de publicité.</p>
-      <a href="/attirer-visiteurs/" class="price-cta">En savoir plus →</a>
+      <a href="/#contact" class="price-cta" data-situation="visibilite">Faire un diagnostic gratuit →</a>
     </div>
     <div class="price-card rv d2">
-      <div class="price-ico">🎯</div>
       <div class="price-title">Amélioration du site</div>
       <div class="price-amount">À partir de 300 €</div>
       <p class="price-desc">Transformer vos visiteurs en clients grâce à un site plus clair, plus convaincant et plus facile à utiliser.</p>
-      <a href="/conversion/" class="price-cta">En savoir plus →</a>
+      <a href="/#contact" class="price-cta" data-situation="conversion">Faire un diagnostic gratuit →</a>
     </div>
   </div>
   <div style="margin-top:2rem;text-align:center;">
@@ -535,27 +524,22 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
     <div class="meth-step rv">
       <div class="step-n"><span class="step-nm">01</span></div>
       <div class="step-c"><div class="step-t">On fait le point</div><div class="step-d">Un échange gratuit de 30 minutes pour comprendre votre situation, vos objectifs et ce qui vous freine.</div></div>
-      <div class="step-i" aria-hidden="true">💬</div>
     </div>
     <div class="meth-step rv d1">
       <div class="step-n"><span class="step-nm">02</span></div>
       <div class="step-c"><div class="step-t">Je vous propose une solution</div><div class="step-d">Un plan d'action clair, adapté à votre budget. Sans jargon, avec des résultats concrets à la clé.</div></div>
-      <div class="step-i" aria-hidden="true">📋</div>
     </div>
     <div class="meth-step rv d2">
       <div class="step-n"><span class="step-nm">03</span></div>
       <div class="step-c"><div class="step-t">Je m'occupe de tout</div><div class="step-d">Je crée, améliore ou optimise votre site. Vous n'avez rien à gérer, je vous tiens informé à chaque étape.</div></div>
-      <div class="step-i" aria-hidden="true">⚙️</div>
     </div>
     <div class="meth-step rv d3">
       <div class="step-n"><span class="step-nm">04</span></div>
       <div class="step-c"><div class="step-t">Je vous explique tout</div><div class="step-d">À la livraison, je vous montre comment ça fonctionne pour que vous soyez autonome si vous le souhaitez.</div></div>
-      <div class="step-i" aria-hidden="true">🎓</div>
     </div>
     <div class="meth-step rv d4">
       <div class="step-n"><span class="step-nm">05</span></div>
       <div class="step-c"><div class="step-t">Je reste disponible</div><div class="step-d">Après la livraison, je reste joignable pour répondre à vos questions et ajuster si nécessaire.</div></div>
-      <div class="step-i" aria-hidden="true">📡</div>
     </div>
   </div>
 </section>
@@ -566,7 +550,7 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
   <h2 id="blog-title">Conseils & <span>ressources</span></h2>
   <p class="s-intro rv">Des articles simples pour comprendre comment développer votre activité en ligne, trouver plus de clients et améliorer votre site.</p>
   <div class="blog-grid" id="blogGrid">
-    <div class="blog-empty"><div class="blog-empty-ico">✍️</div><p>Les premiers articles arrivent bientôt.<br>Revenez dans quelques jours !</p></div>
+    <div class="blog-empty"><p>Les premiers articles arrivent bientôt.<br>Revenez dans quelques jours !</p></div>
   </div>
   <div class="blog-cta rv"><a href="/blog/" class="btn-outline">Voir tous les articles</a></div>
 </section>
@@ -771,6 +755,25 @@ fetch('/posts/index.json').then(r=>r.ok?r.json():[]).then(articles=>{
 
 // Netlify Identity
 if(window.netlifyIdentity){window.netlifyIdentity.on('init',user=>{if(!user){window.netlifyIdentity.on('login',()=>{document.location.href='/admin/';});}});}
+
+// Pré-remplissage du formulaire via data-situation
+const situationMap = {
+  'creation': 'Je n\'ai pas de site — Créer mon site',
+  'visibilite': 'J\'ai un site mais pas de visiteurs',
+  'conversion': 'J\'ai des visiteurs mais pas de clients',
+  'diagnostic': 'Je ne sais pas par où commencer'
+};
+document.querySelectorAll('[data-situation]').forEach(el => {
+  el.addEventListener('click', e => {
+    const val = situationMap[el.dataset.situation];
+    if (!val) return;
+    const select = document.getElementById('fo');
+    if (!select) return;
+    Array.from(select.options).forEach(opt => {
+      if (opt.text === val) opt.selected = true;
+    });
+  });
+});
 </script>
 </body>
 </html>
