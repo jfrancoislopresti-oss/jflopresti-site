@@ -80,8 +80,11 @@ fetch('/posts/index.json')
       card.className = 'blog-card';
       card.dataset.cat = a.category || 'SEO';
       card.style.animationDelay = (i * 0.08) + 's';
+      const thumb = a.cover
+        ? `<img src="${a.cover}" alt="${a.title}" style="width:100%;height:100%;object-fit:cover;">`
+        : `<span style="font-size:3rem;opacity:.4;">${a.emoji || '📝'}</span>`;
       card.innerHTML = `
-        <div class="blog-img">${a.emoji || '📝'}</div>
+        <div class="blog-img">${thumb}</div>
         <div class="blog-meta">
           <span class="blog-cat">${a.category || 'SEO'}</span>
           <span class="blog-date">${a.date || ''}</span>
