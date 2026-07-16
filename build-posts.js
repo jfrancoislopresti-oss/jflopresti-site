@@ -83,6 +83,9 @@ const articles = files.map(filename => {
 <meta name="description" content="${meta.excerpt || ''}">
 ${cover ? `<meta property="og:image" content="https://jflopresti.fr${cover}">` : ''}
 <link rel="canonical" href="https://jflopresti.fr${url}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta name="theme-color" content="#C4622D">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
