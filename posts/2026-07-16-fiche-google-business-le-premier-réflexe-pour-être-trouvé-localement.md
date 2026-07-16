@@ -50,4 +50,4 @@ Ce n'est pas une contrainte — c'est 15 minutes par mois qui peuvent faire une 
 
 ## Et si vous ne savez pas par où commencer ?
 
-Un diagnostic gratuitpermet de voir si votre fiche existe déjà, si elle est bien configurée, et ce qui peut être amélioré rapidement.
+Un [diagnostic gratuit](https://jflopresti.fr/#contact) permet de voir si votre fiche existe déjà, si elle est bien configurée, et ce qui peut être amélioré rapidement.
