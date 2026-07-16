@@ -52,4 +52,4 @@ Ce qu'il faut faire : viser des mots-clés précis plutôt que génériques. "É
 
 Un site bien visible sur Google, c'est des clients qui vous trouvent sans que vous ayez à les chercher. C'est votre site qui travaille pour vous, même quand vous êtes en chantier ou en réunion.
 
-Si vous n'êtes pas sûr de savoir pourquoi votre site n'apparaît pas, un diagnostic gratuit permet d'identifier les points de blocage en 48 heures.
+Si vous n'êtes pas sûr de savoir pourquoi votre site n'apparaît pas, un [diagnostic gratuit](https://jflopresti.fr/#contact) permet d'identifier les points de blocage en 48 heures.
