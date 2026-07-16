@@ -8,10 +8,20 @@ function parseFrontMatter(content) {
   const match = content.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return { meta: {}, body: content };
   const meta = {};
-  match[1].split('\n').forEach(line => {
-    const [key, ...vals] = line.split(':');
-    if (key && vals.length) meta[key.trim()] = vals.join(':').trim().replace(/^["']|["']$/g, '');
+  const lines = match[1].split('\n');
+  let currentKey = null;
+  let currentVal = [];
+  lines.forEach(line => {
+    const colonIdx = line.indexOf(':');
+    if (colonIdx > 0 && !line.startsWith(' ') && !line.startsWith('\t')) {
+      if (currentKey) meta[currentKey] = currentVal.join(' ').trim().replace(/^["']|["']$/g, '');
+      currentKey = line.slice(0, colonIdx).trim();
+      currentVal = [line.slice(colonIdx + 1).trim()];
+    } else if (currentKey) {
+      currentVal.push(line.trim());
+    }
   });
+  if (currentKey) meta[currentKey] = currentVal.join(' ').trim().replace(/^["']|["']$/g, '');
   const body = content.replace(/^---\n[\s\S]*?\n---\n/, '');
   return { meta, body };
 }
