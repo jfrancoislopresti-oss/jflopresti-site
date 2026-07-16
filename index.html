@@ -153,7 +153,8 @@ h2 span{background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background
 .price-card:hover::before{opacity:1;}
 .price-ico{font-size:1.8rem;margin-bottom:1.2rem;}
 .price-title{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:.5rem;}
-.price-amount{font-family:'DM Mono',monospace;font-size:1.6rem;font-weight:500;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem;}
+.price-amount{font-family:'DM Mono',monospace;font-size:1.6rem;font-weight:500;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.5rem;}
+.price-discount{display:inline-block;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.08em;color:#fff;background:linear-gradient(135deg,var(--p3),var(--p1));padding:.25rem .75rem;margin-bottom:1rem;}
 .price-desc{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem;flex:1;}
 .price-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.3rem;background:transparent;border:1px solid var(--border);color:var(--text);font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .3s;align-self:flex-start;}
 .price-cta:hover{border-color:var(--p1);color:var(--accent);}
@@ -414,19 +415,22 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
   <div class="price-grid">
     <div class="price-card rv">
       <div class="price-title">Création de site</div>
-      <div class="price-amount">À partir de 500 €</div>
+      <div class="price-amount">À partir de 650 €</div>
+      <div class="price-discount">-30% pour les nouveaux clients</div>
       <p class="price-desc">Un site professionnel, clair et visible, livré en 2 à 3 semaines. Design soigné, formulaire de contact, affichage parfait sur mobile.</p>
       <a href="/creation-site/" class="price-cta">En savoir plus →</a>
     </div>
     <div class="price-card rv d1">
       <div class="price-title">Visibilité sur Google</div>
-      <div class="price-amount">À partir de 300 €</div>
+      <div class="price-amount">À partir de 390 €</div>
+      <div class="price-discount">-30% pour les nouveaux clients</div>
       <p class="price-desc">Apparaître sur Google et attirer des visiteurs qui cherchent ce que vous proposez, sans payer de publicité.</p>
       <a href="/attirer-visiteurs/" class="price-cta">En savoir plus →</a>
     </div>
     <div class="price-card rv d2">
       <div class="price-title">Amélioration du site</div>
-      <div class="price-amount">À partir de 300 €</div>
+      <div class="price-amount">À partir de 390 €</div>
+      <div class="price-discount">-30% pour les nouveaux clients</div>
       <p class="price-desc">Transformer vos visiteurs en clients grâce à un site plus clair, plus convaincant et plus facile à utiliser.</p>
       <a href="/conversion/" class="price-cta">En savoir plus →</a>
     </div>
