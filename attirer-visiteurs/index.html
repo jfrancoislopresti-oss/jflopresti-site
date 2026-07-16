@@ -42,7 +42,7 @@ h1 span{background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background
 footer{position:relative;z-index:1;padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
 .ft-copy{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--muted);}
 .ft-logo{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:800;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-@media(max-width:900px){nav{padding:1.1rem 1.5rem;}main{padding:6rem 1.5rem 4rem;}footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}}
+@media(max-width:900px){nav{padding:1.1rem 1.5rem;}main{padding:6rem 1.5rem 4rem;}footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}.abo-grid{grid-template-columns:1fr!important;}}
 </style>
 </head>
 <body>
@@ -80,6 +80,39 @@ footer{position:relative;z-index:1;padding:2rem 4rem;border-top:1px solid var(--
       <p>Le tarif dépend de l'état actuel de votre site et de ce qui doit être fait. On commence par un diagnostic gratuit pour voir où vous en êtes.</p>
     </div>
   </div>
+
+  
+<!-- ABONNEMENT -->
+<div style="margin-top:4rem;border-top:1px solid var(--border);padding-top:3rem;">
+  <div style="font-family:DM Mono,monospace;font-size:.68rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;">
+    <span style="display:inline-block;width:32px;height:1px;background:linear-gradient(90deg,#8b5cf6,#ec4899);"></span>
+    Suivi & accompagnement
+  </div>
+  <p style="font-size:.85rem;color:var(--muted);margin-bottom:2rem;line-height:1.7;font-style:italic;">Réservé aux clients ayant souscrit une offre — pour continuer à progresser sans s&apos;en occuper.</p>
+  <div class="abo-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+    <div style="background:var(--bg);border:1px solid var(--border);padding:2rem;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#8b5cf6,#ec4899);"></div>
+      <div style="font-family:DM Mono,monospace;font-size:.62rem;color:var(--muted);letter-spacing:.15em;margin-bottom:.7rem;">Abonnement mensuel</div>
+      <div style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:.5rem;">Suivi mensuel</div>
+      <div style="font-family:DM Mono,monospace;font-size:1.4rem;background:linear-gradient(90deg,#8b5cf6,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.2rem;">190 € / mois</div>
+      <ul style="list-style:none;padding:0;">
+        <li style="font-size:.82rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;gap:.6rem;align-items:center;"><span style="color:#8b5cf6;font-size:.55rem;">✦</span>Maintenance technique et corrections</li>
+        <li style="font-size:.82rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;gap:.6rem;align-items:center;"><span style="color:#8b5cf6;font-size:.55rem;">✦</span>Suivi de la visibilité sur Google</li>
+        <li style="font-size:.82rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;gap:.6rem;align-items:center;"><span style="color:#8b5cf6;font-size:.55rem;">✦</span>Améliorations selon vos demandes</li>
+        <li style="font-size:.82rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;gap:.6rem;align-items:center;"><span style="color:#8b5cf6;font-size:.55rem;">✦</span>Rapport mensuel clair</li>
+        <li style="font-size:.82rem;color:var(--muted);padding:.4rem 0;display:flex;gap:.6rem;align-items:center;"><span style="color:#8b5cf6;font-size:.55rem;">✦</span>3h de support par mois</li>
+      </ul>
+      <a href="/?situation=abonnement#contact" style="display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;padding:.75rem 1.4rem;background:linear-gradient(135deg,#8b5cf6,#ec4899);color:#fff;font-family:DM Mono,monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;">En savoir plus →</a>
+    </div>
+    <div style="background:var(--bg);border:1px solid var(--border);padding:2rem;">
+      <div style="font-family:DM Mono,monospace;font-size:.62rem;color:var(--muted);letter-spacing:.15em;margin-bottom:.7rem;">Accompagnement personnalisé</div>
+      <div style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:.5rem;">Sur-mesure</div>
+      <div style="font-family:DM Mono,monospace;font-size:1.4rem;background:linear-gradient(90deg,#8b5cf6,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.2rem;">Sur devis</div>
+      <p style="font-size:.88rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;">Accompagnement personnalisé selon vos besoins et votre activité. Fréquence, périmètre et tarif définis ensemble.</p>
+      <a href="/?situation=abonnement#contact" style="display:inline-flex;align-items:center;gap:.6rem;margin-top:auto;padding:.75rem 1.4rem;background:transparent;color:var(--text);font-family:DM Mono,monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(139,92,246,.3);">Discuter de mes besoins →</a>
+    </div>
+  </div>
+</div>
 
   <div class="cta-zone">
     <h2>Vous voulez être trouvé<br><span>sur Google ?</span></h2>
