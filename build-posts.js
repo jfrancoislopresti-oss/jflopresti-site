@@ -52,7 +52,15 @@ const articles = files.map(filename => {
     ? `<img src="${cover}" alt="${meta.title || ''}" style="width:100%;max-height:420px;object-fit:cover;margin-bottom:2.5rem;">`
     : `<span class="art-emoji">${emoji}</span>`;
 
-  // Génère la page HTML de l'article
+  // Map category to contact form situation
+  const categoryToSituation = {
+    'Être visible sur Google': 'visibilite',
+    'Améliorer son site': 'conversion',
+    'Trouver des clients': 'creation',
+    'Développer son activité': 'creation'
+  };
+  const situation = categoryToSituation[meta.category] || 'diagnostic';
+  const contactUrl = `/?situation=${situation}#contact`;
   const articleDir = path.join(__dirname, 'posts', slug);
   if (!fs.existsSync(articleDir)) fs.mkdirSync(articleDir, { recursive: true });
 
@@ -120,7 +128,7 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
   <div class="art-body">${mdToHtml(body)}</div>
   <div class="art-footer">
     <a href="/blog/" class="btn-outline">← Tous les articles</a>
-    <a href="/#contact" class="btn-primary">Faire un diagnostic gratuit →</a>
+    <a href="${contactUrl}" class="btn-primary">Faire un diagnostic gratuit →</a>
   </div>
 </main>
 <footer>
