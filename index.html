@@ -621,6 +621,7 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
             <option value="creation">Je n'ai pas de site — Créer mon site</option>
             <option value="visibilite">J'ai un site mais pas de visiteurs</option>
             <option value="conversion">J'ai des visiteurs mais pas de clients</option>
+            <option value="abonnement">Je suis déjà client — Abonnement suivi mensuel</option>
             <option value="diagnostic">Je ne sais pas par où commencer</option>
             <option value="autre">Autre demande</option>
           </select>
@@ -816,10 +817,11 @@ if(window.netlifyIdentity){window.netlifyIdentity.on('init',user=>{if(!user){win
 
 // Pré-remplissage du formulaire via paramètre URL (?situation=...)
 const situationMap = {
-  'creation':   "Je n'ai pas de site — Créer mon site",
-  'visibilite': "J'ai un site mais pas de visiteurs",
-  'conversion': "J'ai des visiteurs mais pas de clients",
-  'diagnostic': "Je ne sais pas par où commencer"
+  'creation':    "Je n'ai pas de site — Créer mon site",
+  'visibilite':  "J'ai un site mais pas de visiteurs",
+  'conversion':  "J'ai des visiteurs mais pas de clients",
+  'abonnement':  "Je suis déjà client — Abonnement suivi mensuel",
+  'diagnostic':  "Je ne sais pas par où commencer"
 };
 (function() {
   const params = new URLSearchParams(window.location.search);
