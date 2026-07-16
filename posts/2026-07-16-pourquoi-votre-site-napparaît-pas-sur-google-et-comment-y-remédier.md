@@ -6,7 +6,7 @@ cover: /images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment
 emoji: 📝
 excerpt: Vous avez un site, mais personne ne vous trouve sur Google. Voici les
   vraies raisons — et les actions concrètes pour y remédier, sans jargon.
-published: true
+published: false
 ---
 \# Pourquoi votre site n'apparaît pas sur Google (et comment y remédier)
 
