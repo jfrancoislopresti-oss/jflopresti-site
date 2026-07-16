@@ -4,45 +4,64 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Attirer des visiteurs sur mon site — Jean-François Lopresti</title>
-<meta name="description" content="Votre site existe mais personne ne le visite ? Je vous aide à apparaître sur Google et à attirer des visiteurs qualifiés. À partir de 300€.">
+<meta name="description" content="Votre site existe mais personne ne le visite ? Je vous aide à apparaître sur Google. À partir de 390€.">
 <link rel="canonical" href="https://jflopresti.fr/attirer-visiteurs/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#060610;--bg2:#0a0a1a;--bg3:#0f0f25;--p1:#8b5cf6;--p3:#ec4899;--accent:#c084fc;--text:#f1f0ff;--muted:#7c7a9e;--border:rgba(139,92,246,0.18);}
-*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#FFFFFF;--bg2:#F7F6F4;--bg3:#F0EEE9;--accent:#C4622D;--accent-h:#A84E22;--accent-l:#F2E8E1;--text:#1A1A1A;--muted:#6B6B6B;--border:#E5E3DF;--shadow-h:0 6px 28px rgba(196,98,45,0.18);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;}
-body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(139,92,246,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.025) 1px,transparent 1px);background-size:70px 70px;pointer-events:none;z-index:0;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(6,6,16,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
-.nav-back{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--muted);text-decoration:none;letter-spacing:.1em;display:flex;align-items:center;gap:.5rem;transition:color .2s;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--accent);text-decoration:none;}
+.nav-back{font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}
 .nav-back:hover{color:var(--accent);}
-main{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:8rem 4rem 6rem;}
-.lbl{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;}
-.lbl::before{content:'';display:inline-block;width:32px;height:1px;background:linear-gradient(90deg,var(--p1),var(--p3));}
-h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:800;line-height:1.05;letter-spacing:-.025em;margin-bottom:1.5rem;}
-h1 span{background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.accroche{font-size:1.1rem;color:var(--muted);line-height:1.8;max-width:680px;margin-bottom:3rem;border-left:2px solid var(--p1);padding-left:1.5rem;}
-.accroche em{color:var(--text);font-style:normal;}
-.blocks{display:flex;flex-direction:column;gap:2rem;margin-bottom:3rem;}
-.block{background:var(--bg3);border:1px solid var(--border);padding:2.5rem;}
-.block h2{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;margin-bottom:1rem;color:var(--text);}
+main{max-width:900px;margin:0 auto;padding:8rem 4rem 6rem;}
+.lbl{font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.7rem;}
+.lbl::before{content:'';display:inline-block;width:28px;height:2px;background:var(--accent);border-radius:2px;}
+h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.3rem;color:var(--text);}
+h1 em{font-style:normal;color:var(--accent);}
+.accroche{font-size:1.05rem;color:var(--muted);line-height:1.8;max-width:680px;margin-bottom:3rem;padding-left:1rem;border-left:3px solid var(--accent);}
+.accroche em{color:var(--text);font-style:normal;font-weight:500;}
+.blocks{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:3rem;}
+.block{background:var(--bg2);border:1.5px solid var(--border);padding:2.2rem;border-radius:4px;}
+.block h2{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:.8rem;color:var(--text);}
 .block p{font-size:.92rem;color:var(--muted);line-height:1.8;}
-.block ul{list-style:none;margin-top:1rem;}
-.block ul li{font-size:.88rem;color:var(--muted);padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:.7rem;}
+.block ul{list-style:none;margin-top:.8rem;}
+.block ul li{font-size:.88rem;color:var(--muted);padding:.42rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;}
 .block ul li:last-child{border-bottom:none;}
-.block ul li::before{content:'✦';color:var(--p1);font-size:.55rem;flex-shrink:0;}
-.price-badge{font-family:'DM Mono',monospace;font-size:1.4rem;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block;margin-bottom:.8rem;}
-.cta-zone{background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.2);padding:3rem;text-align:center;}
-.cta-zone h2{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:1rem;}
-.cta-zone h2 span{background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.block ul li::before{content:'✦';color:var(--accent);font-size:.5rem;flex-shrink:0;}
+.price-badge{font-size:1.4rem;font-weight:700;color:var(--accent);display:inline-block;margin-bottom:.3rem;}
+.price-discount{display:inline-block;font-size:.7rem;font-weight:600;color:#fff;background:var(--accent);padding:.2rem .75rem;border-radius:20px;margin-left:.5rem;vertical-align:middle;}
+.abo-section{margin-top:3.5rem;padding-top:3rem;border-top:1.5px solid var(--border);}
+.abo-lbl{font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:.5rem;display:flex;align-items:center;gap:.7rem;}
+.abo-lbl::before{content:'';display:inline-block;width:28px;height:2px;background:var(--accent);border-radius:2px;}
+.abo-note{font-size:.85rem;color:var(--muted);font-style:italic;margin:1rem 0 2rem;line-height:1.6;}
+.abo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.abo-card{background:var(--bg2);border:1.5px solid var(--border);padding:2rem;border-radius:4px;display:flex;flex-direction:column;transition:border-color .25s,box-shadow .25s;}
+.abo-card:hover{border-color:var(--accent);box-shadow:var(--shadow-h);}
+.abo-card-type{font-size:.7rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;}
+.abo-card-title{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:.3rem;}
+.abo-card-price{font-size:1.3rem;font-weight:700;color:var(--accent);margin-bottom:1.1rem;}
+.abo-card ul{list-style:none;margin-bottom:1.5rem;}
+.abo-card ul li{font-size:.85rem;color:var(--muted);padding:.38rem 0;border-bottom:1px solid var(--border);display:flex;gap:.6rem;align-items:center;}
+.abo-card ul li:last-child{border-bottom:none;}
+.abo-card ul li::before{content:'✦';color:var(--accent);font-size:.5rem;flex-shrink:0;}
+.abo-card p{font-size:.88rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;}
+.abo-cta-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.4rem;background:var(--accent);color:#fff;font-size:.8rem;font-weight:600;text-decoration:none;border-radius:3px;transition:background .2s;align-self:flex-start;margin-top:auto;}
+.abo-cta-primary:hover{background:var(--accent-h);}
+.abo-cta-outline{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.4rem;background:transparent;color:var(--text);font-size:.8rem;font-weight:600;text-decoration:none;border:1.5px solid var(--border);border-radius:3px;transition:all .2s;align-self:flex-start;margin-top:auto;}
+.abo-cta-outline:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-l);}
+.cta-zone{background:var(--bg2);border:1.5px solid var(--border);padding:3rem;text-align:center;border-radius:4px;}
+.cta-zone h2{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:.8rem;color:var(--text);}
+.cta-zone h2 em{font-style:normal;color:var(--accent);}
 .cta-zone p{font-size:.95rem;color:var(--muted);margin-bottom:2rem;line-height:1.7;}
-.btn-main{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2.5rem;background:linear-gradient(135deg,var(--p1),var(--p3));color:#fff;font-family:'DM Mono',monospace;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:transform .3s,box-shadow .3s;}
-.btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(139,92,246,.4);}
-footer{position:relative;z-index:1;padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-.ft-copy{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--muted);}
-.ft-logo{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:800;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-@media(max-width:900px){nav{padding:1.1rem 1.5rem;}main{padding:6rem 1.5rem 4rem;}footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}.abo-grid{grid-template-columns:1fr!important;}}
+.btn-main{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2.2rem;background:var(--accent);color:#fff;font-size:.88rem;font-weight:600;text-decoration:none;border-radius:3px;transition:background .2s,transform .2s,box-shadow .2s;}
+.btn-main:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:var(--shadow-h);}
+footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.ft-copy{font-size:.72rem;color:var(--muted);}
+.ft-logo{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800;color:var(--accent);}
+@media(max-width:900px){nav{padding:1rem 1.5rem;}main{padding:6rem 1.5rem 4rem;}footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}.abo-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -52,9 +71,8 @@ footer{position:relative;z-index:1;padding:2rem 4rem;border-top:1px solid var(--
 </nav>
 <main>
   <div class="lbl">Visibilité sur Google</div>
-  <h1>Votre site existe.<br><span>Mais personne ne le voit.</span></h1>
+  <h1>Votre site existe.<br><em>Mais personne ne le voit.</em></h1>
   <p class="accroche">Avoir un site ne suffit pas. Sans travail de visibilité, votre site reste introuvable. <em>Vos clients tapent leurs questions sur Google — et c'est vos concurrents qu'ils trouvent.</em></p>
-
   <div class="blocks">
     <div class="block">
       <h2>Ce que je fais pour vous</h2>
@@ -72,50 +90,44 @@ footer{position:relative;z-index:1;padding:2rem 4rem;border-top:1px solid var(--
     </div>
     <div class="block">
       <h2>Pour qui ?</h2>
-      <p>Entreprises qui ont un site mais qui ne reçoivent pas ou peu de visiteurs. Indépendants qui veulent générer des contacts sans budget publicitaire. Toute structure qui veut exister vraiment sur Google.</p>
+      <p>Entreprises qui ont un site mais qui ne reçoivent pas ou peu de visiteurs. Indépendants qui veulent générer des contacts sans budget publicitaire.</p>
     </div>
     <div class="block">
-      <div class="price-badge" style="display:block;margin-bottom:.5rem;">À partir de 390 €</div>
-      <div style="display:inline-block;font-family:DM Mono,monospace;font-size:.62rem;letter-spacing:.08em;color:#fff;background:linear-gradient(135deg,#ec4899,#8b5cf6);padding:.25rem .75rem;margin-bottom:.8rem;">-30% pour les nouveaux clients</div>
-      <p>Le tarif dépend de l'état actuel de votre site et de ce qui doit être fait. On commence par un diagnostic gratuit pour voir où vous en êtes.</p>
+      <div class="price-badge">À partir de 390 €</div>
+      <span class="price-discount">-30% pour les nouveaux clients</span>
+      <p style="margin-top:.8rem;">Le tarif dépend de l'état actuel de votre site. On commence par un diagnostic gratuit pour voir où vous en êtes.</p>
     </div>
   </div>
 
-  
-<!-- ABONNEMENT -->
-<div style="margin-top:4rem;border-top:1px solid var(--border);padding-top:3rem;">
-  <div style="font-family:DM Mono,monospace;font-size:.68rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;">
-    <span style="display:inline-block;width:32px;height:1px;background:linear-gradient(90deg,#8b5cf6,#ec4899);"></span>
-    Suivi & accompagnement
-  </div>
-  <p style="font-size:.85rem;color:var(--muted);margin-bottom:2rem;line-height:1.7;font-style:italic;">Réservé aux clients ayant souscrit une offre — pour continuer à progresser sans s&apos;en occuper.</p>
-  <div class="abo-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
-    <div style="background:var(--bg);border:1px solid var(--border);padding:2rem;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#8b5cf6,#ec4899);"></div>
-      <div style="font-family:DM Mono,monospace;font-size:.62rem;color:var(--muted);letter-spacing:.15em;margin-bottom:.7rem;">Abonnement mensuel</div>
-      <div style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:.5rem;">Suivi mensuel</div>
-      <div style="font-family:DM Mono,monospace;font-size:1.4rem;background:linear-gradient(90deg,#8b5cf6,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.2rem;">190 € / mois</div>
-      <ul style="list-style:none;padding:0;">
-        <li style="font-size:.82rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;gap:.6rem;align-items:center;"><span style="color:#8b5cf6;font-size:.55rem;">✦</span>Maintenance technique et corrections</li>
-        <li style="font-size:.82rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;gap:.6rem;align-items:center;"><span style="color:#8b5cf6;font-size:.55rem;">✦</span>Suivi de la visibilité sur Google</li>
-        <li style="font-size:.82rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;gap:.6rem;align-items:center;"><span style="color:#8b5cf6;font-size:.55rem;">✦</span>Améliorations selon vos demandes</li>
-        <li style="font-size:.82rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;gap:.6rem;align-items:center;"><span style="color:#8b5cf6;font-size:.55rem;">✦</span>Rapport mensuel clair</li>
-        <li style="font-size:.82rem;color:var(--muted);padding:.4rem 0;display:flex;gap:.6rem;align-items:center;"><span style="color:#8b5cf6;font-size:.55rem;">✦</span>3h de support par mois</li>
-      </ul>
-      <a href="/?situation=abonnement#contact" style="display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;padding:.75rem 1.4rem;background:linear-gradient(135deg,#8b5cf6,#ec4899);color:#fff;font-family:DM Mono,monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;">En savoir plus →</a>
-    </div>
-    <div style="background:var(--bg);border:1px solid var(--border);padding:2rem;">
-      <div style="font-family:DM Mono,monospace;font-size:.62rem;color:var(--muted);letter-spacing:.15em;margin-bottom:.7rem;">Accompagnement personnalisé</div>
-      <div style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:.5rem;">Sur-mesure</div>
-      <div style="font-family:DM Mono,monospace;font-size:1.4rem;background:linear-gradient(90deg,#8b5cf6,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.2rem;">Sur devis</div>
-      <p style="font-size:.88rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;">Accompagnement personnalisé selon vos besoins et votre activité. Fréquence, périmètre et tarif définis ensemble.</p>
-      <a href="/?situation=abonnement#contact" style="display:inline-flex;align-items:center;gap:.6rem;margin-top:auto;padding:.75rem 1.4rem;background:transparent;color:var(--text);font-family:DM Mono,monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(139,92,246,.3);">Discuter de mes besoins →</a>
+  <div class="abo-section">
+    <div class="abo-lbl">Suivi & accompagnement</div>
+    <p class="abo-note">Réservé aux clients ayant souscrit une offre — pour continuer à progresser sans s'en occuper.</p>
+    <div class="abo-grid">
+      <div class="abo-card">
+        <div class="abo-card-type">Abonnement mensuel</div>
+        <div class="abo-card-title">Suivi mensuel</div>
+        <div class="abo-card-price">190 € / mois</div>
+        <ul>
+          <li>Maintenance technique et corrections</li>
+          <li>Suivi de la visibilité sur Google</li>
+          <li>Améliorations selon vos demandes</li>
+          <li>Rapport mensuel clair</li>
+          <li>3h de support par mois</li>
+        </ul>
+        <a href="/?situation=abonnement#contact" class="abo-cta-primary">En savoir plus →</a>
+      </div>
+      <div class="abo-card">
+        <div class="abo-card-type">Accompagnement personnalisé</div>
+        <div class="abo-card-title">Sur-mesure</div>
+        <div class="abo-card-price">Sur devis</div>
+        <p>Accompagnement personnalisé selon vos besoins et votre activité. Fréquence, périmètre et tarif définis ensemble.</p>
+        <a href="/?situation=abonnement#contact" class="abo-cta-outline">Discuter de mes besoins →</a>
+      </div>
     </div>
   </div>
-</div>
 
-  <div class="cta-zone">
-    <h2>Vous voulez être trouvé<br><span>sur Google ?</span></h2>
+  <div class="cta-zone" style="margin-top:3rem;">
+    <h2>Vous voulez être trouvé<br><em>sur Google ?</em></h2>
     <p>Un premier échange gratuit pour analyser votre situation et vous dire ce qui peut être amélioré.</p>
     <a href="/?situation=visibilite#contact" class="btn-main">Faire un diagnostic gratuit →</a>
   </div>
