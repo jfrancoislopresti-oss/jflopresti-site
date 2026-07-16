@@ -15,26 +15,19 @@
 <meta property="og:description" content="Je vous aide à créer votre site, être visible sur Google et transformer vos visiteurs en clients.">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jean-François Lopresti — Présence digitale & clients en ligne">
-<meta name="twitter:description" content="Je vous aide à créer votre site, être visible sur Google et transformer vos visiteurs en clients.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Jean-François Lopresti — Présence digitale & conversion",
-  "description": "Je vous aide à créer votre site, être visible sur Google et transformer vos visiteurs en clients. Solutions simples pour indépendants, artisans, commerçants et petites entreprises.",
+  "description": "Je vous aide à créer votre site, être visible sur Google et transformer vos visiteurs en clients.",
   "url": "https://jflopresti.fr/",
   "email": "contact@jflopresti.fr",
-  "founder": {
-    "@type": "Person",
-    "name": "Jean-François Lopresti",
-    "jobTitle": "Expert en présence digitale",
-    "sameAs": ["https://www.linkedin.com/in/jean-fran%C3%A7ois-lopresti-173093206/"]
-  },
-  "areaServed": {"@type": "Country", "name": "France"},
+  "founder": {"@type":"Person","name":"Jean-François Lopresti","jobTitle":"Expert en présence digitale","sameAs":["https://www.linkedin.com/in/jean-fran%C3%A7ois-lopresti-173093206/"]},
+  "areaServed": {"@type":"Country","name":"France"},
   "serviceType": ["Création de site web","Visibilité sur Google","Amélioration du site","Diagnostic digital"]
 }
 </script>
@@ -43,267 +36,256 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Comment être visible sur Google ?","acceptedAnswer":{"@type":"Answer","text":"Être visible sur Google demande un site bien structuré, des textes adaptés aux recherches de vos clients, et un travail régulier sur votre contenu. Jean-François Lopresti accompagne les petites entreprises dans cette démarche."}},
-    {"@type":"Question","name":"Combien coûte la création d'un site professionnel ?","acceptedAnswer":{"@type":"Answer","text":"La création d'un site professionnel commence à partir de 500€ avec Jean-François Lopresti. Chaque projet est adapté à votre activité et vos objectifs."}},
-    {"@type":"Question","name":"Comment transformer mes visiteurs en clients ?","acceptedAnswer":{"@type":"Answer","text":"Transformer les visiteurs en clients passe par un message clair, des boutons bien placés et un site qui inspire confiance. C'est ce que propose Jean-François Lopresti avec son offre d'amélioration de site, à partir de 300€."}}
+    {"@type":"Question","name":"Comment être visible sur Google ?","acceptedAnswer":{"@type":"Answer","text":"Être visible sur Google demande un site bien structuré, des textes adaptés aux recherches de vos clients, et un travail régulier sur votre contenu."}},
+    {"@type":"Question","name":"Combien coûte la création d'un site professionnel ?","acceptedAnswer":{"@type":"Answer","text":"La création d'un site professionnel commence à partir de 650€ avec Jean-François Lopresti."}},
+    {"@type":"Question","name":"Comment transformer mes visiteurs en clients ?","acceptedAnswer":{"@type":"Answer","text":"Transformer les visiteurs en clients passe par un message clair, des boutons bien placés et un site qui inspire confiance, à partir de 390€."}}
   ]
 }
 </script>
 <style>
 :root {
-  --bg: #060610; --bg2: #0a0a1a; --bg3: #0f0f25;
-  --card: rgba(15,15,37,0.8);
-  --p1: #8b5cf6; --p2: #a855f7; --p3: #ec4899; --p4: #6366f1;
-  --accent: #c084fc;
-  --text: #f1f0ff; --muted: #7c7a9e;
-  --border: rgba(139,92,246,0.18); --border2: rgba(236,72,153,0.15);
+  --bg: #FFFFFF;
+  --bg2: #F7F6F4;
+  --bg3: #F0EEE9;
+  --card: #FFFFFF;
+  --accent: #C4622D;
+  --accent-h: #A84E22;
+  --accent-l: #F2E8E1;
+  --text: #1A1A1A;
+  --muted: #6B6B6B;
+  --border: #E5E3DF;
+  --border-h: #C4622D;
+  --shadow: 0 2px 16px rgba(0,0,0,0.07);
+  --shadow-h: 0 6px 28px rgba(196,98,45,0.18);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none;}
-.cur{width:10px;height:10px;background:var(--p1);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen;}
-.cur-r{width:32px;height:32px;border:1px solid rgba(139,92,246,.4);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);}
-@media(hover:none){body{cursor:auto;}.cur,.cur-r{display:none;}}
-#particles{position:fixed;inset:0;z-index:0;pointer-events:none;}
-body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(139,92,246,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.025) 1px,transparent 1px);background-size:70px 70px;pointer-events:none;z-index:0;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(6,6,16,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
-.nav-links{display:flex;gap:2.2rem;list-style:none;}
-.nav-links a{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--muted);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .3s;position:relative;}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--p1),var(--p3));transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--accent);text-decoration:none;letter-spacing:-.01em;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:.85rem;color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s;}
 .nav-links a:hover{color:var(--accent);}
-.nav-links a:hover::after{transform:scaleX(1);}
 .nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
-.nav-burger span{display:block;width:24px;height:1.5px;background:var(--text);transition:all .3s;}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--text);transition:all .3s;}
 .nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
 .nav-burger.open span:nth-child(2){opacity:0;}
 .nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;z-index:99;background:rgba(6,6,16,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:1.5rem 2rem;flex-direction:column;gap:1.2rem;}
+.mobile-menu{display:none;position:fixed;top:61px;left:0;right:0;z-index:99;background:#fff;border-bottom:1px solid var(--border);padding:1.5rem 2rem;flex-direction:column;gap:1rem;}
 .mobile-menu.open{display:flex;}
-.mobile-menu a{font-family:'DM Mono',monospace;font-size:.85rem;color:var(--muted);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 0;border-bottom:1px solid var(--border);transition:color .2s;}
+.mobile-menu a{font-size:.9rem;color:var(--muted);text-decoration:none;font-weight:500;padding:.5rem 0;border-bottom:1px solid var(--border);transition:color .2s;}
+.mobile-menu a:last-child{border-bottom:none;}
 .mobile-menu a:hover{color:var(--accent);}
 
 /* SECTIONS */
-section,header{position:relative;z-index:1;padding:8rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+section,header{position:relative;padding:7rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.bg-alt{background:var(--bg2);}
 
-/* LABELS */
-.lbl{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;}
-.lbl::before{content:'';display:inline-block;width:32px;height:1px;background:linear-gradient(90deg,var(--p1),var(--p3));}
+/* LABEL */
+.lbl{font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.7rem;}
+.lbl::before{content:'';display:inline-block;width:28px;height:2px;background:var(--accent);border-radius:2px;}
 
 /* HERO */
-#hero{min-height:100vh;padding:0 4rem;align-items:flex-start;justify-content:center;overflow:hidden;}
-.hero-inner{max-width:820px;z-index:2;padding-top:2rem;}
-.hero-tag{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:2rem;display:inline-flex;align-items:center;gap:.8rem;}
-.htag-dot{width:6px;height:6px;background:var(--p3);border-radius:50%;animation:blink 2s ease-in-out infinite;}
-@keyframes blink{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.8);}}
-h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4.2vw,4rem);font-weight:800;line-height:1.05;letter-spacing:-.025em;margin-bottom:1.8rem;}
-h1 .l1{display:block;color:var(--text);}
-h1 .l2{display:block;background:linear-gradient(90deg,var(--p1),var(--p3),var(--p2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:gshift 6s ease-in-out infinite;}
-@keyframes gshift{0%,100%{background-position:0%;}50%{background-position:100%;}}
-.hero-sub{font-size:1.05rem;color:var(--muted);line-height:1.85;max-width:600px;margin-bottom:3rem;}
-.hero-sub em{color:var(--text);font-style:normal;}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
-.btn-primary{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 2rem;background:linear-gradient(135deg,var(--p1),var(--p3));color:#fff;font-family:'DM Mono',monospace;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(139,92,246,.4);}
-.btn-outline{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 2rem;background:transparent;color:var(--text);font-family:'DM Mono',monospace;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid var(--border);transition:border-color .3s,color .3s,background .3s,box-shadow .3s;}
-.btn-outline:hover{border-color:var(--p1);color:#fff;background:linear-gradient(135deg,var(--p1),var(--p3));box-shadow:0 8px 25px rgba(139,92,246,.35);}
-.btn-outline.sm{padding:.7rem 1.5rem;font-size:.72rem;}
-.hero-stats{display:flex;gap:3rem;margin-top:3rem;flex-wrap:wrap;}
-.stat{display:flex;flex-direction:column;gap:.3rem;}
-.stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.stat-lbl{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;}
-.hero-3d{position:absolute;right:3rem;top:50%;transform:translateY(-50%);width:420px;height:420px;pointer-events:none;}
-.hero-3d svg{width:100%;height:100%;}
+#hero{min-height:100vh;padding:0 4rem;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;background:var(--bg);}
+.hero-content{max-width:580px;}
+.hero-tag{font-size:.75rem;font-weight:600;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem;display:inline-flex;align-items:center;gap:.6rem;}
+.hero-tag::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;animation:blink 2s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+h1{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,4vw,3.8rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.5rem;color:var(--text);}
+h1 em{font-style:normal;color:var(--accent);}
+.hero-sub{font-size:1.05rem;color:var(--muted);line-height:1.85;margin-bottom:2.5rem;max-width:500px;}
+.hero-sub em{color:var(--text);font-style:normal;font-weight:500;}
+.hero-btns{display:flex;gap:.8rem;flex-wrap:wrap;}
+.btn-primary{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.8rem;background:var(--accent);color:#fff;font-size:.85rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;border-radius:3px;}
+.btn-primary:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:var(--shadow-h);}
+.btn-outline{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.8rem;background:transparent;color:var(--text);font-size:.85rem;font-weight:600;text-decoration:none;border:1.5px solid var(--border);transition:all .2s;border-radius:3px;}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-l);}
+.btn-outline.sm{padding:.65rem 1.3rem;font-size:.8rem;}
+
+/* HERO ILLUSTRATION */
+.hero-visual{display:flex;align-items:center;justify-content:center;}
+.hero-visual svg{width:100%;max-width:460px;height:auto;}
 
 /* H2 */
-h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.2vw,2.8rem);font-weight:800;letter-spacing:-.02em;margin-bottom:1rem;line-height:1.1;}
-h2 span{background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.s-intro{font-size:1rem;color:var(--muted);line-height:1.8;max-width:680px;margin-bottom:3.5rem;border-left:2px solid var(--p1);padding-left:1.5rem;}
-.sep{width:40px;height:2px;background:linear-gradient(90deg,var(--p1),var(--p3));margin:1.5rem 0;}
+h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-.02em;margin-bottom:.8rem;line-height:1.1;color:var(--text);}
+h2 em{font-style:normal;color:var(--accent);}
+.s-intro{font-size:1rem;color:var(--muted);line-height:1.8;max-width:620px;margin-bottom:3rem;padding-left:1rem;border-left:3px solid var(--accent);}
+.sep{width:36px;height:3px;background:var(--accent);border-radius:2px;margin:1.5rem 0;}
 
-/* SITUATION BLOCS */
-#situation{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);}
-.sit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:1rem;}
-.sit-card{background:var(--bg3);border:1px solid var(--border);padding:2.5rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;display:flex;flex-direction:column;}
-.sit-card:hover{border-color:rgba(139,92,246,.35);transform:translateY(-4px);}
-.sit-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--p1),var(--p3));transform:scaleX(0);transform-origin:left;transition:transform .5s;}
-.sit-card:hover::before{transform:scaleX(1);}
-.sit-ico{font-size:2rem;margin-bottom:1.2rem;}
-.sit-title{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:1rem;line-height:1.2;}
-.sit-text{font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1.8rem;flex:1;}
-.sit-cta{display:inline-flex;align-items:center;gap:.6rem;padding:.75rem 1.4rem;background:linear-gradient(135deg,var(--p1),var(--p3));color:#fff;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:transform .2s,box-shadow .2s;align-self:flex-start;}
-.sit-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(139,92,246,.4);}
+/* SITUATION */
+#situation{background:var(--bg2);}
+.sit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.sit-card{background:var(--card);border:1.5px solid var(--border);padding:2.2rem;display:flex;flex-direction:column;transition:border-color .25s,box-shadow .25s,transform .25s;border-radius:4px;}
+.sit-card:hover{border-color:var(--accent);box-shadow:var(--shadow-h);transform:translateY(-3px);}
+.sit-num{font-size:.7rem;font-weight:700;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem;}
+.sit-title{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:.8rem;line-height:1.3;}
+.sit-text{font-size:.88rem;color:var(--muted);line-height:1.75;margin-bottom:1.8rem;flex:1;}
+.sit-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.3rem;background:var(--accent);color:#fff;font-size:.78rem;font-weight:600;text-decoration:none;transition:background .2s;border-radius:3px;align-self:flex-start;}
+.sit-cta:hover{background:var(--accent-h);}
 
 /* DIAGNOSTIC */
-#diagnostic{background:var(--bg2);}
-.diag-inner{max-width:700px;margin:0 auto;text-align:center;}
+#diagnostic{background:var(--bg);}
+.diag-inner{max-width:680px;margin:0 auto;text-align:center;}
 .diag-inner h2{margin-bottom:1rem;}
 .diag-inner p{font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:2.5rem;}
-.diag-btn{display:inline-flex;align-items:center;gap:.8rem;padding:1.1rem 2.5rem;background:linear-gradient(135deg,var(--p1),var(--p3));color:#fff;font-family:'DM Mono',monospace;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:transform .3s,box-shadow .3s;}
-.diag-btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(139,92,246,.45);}
+.diag-btn{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2.2rem;background:var(--accent);color:#fff;font-size:.9rem;font-weight:600;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;border-radius:3px;}
+.diag-btn:hover{background:var(--accent-h);transform:translateY(-2px);box-shadow:var(--shadow-h);}
 
 /* PRICING */
-#pricing{background:var(--bg);}
-.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
-.price-card{background:var(--card);border:1px solid var(--border);padding:2.5rem;backdrop-filter:blur(10px);position:relative;overflow:hidden;transition:border-color .3s,transform .3s;display:flex;flex-direction:column;}
-.price-card:hover{border-color:rgba(139,92,246,.35);transform:translateY(-4px);}
-.price-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--p1),var(--p3),transparent);opacity:0;transition:opacity .3s;}
-.price-card:hover::before{opacity:1;}
-.price-ico{font-size:1.8rem;margin-bottom:1.2rem;}
-.price-title{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:.5rem;}
-.price-amount{font-family:'DM Mono',monospace;font-size:1.6rem;font-weight:500;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.5rem;}
-.price-discount{display:inline-block;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.08em;color:#fff;background:linear-gradient(135deg,var(--p3),var(--p1));padding:.25rem .75rem;margin-bottom:1rem;}
+#pricing{background:var(--bg2);}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.price-card{background:var(--card);border:1.5px solid var(--border);padding:2.2rem;display:flex;flex-direction:column;border-radius:4px;transition:border-color .25s,box-shadow .25s,transform .25s;}
+.price-card:hover{border-color:var(--accent);box-shadow:var(--shadow-h);transform:translateY(-3px);}
+.price-title{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:.4rem;}
+.price-amount{font-size:1.5rem;font-weight:700;color:var(--accent);margin-bottom:.4rem;}
+.price-discount{display:inline-block;font-size:.68rem;font-weight:600;color:#fff;background:var(--accent);padding:.2rem .7rem;border-radius:20px;margin-bottom:1rem;letter-spacing:.04em;}
 .price-desc{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem;flex:1;}
-.price-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.3rem;background:transparent;border:1px solid var(--border);color:var(--text);font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .3s;align-self:flex-start;}
-.price-cta:hover{border-color:var(--p1);color:var(--accent);}
+.price-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.2rem;background:transparent;border:1.5px solid var(--border);color:var(--text);font-size:.78rem;font-weight:600;text-decoration:none;transition:all .2s;border-radius:3px;align-self:flex-start;}
+.price-cta:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-l);}
 
 /* CAS */
-#cas{background:var(--bg2);}
-.cas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;align-items:stretch;}
-.cas-card{background:var(--bg3);border:1px solid var(--border);padding:2.2rem 1.8rem;position:relative;overflow:hidden;transition:border-color .3s;display:flex;flex-direction:column;}
-.cas-card:hover{border-color:rgba(139,92,246,.3);}
-.cas-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;color:var(--accent);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25);padding:.25rem .7rem;margin-bottom:1.3rem;align-self:flex-start;}
-.cas-title{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:1.3rem;color:var(--text);}
-.cas-bloc{margin-bottom:1rem;}
+#cas{background:var(--bg);}
+.cas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;align-items:stretch;}
+.cas-card{background:var(--bg2);border:1.5px solid var(--border);padding:2rem;display:flex;flex-direction:column;border-radius:4px;transition:border-color .25s;}
+.cas-card:hover{border-color:var(--accent);}
+.cas-badge{display:inline-block;font-size:.68rem;font-weight:700;color:var(--accent);background:var(--accent-l);padding:.25rem .7rem;border-radius:20px;margin-bottom:1.2rem;letter-spacing:.05em;align-self:flex-start;}
+.cas-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1.2rem;color:var(--text);line-height:1.3;}
+.cas-bloc{margin-bottom:.9rem;}
 .cas-bloc.solution{flex:1;}
-.cas-lbl{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;margin-bottom:.45rem;}
-.cas-bloc p,.cas-bloc li{font-size:.8rem;color:var(--muted);line-height:1.65;}
+.cas-lbl{font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.4rem;}
+.cas-bloc p,.cas-bloc li{font-size:.82rem;color:var(--muted);line-height:1.65;}
 .cas-bloc ul{list-style:none;}
-.cas-bloc ul li{display:flex;gap:.5rem;}
-.cas-bloc ul li::before{content:'—';color:var(--p1);flex-shrink:0;}
-.cas-res{margin-top:auto;padding:.9rem;background:rgba(139,92,246,.06);border-left:2px solid var(--p1);}
+.cas-bloc ul li{display:flex;gap:.5rem;padding:.2rem 0;}
+.cas-bloc ul li::before{content:'—';color:var(--accent);flex-shrink:0;}
+.cas-res{margin-top:auto;padding:.9rem;background:var(--accent-l);border-left:3px solid var(--accent);border-radius:0 3px 3px 0;}
 .cas-res .cas-lbl{color:var(--accent);}
-.cas-res li{color:rgba(192,132,252,.85)!important;}
+.cas-res li{color:var(--accent-h)!important;}
 
 /* METHODE */
-#methode{background:var(--bg);}
-.meth-steps{display:flex;flex-direction:column;gap:0;margin-top:3rem;position:relative;}
-.meth-steps::before{content:'';position:absolute;left:25px;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--p1),var(--p3),transparent);}
-.meth-step{display:flex;gap:2.5rem;align-items:flex-start;padding:2.2rem 0;position:relative;}
-.meth-step:not(:last-child){border-bottom:1px solid rgba(255,255,255,.04);}
-.step-n{flex-shrink:0;width:52px;height:52px;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;z-index:1;transition:border-color .3s,background .3s;}
-.meth-step:hover .step-n{border-color:var(--p1);background:rgba(139,92,246,.08);}
-.step-nm{font-family:'DM Mono',monospace;font-size:.78rem;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:500;}
-.step-c{flex:1;padding-top:.6rem;}
-.step-t{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:.5rem;}
+#methode{background:var(--bg2);}
+.meth-steps{display:flex;flex-direction:column;margin-top:2.5rem;position:relative;}
+.meth-steps::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:var(--border);border-radius:2px;}
+.meth-step{display:flex;gap:2rem;align-items:flex-start;padding:1.8rem 0;position:relative;}
+.meth-step:not(:last-child){border-bottom:1px solid var(--border);}
+.step-n{flex-shrink:0;width:42px;height:42px;background:var(--bg);border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;transition:border-color .25s,background .25s;}
+.meth-step:hover .step-n{border-color:var(--accent);background:var(--accent-l);}
+.step-nm{font-size:.75rem;font-weight:700;color:var(--accent);}
+.step-c{flex:1;padding-top:.4rem;}
+.step-t{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:.4rem;}
 .step-d{font-size:.88rem;color:var(--muted);line-height:1.7;}
 
-
 /* BLOG */
-#blog{background:var(--bg2);}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;}
-.blog-card{background:var(--bg3);border:1px solid var(--border);overflow:hidden;transition:border-color .3s,transform .3s;display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer;}
-.blog-card:hover{border-color:rgba(139,92,246,.3);transform:translateY(-3px);}
-.blog-img{width:100%;background:linear-gradient(135deg,var(--bg2),var(--bg3));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+#blog{background:var(--bg);}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.blog-card{background:var(--bg2);border:1.5px solid var(--border);overflow:hidden;transition:border-color .25s,transform .25s;display:flex;flex-direction:column;text-decoration:none;color:inherit;border-radius:4px;}
+.blog-card:hover{border-color:var(--accent);transform:translateY(-3px);}
+.blog-img{width:100%;background:var(--bg3);display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .blog-img img{width:100%;height:auto;display:block;}
-.blog-img-placeholder{font-size:2.5rem;opacity:.3;padding:2rem 0;}
-.blog-meta{display:flex;gap:.8rem;align-items:center;padding:1.2rem 1.5rem .5rem;}
-.blog-cat{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;color:var(--accent);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2);padding:.2rem .6rem;}
-.blog-date{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted);}
-.blog-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--text);padding:.5rem 1.5rem .8rem;line-height:1.3;}
-.blog-excerpt{font-size:.8rem;color:var(--muted);line-height:1.65;padding:0 1.5rem 1.2rem;flex:1;}
-.blog-link{display:inline-flex;align-items:center;gap:.5rem;margin:auto 1.5rem 1.5rem;font-family:'DM Mono',monospace;font-size:.7rem;color:var(--accent);text-decoration:none;letter-spacing:.08em;}
+.blog-img-placeholder{font-size:2rem;opacity:.25;padding:2.5rem 0;}
+.blog-meta{display:flex;gap:.7rem;align-items:center;padding:1rem 1.3rem .4rem;}
+.blog-cat{font-size:.65rem;font-weight:700;color:var(--accent);background:var(--accent-l);padding:.2rem .6rem;border-radius:20px;letter-spacing:.04em;}
+.blog-date{font-size:.65rem;color:var(--muted);}
+.blog-title{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--text);padding:.4rem 1.3rem .7rem;line-height:1.3;}
+.blog-excerpt{font-size:.8rem;color:var(--muted);line-height:1.65;padding:0 1.3rem 1rem;flex:1;}
+.blog-link{display:inline-flex;align-items:center;gap:.4rem;margin:auto 1.3rem 1.3rem;font-size:.75rem;font-weight:600;color:var(--accent);text-decoration:none;}
 .blog-empty{text-align:center;padding:4rem 2rem;color:var(--muted);grid-column:1/-1;}
-.blog-empty-ico{font-size:3rem;margin-bottom:1rem;opacity:.3;}
-.blog-cta{margin-top:2.5rem;display:flex;justify-content:center;}
+.blog-empty p{font-size:.9rem;line-height:1.8;}
+.blog-cta{margin-top:2rem;display:flex;justify-content:center;}
 
 /* APROPOS */
-#apropos{background:var(--bg);}
+#apropos{background:var(--bg2);}
 .ap-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:5rem;align-items:start;}
-.ap-text{font-size:.98rem;color:var(--muted);line-height:1.9;}
-.ap-text p{margin-bottom:1.5rem;}
-.ap-text em{color:var(--text);font-style:normal;}
-.tools-lbl{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;margin-bottom:1rem;}
+.ap-text{font-size:.95rem;color:var(--muted);line-height:1.9;}
+.ap-text p{margin-bottom:1.3rem;}
+.ap-text em{color:var(--text);font-style:normal;font-weight:500;}
+.tools-lbl{font-size:.7rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.15em;margin-bottom:.8rem;}
 .tools-col{display:flex;flex-direction:column;}
-.tool-tag{font-family:'DM Mono',monospace;font-size:.78rem;color:var(--muted);padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:.6rem;transition:color .2s;}
-.tool-tag::before{content:'›';color:var(--p1);font-size:.95rem;flex-shrink:0;}
-.tool-tag:first-child{border-top:1px solid rgba(255,255,255,.04);}
+.tool-tag{font-size:.82rem;color:var(--muted);padding:.55rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;transition:color .2s;}
+.tool-tag::before{content:'›';color:var(--accent);font-size:.9rem;flex-shrink:0;}
+.tool-tag:first-child{border-top:1px solid var(--border);}
 .tool-tag:hover{color:var(--accent);}
 
 /* CONTACT */
-#contact{background:var(--bg3);}
+#contact{background:var(--bg);}
 .ct-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
-.ct-head{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.2rem;}
-.ct-head span{background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ct-head{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.2vw,2.8rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:1rem;color:var(--text);}
+.ct-head em{font-style:normal;color:var(--accent);}
 .ct-sub{font-size:.95rem;color:var(--muted);margin-bottom:2rem;line-height:1.7;}
-.ct-links{display:flex;flex-direction:column;gap:.9rem;}
-.ct-link{display:inline-flex;align-items:center;gap:.7rem;padding:.85rem 1.6rem;font-family:'DM Mono',monospace;font-size:.75rem;letter-spacing:.08em;text-decoration:none;transition:all .3s;width:fit-content;}
-.ct-link.prim{background:linear-gradient(135deg,var(--p1),var(--p3));color:#fff;border:none;}
-.ct-link.prim:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(139,92,246,.4);}
-.ct-link.sec{background:transparent;color:var(--text);border:1px solid var(--border);}
-.ct-link.sec:hover{border-color:var(--p1);color:var(--accent);}
+.ct-links{display:flex;flex-direction:column;gap:.8rem;}
+.ct-link{display:inline-flex;align-items:center;gap:.7rem;padding:.8rem 1.5rem;font-size:.82rem;font-weight:600;text-decoration:none;transition:all .2s;width:fit-content;border-radius:3px;}
+.ct-link.prim{background:var(--accent);color:#fff;}
+.ct-link.prim:hover{background:var(--accent-h);box-shadow:var(--shadow-h);}
+.ct-link.sec{background:transparent;color:var(--text);border:1.5px solid var(--border);}
+.ct-link.sec:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-l);}
 .ct-link svg{width:15px;height:15px;flex-shrink:0;}
-.ct-form{background:rgba(6,6,16,.6);border:1px solid var(--border);padding:2.3rem;backdrop-filter:blur(10px);}
-.form-ttl{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;margin-bottom:1.8rem;}
-.fg{margin-bottom:1.3rem;}
-.fg label{display:block;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-bottom:.45rem;}
-.fg input,.fg select,.fg textarea{width:100%;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.07);color:var(--text);font-family:'Inter',sans-serif;font-size:.88rem;padding:.7rem .95rem;outline:none;transition:border-color .3s;appearance:none;}
-.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238b5cf6' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer;}
-.fg select option{background:#0f0f25;}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(139,92,246,.45);}
+.ct-form{background:var(--bg2);border:1.5px solid var(--border);padding:2.2rem;border-radius:4px;}
+.form-ttl{font-size:.72rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.15em;margin-bottom:1.5rem;}
+.fg{margin-bottom:1.2rem;}
+.fg label{display:block;font-size:.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+.fg input,.fg select,.fg textarea{width:100%;background:#fff;border:1.5px solid var(--border);color:var(--text);font-family:'Inter',sans-serif;font-size:.9rem;padding:.7rem .95rem;outline:none;transition:border-color .2s;border-radius:3px;appearance:none;}
+.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C4622D' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer;}
+.fg select option{background:#fff;color:var(--text);}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--accent);}
 .fg textarea{resize:vertical;min-height:100px;}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.form-sub{width:100%;padding:.95rem;background:linear-gradient(135deg,var(--p1),var(--p3));border:none;color:#fff;font-family:'DM Mono',monospace;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:opacity .3s,transform .3s;}
-.form-sub:hover{opacity:.9;transform:translateY(-1px);}
-.form-ok{display:none;text-align:center;padding:2rem;font-family:'DM Mono',monospace;font-size:.82rem;color:var(--accent);letter-spacing:.1em;}
+.form-sub{width:100%;padding:.9rem;background:var(--accent);border:none;color:#fff;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:background .2s,transform .2s;border-radius:3px;}
+.form-sub:hover{background:var(--accent-h);transform:translateY(-1px);}
+.form-ok{display:none;text-align:center;padding:2rem;font-size:.9rem;color:var(--accent);font-weight:600;}
 
 /* REVEAL */
-.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
 .rv.on{opacity:1;transform:translateY(0);}
 .d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}.d4{transition-delay:.4s;}
 
 /* FOOTER */
-footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-.ft-left{display:flex;flex-direction:column;gap:.5rem;}
-.ft-copy{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--muted);letter-spacing:.08em;}
+footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;background:var(--bg);}
+.ft-left{display:flex;flex-direction:column;gap:.4rem;}
+.ft-copy{font-size:.72rem;color:var(--muted);}
 .ft-links{display:flex;gap:1.5rem;}
-.ft-links a{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--muted);text-decoration:none;letter-spacing:.08em;transition:color .2s;}
+.ft-links a{font-size:.72rem;color:var(--muted);text-decoration:none;transition:color .2s;}
 .ft-links a:hover{color:var(--accent);}
-.ft-logo{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:800;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ft-logo{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800;color:var(--accent);}
 
 /* MODALS */
-.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);z-index:500;align-items:center;justify-content:center;padding:2rem;}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);z-index:500;align-items:center;justify-content:center;padding:2rem;}
 .modal-bg.open{display:flex;}
-.modal{background:var(--bg3);border:1px solid var(--border);max-width:700px;width:100%;max-height:80vh;overflow-y:auto;padding:3rem;}
-.modal h3{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:1.5rem;}
-.modal h3 span{background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.modal{background:#fff;border:1.5px solid var(--border);border-radius:6px;max-width:720px;width:100%;max-height:82vh;overflow-y:auto;padding:3rem;}
+.modal h3{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--text);margin-bottom:1.5rem;}
+.modal h3 em{font-style:normal;color:var(--accent);}
 .modal p,.modal li{font-size:.85rem;color:var(--muted);line-height:1.8;margin-bottom:.8rem;}
 .modal strong{color:var(--text);}
-.modal-close{display:block;margin-top:2rem;font-family:'DM Mono',monospace;font-size:.72rem;color:var(--accent);cursor:pointer;letter-spacing:.1em;background:none;border:1px solid var(--border);padding:.6rem 1.2rem;transition:border-color .2s;}
-.modal-close:hover{border-color:var(--p1);}
+.modal ul{padding-left:0;list-style:none;}
+.modal-close{display:inline-block;margin-top:2rem;font-size:.78rem;font-weight:600;color:var(--accent);cursor:pointer;background:none;border:1.5px solid var(--border);padding:.6rem 1.2rem;border-radius:3px;transition:border-color .2s;}
+.modal-close:hover{border-color:var(--accent);}
 
 /* RESPONSIVE */
-@media(max-width:1100px){.ct-layout{grid-template-columns:1fr;gap:3rem;}.ap-layout{grid-template-columns:1fr;gap:3rem;}.hero-3d{display:none;}}
+@media(max-width:1100px){#hero{grid-template-columns:1fr;}.hero-visual{display:none;}.ct-layout{grid-template-columns:1fr;gap:3rem;}.ap-layout{grid-template-columns:1fr;gap:3rem;}}
 @media(max-width:900px){
-  nav{padding:1.1rem 1.5rem;}.nav-links{display:none;}.nav-burger{display:flex;}
-  section,header{padding:5rem 1.5rem;min-height:auto;}
-  #hero{padding:6rem 1.5rem 4rem;}
-  h1{font-size:clamp(1.7rem,6.5vw,2.8rem);}
+  nav{padding:1rem 1.5rem;}.nav-links{display:none;}.nav-burger{display:flex;}
+  section,header{padding:4.5rem 1.5rem;}
+  #hero{padding:6rem 1.5rem 4rem;min-height:auto;}
+  h1{font-size:clamp(1.9rem,6.5vw,2.8rem);}
   .sit-grid,.price-grid,.cas-grid,.blog-grid{grid-template-columns:1fr;}
   .frow{grid-template-columns:1fr;}
   footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}
   .meth-steps::before{left:16px;}
   .step-n{width:34px;height:34px;}
   .meth-step{gap:1.2rem;}
-  .hero-stats{gap:1.5rem;}
   .ap-layout{grid-template-columns:1fr;gap:2rem;}
   .tools-col{display:grid;grid-template-columns:repeat(2,1fr);}
   .tool-tag:first-child{border-top:none;}
+  .modal{padding:2rem;}
 }
 @media(max-width:600px){
-  .ct-head{font-size:clamp(1.6rem,7vw,2.2rem);}
-  .tools-col{grid-template-columns:1fr;}
   .hero-btns{flex-direction:column;}
-  .hero-stats{flex-direction:column;gap:1rem;}
+  .tools-col{grid-template-columns:1fr;}
+  .ct-head{font-size:clamp(1.6rem,7vw,2.2rem);}
 }
 </style>
 </head>
 <body>
-<canvas id="particles"></canvas>
-<div class="cur" id="cur"></div>
-<div class="cur-r" id="curR"></div>
 
 <nav aria-label="Navigation principale">
   <a href="#" class="nav-logo">JFL</a>
@@ -334,63 +316,81 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
 
 <!-- HERO -->
 <header id="hero">
-  <div class="hero-inner">
-    <div class="hero-tag"><span class="htag-dot"></span>Disponible pour de nouvelles missions</div>
-    <h1>
-      <span class="l1">Trouvez plus de clients</span>
-      <span class="l2">grâce à votre présence en ligne</span>
-    </h1>
-    <p class="hero-sub">
-      Vous n'avez pas de site ? Personne ne vous trouve sur Google ? Ou votre site ne vous rapporte rien ?<br>
-      <em>Je vous aide à créer, rendre visible et rentabiliser votre présence digitale.</em>
-    </p>
+  <div class="hero-content">
+    <div class="hero-tag">Disponible pour de nouvelles missions</div>
+    <h1>Trouvez plus de clients grâce à votre <em>présence en ligne</em></h1>
+    <p class="hero-sub">Vous n'avez pas de site ? Personne ne vous trouve sur <span style="white-space:nowrap;">Google ?</span> Ou votre site ne vous rapporte rien ?<br><em>Je vous aide à créer, rendre visible et rentabiliser votre présence digitale.</em></p>
     <div class="hero-btns">
       <a href="/creation-site/" class="btn-outline">Créer mon site</a>
       <a href="/attirer-visiteurs/" class="btn-outline">Attirer des visiteurs</a>
       <a href="/conversion/" class="btn-outline">Obtenir plus de clients</a>
     </div>
   </div>
-  <div class="hero-3d" aria-hidden="true">
-    <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="hero-visual" aria-hidden="true">
+    <svg viewBox="0 0 480 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Browser window -->
+      <rect x="40" y="60" width="300" height="220" rx="8" fill="#fff" stroke="#E5E3DF" stroke-width="2"/>
+      <rect x="40" y="60" width="300" height="36" rx="8" fill="#F7F6F4" stroke="#E5E3DF" stroke-width="2"/>
+      <circle cx="60" cy="78" r="5" fill="#E5E3DF"/>
+      <circle cx="78" cy="78" r="5" fill="#E5E3DF"/>
+      <circle cx="96" cy="78" r="5" fill="#E5E3DF"/>
+      <rect x="112" y="70" width="180" height="16" rx="4" fill="#E5E3DF"/>
+      <!-- Browser content -->
+      <rect x="60" y="114" width="120" height="10" rx="3" fill="#F0EEE9"/>
+      <rect x="60" y="132" width="200" height="6" rx="3" fill="#F0EEE9"/>
+      <rect x="60" y="146" width="160" height="6" rx="3" fill="#F0EEE9"/>
+      <rect x="60" y="172" width="80" height="28" rx="4" fill="#C4622D"/>
+      <!-- Chart -->
+      <rect x="60" y="222" width="30" height="30" rx="2" fill="#F0EEE9"/>
+      <rect x="100" y="210" width="30" height="42" rx="2" fill="#E8896A"/>
+      <rect x="140" y="198" width="30" height="54" rx="2" fill="#C4622D"/>
+      <rect x="180" y="205" width="30" height="47" rx="2" fill="#E8896A"/>
+      <rect x="220" y="192" width="30" height="60" rx="2" fill="#C4622D"/>
+      <!-- Arrow up -->
+      <path d="M310 200 L360 140" stroke="#C4622D" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M345 140 L360 140 L360 155" stroke="#C4622D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Floating cards -->
+      <rect x="290" y="240" width="150" height="70" rx="6" fill="#fff" stroke="#E5E3DF" stroke-width="1.5" filter="url(#shadow)"/>
+      <rect x="306" y="256" width="60" height="8" rx="2" fill="#F0EEE9"/>
+      <rect x="306" y="272" width="100" height="6" rx="2" fill="#F0EEE9"/>
+      <rect x="306" y="286" width="80" height="6" rx="2" fill="#F0EEE9"/>
+      <circle cx="420" cy="260" r="6" fill="#C4622D"/>
+      <!-- Badge -->
+      <rect x="60" y="320" width="140" height="50" rx="6" fill="#fff" stroke="#E5E3DF" stroke-width="1.5"/>
+      <rect x="76" y="334" width="50" height="7" rx="2" fill="#C4622D" opacity=".3"/>
+      <rect x="76" y="348" width="100" height="6" rx="2" fill="#F0EEE9"/>
+      <!-- People dots -->
+      <circle cx="380" cy="340" r="18" fill="#F7F6F4" stroke="#E5E3DF" stroke-width="1.5"/>
+      <circle cx="380" cy="334" r="6" fill="#C4622D" opacity=".6"/>
+      <path d="M368 354 Q380 348 392 354" stroke="#C4622D" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
       <defs>
-        <radialGradient id="sg1" cx="40%" cy="35%" r="60%"><stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.5"/><stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
-        <radialGradient id="sg2" cx="60%" cy="65%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.3"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+          <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000014"/>
+        </filter>
       </defs>
-      <ellipse cx="210" cy="210" rx="185" ry="62" stroke="rgba(139,92,246,.15)" stroke-width="1" fill="none"><animateTransform attributeName="transform" type="rotate" from="0 210 210" to="360 210 210" dur="18s" repeatCount="indefinite"/></ellipse>
-      <ellipse cx="210" cy="210" rx="155" ry="52" stroke="rgba(236,72,153,.12)" stroke-width="1" fill="none" transform="rotate(55 210 210)"><animateTransform attributeName="transform" type="rotate" from="55 210 210" to="415 210 210" dur="13s" repeatCount="indefinite"/></ellipse>
-      <ellipse cx="210" cy="210" rx="125" ry="42" stroke="rgba(99,102,241,.14)" stroke-width="1" fill="none" transform="rotate(110 210 210)"><animateTransform attributeName="transform" type="rotate" from="110 210 210" to="-250 210 210" dur="22s" repeatCount="indefinite"/></ellipse>
-      <ellipse cx="210" cy="210" rx="95" ry="32" stroke="rgba(168,85,247,.1)" stroke-width="1" fill="none" transform="rotate(20 210 210)"><animateTransform attributeName="transform" type="rotate" from="20 210 210" to="380 210 210" dur="28s" repeatCount="indefinite"/></ellipse>
-      <circle cx="210" cy="210" r="55" fill="url(#sg1)"/><circle cx="210" cy="210" r="35" fill="url(#sg2)"/>
-      <circle cx="210" cy="210" r="55" stroke="rgba(139,92,246,.35)" stroke-width="1" fill="none"/>
-      <circle cx="210" cy="210" r="35" stroke="rgba(236,72,153,.2)" stroke-width="1" fill="none"/>
-      <circle cx="210" cy="210" r="6" fill="#c084fc" opacity=".9"/>
-      <g><animateTransform attributeName="transform" type="rotate" from="0 210 210" to="360 210 210" dur="7s" repeatCount="indefinite"/><circle cx="395" cy="210" r="5" fill="#8b5cf6" opacity=".8"/></g>
-      <g><animateTransform attributeName="transform" type="rotate" from="120 210 210" to="480 210 210" dur="11s" repeatCount="indefinite"/><circle cx="365" cy="210" r="3.5" fill="#ec4899" opacity=".7"/></g>
-      <g><animateTransform attributeName="transform" type="rotate" from="240 210 210" to="-120 210 210" dur="9s" repeatCount="indefinite"/><circle cx="210" cy="55" r="3" fill="#6366f1" opacity=".8"/></g>
-      <line x1="30" y1="30" x2="50" y2="30" stroke="rgba(139,92,246,.4)" stroke-width="1"/>
-      <line x1="30" y1="30" x2="30" y2="50" stroke="rgba(139,92,246,.4)" stroke-width="1"/>
-      <line x1="390" y1="390" x2="370" y2="390" stroke="rgba(236,72,153,.4)" stroke-width="1"/>
-      <line x1="390" y1="390" x2="390" y2="370" stroke="rgba(236,72,153,.4)" stroke-width="1"/>
     </svg>
   </div>
 </header>
 
 <!-- SITUATION -->
-<section id="situation" aria-labelledby="situation-title">
+<section id="situation" aria-labelledby="situation-title" class="bg-alt">
   <div class="lbl">01 — Votre situation</div>
-  <h2 id="situation-title">Dans quelle situation <span>êtes-vous ?</span></h2>
-  <div class="sit-grid">
+  <h2 id="situation-title">Dans quelle situation <em>êtes-vous ?</em></h2>
+  <div class="sit-grid" style="margin-top:2.5rem;">
     <div class="sit-card rv">
+      <div class="sit-num">01</div>
       <div class="sit-title">Je n'ai pas de site</div>
       <p class="sit-text">Je crée un site professionnel simple et efficace pour présenter votre activité et permettre à vos clients de vous contacter facilement.</p>
       <a href="/creation-site/" class="sit-cta">Créer mon site →</a>
     </div>
     <div class="sit-card rv d1">
+      <div class="sit-num">02</div>
       <div class="sit-title">J'ai un site mais pas de visiteurs</div>
       <p class="sit-text">Je vous aide à apparaître sur Google et à attirer des visiteurs qualifiés sur votre site, sans budget publicitaire.</p>
       <a href="/attirer-visiteurs/" class="sit-cta">Attirer des visiteurs →</a>
     </div>
     <div class="sit-card rv d2">
+      <div class="sit-num">03</div>
       <div class="sit-title">J'ai des visiteurs mais pas de clients</div>
       <p class="sit-text">J'optimise votre site pour transformer vos visiteurs en demandes de contact et en clients réels.</p>
       <a href="/conversion/" class="sit-cta">Améliorer mes résultats →</a>
@@ -402,16 +402,16 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
 <section id="diagnostic" aria-labelledby="diagnostic-title">
   <div class="diag-inner rv">
     <div class="lbl" style="justify-content:center;">Vous hésitez ?</div>
-    <h2 id="diagnostic-title">Vous ne savez pas par où <span style="white-space:nowrap;">commencer ?</span></h2>
+    <h2 id="diagnostic-title">Vous ne savez pas par où <em style="white-space:nowrap;">commencer ?</em></h2>
     <p>Je vous propose un échange rapide pour analyser votre situation et vous orienter vers la meilleure solution. Gratuit, sans engagement, sans jargon.</p>
     <a href="#contact" class="diag-btn">Faire un diagnostic gratuit →</a>
   </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing" aria-labelledby="pricing-title">
+<section id="pricing" aria-labelledby="pricing-title" class="bg-alt">
   <div class="lbl">02 — Tarifs</div>
-  <h2 id="pricing-title">Des solutions <span>claires et accessibles</span></h2>
+  <h2 id="pricing-title">Des solutions <em>claires et accessibles</em></h2>
   <div class="price-grid">
     <div class="price-card rv">
       <div class="price-title">Création de site</div>
@@ -435,7 +435,7 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
       <a href="/conversion/" class="price-cta">En savoir plus →</a>
     </div>
   </div>
-  <div style="margin-top:2rem;text-align:center;">
+  <div style="margin-top:1.8rem;text-align:center;">
     <a href="#contact" class="btn-outline sm">Diagnostic gratuit — 0 € →</a>
   </div>
 </section>
@@ -443,7 +443,7 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
 <!-- ÉTUDES DE CAS -->
 <section id="cas" aria-labelledby="cas-title">
   <div class="lbl">03 — Exemples</div>
-  <h2 id="cas-title">Ce que ça <span>donne concrètement</span></h2>
+  <h2 id="cas-title">Ce que ça <em>donne concrètement</em></h2>
   <div class="cas-grid">
     <div class="cas-card rv">
       <div class="cas-badge">Exemple 01</div>
@@ -454,19 +454,11 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
       </div>
       <div class="cas-bloc solution">
         <div class="cas-lbl">Ce qui a été fait</div>
-        <ul>
-          <li>Création d'un site simple et clair</li>
-          <li>Optimisation pour Google</li>
-          <li>Fiche Google Business configurée</li>
-        </ul>
+        <ul><li>Création d'un site simple et clair</li><li>Optimisation pour Google</li><li>Fiche Google Business configurée</li></ul>
       </div>
       <div class="cas-res">
         <div class="cas-lbl">Résultat attendu</div>
-        <ul>
-          <li>Visible sur Google dans sa zone</li>
-          <li>Premiers contacts via le site</li>
-          <li>Crédibilité renforcée</li>
-        </ul>
+        <ul><li>Visible sur Google dans sa zone</li><li>Premiers contacts via le site</li><li>Crédibilité renforcée</li></ul>
       </div>
     </div>
     <div class="cas-card rv d1">
@@ -478,19 +470,11 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
       </div>
       <div class="cas-bloc solution">
         <div class="cas-lbl">Ce qui a été fait</div>
-        <ul>
-          <li>Simplification du message principal</li>
-          <li>Boutons de contact mieux placés</li>
-          <li>Formulaire simplifié</li>
-        </ul>
+        <ul><li>Simplification du message principal</li><li>Boutons de contact mieux placés</li><li>Formulaire simplifié</li></ul>
       </div>
       <div class="cas-res">
         <div class="cas-lbl">Résultat attendu</div>
-        <ul>
-          <li>2 à 3 fois plus de contacts</li>
-          <li>Message compris en 5 secondes</li>
-          <li>Site qui travaille pour lui</li>
-        </ul>
+        <ul><li>2 à 3 fois plus de contacts</li><li>Message compris en 5 secondes</li><li>Site qui travaille pour lui</li></ul>
       </div>
     </div>
     <div class="cas-card rv d2">
@@ -502,28 +486,20 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
       </div>
       <div class="cas-bloc solution">
         <div class="cas-lbl">Ce qui a été fait</div>
-        <ul>
-          <li>Refonte complète du site</li>
-          <li>Travail de visibilité Google</li>
-          <li>Suivi des résultats mis en place</li>
-        </ul>
+        <ul><li>Refonte complète du site</li><li>Travail de visibilité Google</li><li>Suivi des résultats mis en place</li></ul>
       </div>
       <div class="cas-res">
         <div class="cas-lbl">Résultat attendu</div>
-        <ul>
-          <li>Présence en ligne professionnelle</li>
-          <li>Trafic en croissance régulière</li>
-          <li>Clients qui les trouvent facilement</li>
-        </ul>
+        <ul><li>Présence en ligne professionnelle</li><li>Trafic en croissance régulière</li><li>Clients qui les trouvent facilement</li></ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- MÉTHODE -->
-<section id="methode" aria-labelledby="methode-title">
+<section id="methode" aria-labelledby="methode-title" class="bg-alt">
   <div class="lbl">04 — Comment ça se passe</div>
-  <h2 id="methode-title">Simple, <span>de A à Z</span></h2>
+  <h2 id="methode-title">Simple, <em>de A à Z</em></h2>
   <div class="meth-steps">
     <div class="meth-step rv">
       <div class="step-n"><span class="step-nm">01</span></div>
@@ -551,7 +527,7 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
 <!-- BLOG -->
 <section id="blog" aria-labelledby="blog-title">
   <div class="lbl">05 — Blog</div>
-  <h2 id="blog-title">Conseils & <span>ressources</span></h2>
+  <h2 id="blog-title">Conseils & <em>ressources</em></h2>
   <p class="s-intro rv">Des articles simples pour comprendre comment développer votre activité en ligne, trouver plus de clients et améliorer votre site.</p>
   <div class="blog-grid" id="blogGrid">
     <div class="blog-empty"><p>Les premiers articles arrivent bientôt.<br>Revenez dans quelques jours !</p></div>
@@ -560,11 +536,11 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
 </section>
 
 <!-- À PROPOS -->
-<section id="apropos" aria-labelledby="apropos-title">
+<section id="apropos" aria-labelledby="apropos-title" class="bg-alt">
   <div class="lbl">06 — À propos</div>
   <div class="ap-layout">
     <div>
-      <h2 id="apropos-title">Qui <span>suis-je ?</span></h2>
+      <h2 id="apropos-title">Qui <em>suis-je ?</em></h2>
       <div class="sep"></div>
       <div class="ap-text rv">
         <p>Je suis <em>Jean-François Lopresti, consultant freelance en présence digitale</em>. Après une expérience de 2 ans chez <em>Business France</em> au sein du service V.I.E, où j'ai travaillé sur des projets de communication digitale, de création de contenus et de coordination interne, j'accompagne aujourd'hui les indépendants et petites entreprises.</p>
@@ -573,7 +549,7 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
       </div>
     </div>
     <div class="rv d1">
-      <div class="tools-lbl">// Outils utilisés</div>
+      <div class="tools-lbl">Outils utilisés</div>
       <div class="tools-col">
         <span class="tool-tag">Google Search Console</span>
         <span class="tool-tag">Google Analytics 4</span>
@@ -594,7 +570,7 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
   <div class="lbl">07 — Contact</div>
   <div class="ct-layout">
     <div>
-      <h2 id="contact-title" class="ct-head rv">Parlons de<br><span>votre projet</span></h2>
+      <h2 id="contact-title" class="ct-head rv">Parlons de<br><em>votre projet</em></h2>
       <p class="ct-sub rv d1">Premier échange gratuit et sans engagement. Décrivez votre situation en quelques mots, je vous réponds sous 24h.</p>
       <div class="ct-links rv d2">
         <a href="mailto:contact@jflopresti.fr" class="ct-link prim">
@@ -608,7 +584,7 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
       </div>
     </div>
     <div class="ct-form rv d1">
-      <div class="form-ttl">// Faire un diagnostic gratuit</div>
+      <div class="form-ttl">Faire un diagnostic gratuit</div>
       <div id="formWrap">
         <div class="frow">
           <div class="fg"><label for="fn">Prénom & Nom</label><input type="text" id="fn" placeholder="Jean Dupont" autocomplete="name"></div>
@@ -638,9 +614,9 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
           </select>
         </div>
         <div class="fg"><label for="fm">Votre message (optionnel)</label><textarea id="fm" placeholder="Décrivez votre situation en quelques mots…"></textarea></div>
-        <button class="form-sub" id="formBtn" type="button"><span>Faire un diagnostic gratuit →</span></button>
+        <button class="form-sub" id="formBtn" type="button">Faire un diagnostic gratuit →</button>
       </div>
-      <div class="form-ok" id="formOk">✦ Message envoyé !<br>Je vous réponds sous 24h.</div>
+      <div class="form-ok" id="formOk">Message envoyé ! Je vous réponds sous 24h.</div>
     </div>
   </div>
 </section>
@@ -659,31 +635,33 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
   <div class="ft-logo">JFL</div>
 </footer>
 
-<!-- MODALS -->
+<!-- MODAL MENTIONS LÉGALES -->
 <div class="modal-bg" id="mlModal">
   <div class="modal">
-    <h3>Mentions <span>légales</span></h3>
-    <p><strong>Éditeur du site</strong><br>Jean-François Lopresti<br>Activité d'auto-entrepreneur / freelance<br>Email : contact@jflopresti.fr</p>
+    <h3>Mentions <em>légales</em></h3>
+    <p><strong>Éditeur du site</strong><br>Jean-François Lopresti<br>Micro-entrepreneur — Email : contact@jflopresti.fr</p>
     <p><strong>Site web</strong><br>https://jflopresti.fr</p>
     <p><strong>Hébergement</strong><br>Netlify, Inc. — 44 Montgomery Street, Suite 300, San Francisco, California 94104, États-Unis</p>
-    <p><strong>Propriété intellectuelle</strong><br>L'ensemble du contenu de ce site est la propriété exclusive de Jean-François Lopresti. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
-    <p><strong>Données personnelles</strong><br>Les données collectées via le formulaire de contact sont uniquement utilisées pour répondre à votre demande. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression en écrivant à contact@jflopresti.fr.</p>
     <p><strong>TVA et fiscalité</strong></p>
     <ul style="list-style:none;padding:0;margin-bottom:.8rem;">
-      <li style="padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.06);">Régime : Micro-entrepreneur en franchise de TVA (article 293 B du CGI).</li>
-      <li style="padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.06);">TVA intracommunautaire : FR10563244200015</li>
-      <li style="padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.06);">Pour les clients en France (B2B) : La TVA est autoliquidée par l'acheteur (article 283 du CGI).</li>
-      <li style="padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.06);">Pour les clients en France (B2C) : Pas de TVA (franchise en base).</li>
-      <li style="padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.06);">Pour les clients dans l'UE (B2C) : La TVA est due dans leur pays (régime OSS si applicable).</li>
+      <li style="padding:.3rem 0;border-bottom:1px solid var(--border);">Régime : Micro-entrepreneur en franchise de TVA (article 293 B du CGI).</li>
+      <li style="padding:.3rem 0;border-bottom:1px solid var(--border);">TVA intracommunautaire : FR10563244200015</li>
+      <li style="padding:.3rem 0;border-bottom:1px solid var(--border);">Pour les clients en France (B2B) : La TVA est autoliquidée par l'acheteur (article 283 du CGI).</li>
+      <li style="padding:.3rem 0;border-bottom:1px solid var(--border);">Pour les clients en France (B2C) : Pas de TVA (franchise en base).</li>
+      <li style="padding:.3rem 0;border-bottom:1px solid var(--border);">Pour les clients dans l'UE (B2C) : La TVA est due dans leur pays (régime OSS si applicable).</li>
       <li style="padding:.3rem 0;">Pour les clients hors UE : Aucune TVA française n'est applicable.</li>
     </ul>
+    <p><strong>Propriété intellectuelle</strong><br>L'ensemble du contenu de ce site est la propriété exclusive de Jean-François Lopresti. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+    <p><strong>Données personnelles</strong><br>Les données collectées via le formulaire de contact sont uniquement utilisées pour répondre à votre demande. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression en écrivant à contact@jflopresti.fr.</p>
     <p><strong>Cookies</strong><br>Ce site n'utilise pas de cookies de tracking ou publicitaires.</p>
     <button class="modal-close" id="mlClose">Fermer ✕</button>
   </div>
 </div>
+
+<!-- MODAL POLITIQUE DE CONFIDENTIALITÉ -->
 <div class="modal-bg" id="pcModal">
   <div class="modal">
-    <h3>Politique de <span>confidentialité</span></h3>
+    <h3>Politique de <em>confidentialité</em></h3>
     <p><strong>Responsable du traitement</strong><br>Jean-François Lopresti — contact@jflopresti.fr</p>
     <p><strong>Données collectées</strong><br>Lors de l'utilisation du formulaire de contact : nom, adresse email et message. Ces données sont transmises via Web3Forms et utilisées exclusivement pour répondre à votre demande.</p>
     <p><strong>Base légale</strong><br>Le traitement est fondé sur votre consentement (envoi volontaire du formulaire).</p>
@@ -697,82 +675,53 @@ footer{position:relative;z-index:1;padding:2.5rem 4rem;border-top:1px solid var(
 <!-- MODAL CGV -->
 <div class="modal-bg" id="cgvModal">
   <div class="modal">
-    <h3>Conditions Générales <span>de Vente</span></h3>
-
-    <p><strong>1. Objet</strong><br>Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre Jean-François Lopresti, micro-entrepreneur (ci-après « le Prestataire »), et tout client (ci-après « le Client ») ayant recours à ses services de création de site web, de visibilité en ligne et d'amélioration de la conversion.</p>
-
-    <p><strong>2. Prestations</strong><br>Les prestations proposées incluent notamment : la création de site web, le travail de visibilité sur Google, l'optimisation de la conversion, les diagnostics digitaux et toute mission de conseil en présence digitale. Le détail de chaque prestation est précisé dans le devis ou le bon de commande accepté par le Client.</p>
-
-    <p><strong>3. Devis et commande</strong><br>Toute prestation fait l'objet d'un devis préalable, valable 30 jours. La commande est réputée acceptée à réception du devis signé ou d'un accord écrit du Client (email inclus), accompagné du versement de l'acompte éventuel.</p>
-
-    <p><strong>4. Tarifs</strong><br>Les tarifs sont indiqués en euros hors taxes. Le Prestataire est en franchise en base de TVA conformément à l'article 293 B du Code général des impôts. En conséquence, aucune TVA n'est facturée pour les clients en France. Pour les clients professionnels intracommunautaires, la TVA est autoliquidée par l'acheteur conformément à l'article 283 du CGI. Les tarifs peuvent évoluer ; le tarif applicable est celui en vigueur à la date d'acceptation du devis.</p>
-
-    <p><strong>5. TVA</strong><br>Nos prestations ne sont pas soumises à la TVA française (régime de franchise en base, article 293 B du CGI). Numéro de TVA intracommunautaire : FR10563244200015.</p>
+    <h3>Conditions Générales <em>de Vente</em></h3>
+    <p><strong>1. Objet</strong><br>Les présentes CGV régissent les relations contractuelles entre Jean-François Lopresti, micro-entrepreneur, et tout client ayant recours à ses services de création de site web, de visibilité en ligne et d'amélioration de la conversion.</p>
+    <p><strong>2. Prestations</strong><br>Les prestations proposées incluent : création de site web, visibilité sur Google, optimisation de la conversion, diagnostics digitaux et toute mission de conseil en présence digitale.</p>
+    <p><strong>3. Devis et commande</strong><br>Toute prestation fait l'objet d'un devis préalable, valable 30 jours. La commande est acceptée à réception du devis signé ou d'un accord écrit, accompagné de l'acompte éventuel.</p>
+    <p><strong>4. Tarifs</strong><br>Les tarifs sont indiqués en euros. Le Prestataire est en franchise en base de TVA (article 293 B du CGI). Aucune TVA n'est facturée pour les clients en France.</p>
+    <p><strong>5. TVA</strong><br>Nos prestations ne sont pas soumises à la TVA française. Numéro de TVA intracommunautaire : FR10563244200015.</p>
     <ul style="list-style:none;padding:0;margin-bottom:.8rem;">
-      <li style="padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.06);">Clients professionnels (B2B) : La TVA est autoliquidée par l'acheteur.</li>
-      <li style="padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.06);">Clients particuliers (B2C) : Pas de TVA appliquée.</li>
+      <li style="padding:.3rem 0;border-bottom:1px solid var(--border);">Clients professionnels (B2B) : La TVA est autoliquidée par l'acheteur.</li>
+      <li style="padding:.3rem 0;border-bottom:1px solid var(--border);">Clients particuliers (B2C) : Pas de TVA appliquée.</li>
       <li style="padding:.3rem 0;">Clients dans l'UE : La TVA peut être due dans leur pays (selon le régime OSS).</li>
     </ul>
-
-    <p><strong>6. Paiement</strong><br>Sauf mention contraire dans le devis, les conditions de paiement sont les suivantes : 50 % d'acompte à la commande, 50 % à la livraison. Le paiement s'effectue par virement bancaire ou tout autre moyen convenu entre les parties. Tout retard de paiement entraîne de plein droit l'application d'une pénalité égale à 3 fois le taux d'intérêt légal, ainsi qu'une indemnité forfaitaire de recouvrement de 40 €.</p>
-
-    <p><strong>7. Délais de livraison</strong><br>Les délais indiqués dans le devis sont donnés à titre indicatif. Ils peuvent varier en fonction de la réactivité du Client dans la fourniture des éléments nécessaires à la réalisation de la prestation.</p>
-
-    <p><strong>8. Obligations du Client</strong><br>Le Client s'engage à fournir dans les délais convenus tous les éléments nécessaires à la bonne réalisation de la prestation (textes, images, accès, validations, etc.). Tout retard imputable au Client peut entraîner un décalage des délais de livraison.</p>
-
-    <p><strong>9. Propriété intellectuelle</strong><br>Jusqu'au paiement intégral de la prestation, le Prestataire conserve la propriété intellectuelle des créations réalisées. Après paiement complet, les droits d'utilisation sont cédés au Client pour l'usage défini dans le devis. Le Prestataire se réserve le droit de mentionner la réalisation dans ses références commerciales, sauf accord contraire exprès du Client.</p>
-
-    <p><strong>10. Droit de rétractation</strong><br>Conformément à l'article L.221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour les contrats de prestation de services pleinement exécutés avant la fin du délai de rétractation et dont l'exécution a commencé avec l'accord préalable exprès du Client.</p>
-
-    <p><strong>11. Responsabilité</strong><br>Le Prestataire s'engage à apporter tout le soin nécessaire à la réalisation des prestations. Sa responsabilité ne saurait être engagée en cas de préjudice indirect, de perte de chiffre d'affaires ou de données. En tout état de cause, la responsabilité du Prestataire est limitée au montant de la prestation facturée.</p>
-
-    <p><strong>12. Confidentialité</strong><br>Le Prestataire s'engage à garder confidentielles toutes les informations communiquées par le Client dans le cadre de la prestation, et à ne pas les divulguer à des tiers sans accord préalable.</p>
-
-    <p><strong>13. Droit applicable et litiges</strong><br>Les présentes CGV sont soumises au droit français. En cas de litige, une solution amiable sera recherchée en priorité. À défaut, les tribunaux compétents du ressort du domicile du Prestataire seront seuls compétents.</p>
-
-    <p><strong>14. Modification des CGV</strong><br>Le Prestataire se réserve le droit de modifier les présentes CGV à tout moment. Les CGV applicables sont celles en vigueur à la date d'acceptation du devis.</p>
-
+    <p><strong>6. Paiement</strong><br>50% d'acompte à la commande, 50% à la livraison. Tout retard entraîne une pénalité de 3 fois le taux d'intérêt légal et une indemnité forfaitaire de 40€.</p>
+    <p><strong>7. Délais</strong><br>Les délais indiqués sont donnés à titre indicatif et peuvent varier selon la réactivité du Client.</p>
+    <p><strong>8. Obligations du Client</strong><br>Le Client s'engage à fournir dans les délais tous les éléments nécessaires (textes, images, accès, validations).</p>
+    <p><strong>9. Propriété intellectuelle</strong><br>Les droits d'utilisation sont cédés au Client après paiement intégral. Le Prestataire se réserve le droit de mentionner la réalisation dans ses références.</p>
+    <p><strong>10. Droit de rétractation</strong><br>Conformément à l'article L.221-28 du Code de la consommation, le droit de rétractation ne s'applique pas aux services pleinement exécutés avant la fin du délai.</p>
+    <p><strong>11. Responsabilité</strong><br>La responsabilité du Prestataire est limitée au montant de la prestation facturée.</p>
+    <p><strong>12. Confidentialité</strong><br>Le Prestataire s'engage à garder confidentielles toutes les informations communiquées par le Client.</p>
+    <p><strong>13. Droit applicable</strong><br>Les présentes CGV sont soumises au droit français. En cas de litige, les tribunaux du ressort du domicile du Prestataire seront compétents.</p>
     <button class="modal-close" id="cgvClose">Fermer ✕</button>
   </div>
 </div>
 
 <script>
-// Particles
-const canvas = document.getElementById('particles');
-const ctx = canvas.getContext('2d');
-let W, H, pts = [];
-const COLORS = ['rgba(139,92,246,','rgba(236,72,153,','rgba(99,102,241,','rgba(168,85,247,'];
-function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
-resize();window.addEventListener('resize',resize);
-function mkPt(){return{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*1.5+.5,c:COLORS[Math.floor(Math.random()*COLORS.length)],a:Math.random()*.6+.2};}
-for(let i=0;i<90;i++)pts.push(mkPt());
-function draw(){ctx.clearRect(0,0,W,H);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.c+p.a+')';ctx.fill();});for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<120){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle='rgba(139,92,246,'+(.12*(1-d/120))+')';ctx.lineWidth=.5;ctx.stroke();}}}requestAnimationFrame(draw);}
-draw();
+// Reveal on scroll
+const rvEls = document.querySelectorAll('.rv');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});
+},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+rvEls.forEach(el => obs.observe(el));
 
-// Cursor
-const cur=document.getElementById('cur'),curR=document.getElementById('curR');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
-(function ani(){cur.style.left=mx+'px';cur.style.top=my+'px';rx+=(mx-rx)*.14;ry+=(my-ry)*.14;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(ani);})();
-
-// Reveal
-const rvEls=document.querySelectorAll('.rv');
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-rvEls.forEach(el=>obs.observe(el));
-
-// Nav + burger
-const secs=document.querySelectorAll('section[id],header[id]');
-const navAs=document.querySelectorAll('.nav-links a');
-const burger=document.getElementById('burger');
-const mobileMenu=document.getElementById('mobileMenu');
+// Nav burger
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
 function closeBurger(){mobileMenu.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded',false);}
-window.addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-200)c=s.id;});navAs.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+c?'var(--accent)':'';});if(mobileMenu.classList.contains('open'))closeBurger();},{passive:true});
+window.addEventListener('scroll',()=>{
+  let c='';
+  document.querySelectorAll('section[id],header[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-200)c=s.id;});
+  document.querySelectorAll('.nav-links a').forEach(a=>{a.style.color=a.getAttribute('href')==='#'+c?'var(--accent)':'';});
+  if(mobileMenu.classList.contains('open'))closeBurger();
+},{passive:true});
 burger.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');burger.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);});
 mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeBurger));
 
 // Form
 const W3KEY='1b64e831-b5f7-4df0-b755-a7ba321f6fc4';
-function setErr(id,e){document.getElementById(id).style.borderColor=e?'rgba(236,72,153,.6)':'';}
+function setErr(id,e){document.getElementById(id).style.borderColor=e?'#e53e3e':'';}
 document.getElementById('formBtn').addEventListener('click',async()=>{
   const n=document.getElementById('fn').value.trim();
   const e=document.getElementById('fe').value.trim();
@@ -783,13 +732,13 @@ document.getElementById('formBtn').addEventListener('click',async()=>{
   setErr('fo',!o);if(!o)ok=false;
   if(!ok)return;
   const btn=document.getElementById('formBtn');
-  btn.disabled=true;btn.querySelector('span').textContent='Envoi…';
+  btn.disabled=true;btn.textContent='Envoi…';
   try{
-    const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({access_key:W3KEY,subject:'Nouveau diagnostic — '+(o||'Autre'),from_name:n,email:e,situation:o,activite:document.getElementById('fp').value||'Non renseigné',message:document.getElementById('fm').value||'(vide)'})});
+    const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({access_key:W3KEY,subject:'Nouveau contact — '+(o||'Autre'),from_name:n,email:e,situation:o,activite:document.getElementById('fp').value||'Non renseigné',message:document.getElementById('fm').value||'(vide)'})});
     const d=await res.json();
     if(d.success){document.getElementById('formWrap').style.display='none';document.getElementById('formOk').style.display='block';}
     else throw new Error(d.message);
-  }catch(err){btn.disabled=false;btn.querySelector('span').textContent='Faire un diagnostic gratuit →';alert('Erreur : '+err.message);}
+  }catch(err){btn.disabled=false;btn.textContent='Faire un diagnostic gratuit →';alert('Erreur : '+err.message);}
 });
 
 // Modals
@@ -801,12 +750,23 @@ document.getElementById('cgv-link').addEventListener('click',e=>{e.preventDefaul
 document.getElementById('cgvClose').addEventListener('click',()=>document.getElementById('cgvModal').classList.remove('open'));
 document.querySelectorAll('.modal-bg').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');}));
 
+// Pré-remplissage formulaire via URL
+const situationMap={'creation':"Je n'ai pas de site — Créer mon site",'visibilite':"J'ai un site mais pas de visiteurs",'conversion':"J'ai des visiteurs mais pas de clients",'abonnement':"Je suis déjà client — Abonnement suivi mensuel",'diagnostic':"Je ne sais pas par où commencer"};
+(function(){
+  const params=new URLSearchParams(window.location.search);
+  const sit=params.get('situation');
+  if(!sit)return;
+  const select=document.getElementById('fo');
+  if(!select)return;
+  Array.from(select.options).forEach(opt=>{if(opt.value===sit)opt.selected=true;});
+})();
+
 // Blog
 fetch('/posts/index.json').then(r=>r.ok?r.json():[]).then(articles=>{
   if(!articles||articles.length===0)return;
   const grid=document.getElementById('blogGrid');grid.innerHTML='';
   articles.slice(0,3).forEach(a=>{
-    const thumb=a.cover?`<img src="${a.cover}" alt="${a.title}" style="width:100%;height:auto;display:block;">`:`<div class="blog-img-placeholder">${a.emoji||'📝'}</div>`;
+    const thumb=a.cover?`<img src="${a.cover}" alt="${a.title}" style="width:100%;height:auto;display:block;">`:`<div class="blog-img-placeholder">${a.emoji||''}</div>`;
     grid.innerHTML+=`<a class="blog-card rv" href="${a.url||'#'}"><div class="blog-img">${thumb}</div><div class="blog-meta"><span class="blog-cat">${a.category||'Conseils'}</span><span class="blog-date">${a.date||''}</span></div><h3 class="blog-title">${a.title}</h3><p class="blog-excerpt">${a.excerpt||''}</p><span class="blog-link">Lire l'article →</span></a>`;
   });
   document.querySelectorAll('.blog-card.rv').forEach(el=>obs.observe(el));
@@ -814,25 +774,6 @@ fetch('/posts/index.json').then(r=>r.ok?r.json():[]).then(articles=>{
 
 // Netlify Identity
 if(window.netlifyIdentity){window.netlifyIdentity.on('init',user=>{if(!user){window.netlifyIdentity.on('login',()=>{document.location.href='/admin/';});}});}
-
-// Pré-remplissage du formulaire via paramètre URL (?situation=...)
-const situationMap = {
-  'creation':    "Je n'ai pas de site — Créer mon site",
-  'visibilite':  "J'ai un site mais pas de visiteurs",
-  'conversion':  "J'ai des visiteurs mais pas de clients",
-  'abonnement':  "Je suis déjà client — Abonnement suivi mensuel",
-  'diagnostic':  "Je ne sais pas par où commencer"
-};
-(function() {
-  const params = new URLSearchParams(window.location.search);
-  const sit = params.get('situation');
-  if (!sit || !situationMap[sit]) return;
-  const select = document.getElementById('fo');
-  if (!select) return;
-  Array.from(select.options).forEach(opt => {
-    if (opt.value === sit) opt.selected = true;
-  });
-})();
 </script>
 </body>
 </html>
