@@ -48,4 +48,4 @@ La correction : des photos professionnelles, des avis clients visibles, une page
 
 ## Comment savoir ce qui bloque sur votre site ?
 
-Un regard extérieur aide à identifier rapidement les points de fuite. Un diagnostic de 30 minutes permet souvent d'identifier les 2 ou 3 changements qui feront vraiment la différence sur vos demandes de contact.
+Un regard extérieur aide à identifier rapidement les points de fuite. Un [diagnostic de 30 minutes](https://jflopresti.fr/#contact) permet souvent d'identifier les 2 ou 3 changements qui feront vraiment la différence sur vos demandes de contact.
