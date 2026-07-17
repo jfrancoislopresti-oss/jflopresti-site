@@ -2,6 +2,8 @@ backend:
   name: github
   repo: jfrancoislopresti-oss/jflopresti-site
   branch: main
+  base_url: https://cms-oauth.jfrancoislopresti.workers.dev
+  auth_endpoint: /auth
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
