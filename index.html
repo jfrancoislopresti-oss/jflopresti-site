@@ -719,174 +719,151 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
 </div>
 
 <script>
-// Reveal on scroll
+// ── Reveal on scroll ────────────────────────────────
 const rvEls = document.querySelectorAll('.rv');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});
 },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 rvEls.forEach(el => obs.observe(el));
 
-// Nav burger
+// ── Nav mobile ──────────────────────────────────────
 const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
-function closeBurger(){mobileMenu.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded',false);}
-window.addEventListener('scroll',()=>{
-  let c='';
-  document.querySelectorAll('section[id],header[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-200)c=s.id;});
-  document.querySelectorAll('.nav-links a').forEach(a=>{a.style.color=a.getAttribute('href')==='#'+c?'var(--accent)':'';});
-  if(mobileMenu.classList.contains('open'))closeBurger();
-},{passive:true});
-burger.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');burger.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);});
-mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeBurger));
+const mobileMenu = document.getElementById('mobile-menu');
+if(burger && mobileMenu){
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => { mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); });
+  });
+}
 
-// Form
-const W3KEY='1b64e831-b5f7-4df0-b755-a7ba321f6fc4';
-function setErr(id,e){document.getElementById(id).style.borderColor=e?'#e53e3e':'';}
-document.getElementById('formBtn').addEventListener('click',async()=>{
-  const n=document.getElementById('fn').value.trim();
-  const e=document.getElementById('fe').value.trim();
-  const o=document.getElementById('fo').value;
-  let ok=true;
-  setErr('fn',!n);if(!n)ok=false;
-  setErr('fe',!e);if(!e)ok=false;
-  setErr('fo',!o);if(!o)ok=false;
-  if(!ok)return;
-  const btn=document.getElementById('formBtn');
-  btn.disabled=true;btn.textContent='Envoi…';
-  try{
-    const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({access_key:W3KEY,subject:'Nouveau contact — '+(o||'Autre'),from_name:n,email:e,situation:o,activite:document.getElementById('fp').value||'Non renseigné',message:document.getElementById('fm').value||'(vide)'})});
-    const d=await res.json();
-    if(d.success){document.getElementById('formWrap').style.display='none';document.getElementById('formOk').style.display='block';}
-    else throw new Error(d.message);
-  }catch(err){btn.disabled=false;btn.textContent='Faire un diagnostic gratuit →';alert('Erreur : '+err.message);}
+// ── Formulaire ──────────────────────────────────────
+const form = document.getElementById('contact-form');
+if(form){
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type=submit]');
+    btn.disabled = true; btn.textContent = 'Envoi…';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {method:'POST',body:new FormData(form)});
+      if(res.ok){ form.style.display='none'; document.getElementById('form-success').style.display='block'; }
+      else { btn.disabled=false; btn.textContent='Faire un diagnostic gratuit →'; alert('Erreur, réessayez.'); }
+    } catch(err){ btn.disabled=false; btn.textContent='Faire un diagnostic gratuit →'; }
+  });
+}
+
+// ── Modales légales ─────────────────────────────────
+['ml','pc','cgv'].forEach(id => {
+  const openBtn = document.getElementById(id+'Btn') || document.querySelector('[href="#'+id+'Modal"]') || document.querySelector('[data-modal="'+id+'"]');
+  const modal = document.getElementById(id+'Modal');
+  const closeBtn = document.getElementById(id+'Close');
+  if(modal && closeBtn){
+    if(openBtn) openBtn.addEventListener('click', e => { e.preventDefault(); modal.classList.add('open'); });
+    closeBtn.addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', e => { if(e.target === modal) modal.classList.remove('open'); });
+  }
+});
+document.querySelectorAll('.ft-link').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if(target) target.classList.add('open');
+  });
 });
 
-// Modals
-document.getElementById('ml-link').addEventListener('click',e=>{e.preventDefault();document.getElementById('mlModal').classList.add('open');});
-document.getElementById('mlClose').addEventListener('click',()=>document.getElementById('mlModal').classList.remove('open'));
-document.getElementById('pc-link').addEventListener('click',e=>{e.preventDefault();document.getElementById('pcModal').classList.add('open');});
-document.getElementById('pcClose').addEventListener('click',()=>document.getElementById('pcModal').classList.remove('open'));
-document.getElementById('cgv-link').addEventListener('click',e=>{e.preventDefault();document.getElementById('cgvModal').classList.add('open');});
-document.getElementById('cgvClose').addEventListener('click',()=>document.getElementById('cgvModal').classList.remove('open'));
-document.querySelectorAll('.modal-bg').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');}));
+// ── Pré-remplissage formulaire ───────────────────────
+const params = new URLSearchParams(window.location.search);
+const sit = params.get('situation');
+if(sit){
+  const sel = document.getElementById('situation-select');
+  if(sel){ const opt = [...sel.options].find(o => o.value.toLowerCase().includes(sit.toLowerCase())); if(opt) sel.value = opt.value; }
+  const ctaSection = document.getElementById('contact');
+  if(ctaSection) ctaSection.scrollIntoView({behavior:'smooth'});
+}
 
-// Pré-remplissage formulaire via URL
-const situationMap={'creation':"Je n'ai pas de site — Créer mon site",'visibilite':"J'ai un site mais pas de visiteurs",'conversion':"J'ai des visiteurs mais pas de clients",'abonnement':"Je suis déjà client — Abonnement suivi mensuel",'diagnostic':"Je ne sais pas par où commencer"};
-(function(){
-  const params=new URLSearchParams(window.location.search);
-  const sit=params.get('situation');
-  if(!sit)return;
-  const select=document.getElementById('fo');
-  if(!select)return;
-  Array.from(select.options).forEach(opt=>{if(opt.value===sit)opt.selected=true;});
-})();
-
-// Blog
-fetch('/posts/index.json').then(r=>r.ok?r.json():[]).then(articles=>{
-  if(!articles||articles.length===0)return;
-  const grid=document.getElementById('blogGrid');grid.innerHTML='';
-  articles.slice(0,3).forEach(a=>{
-    const thumb=a.cover?`<img src="${a.cover}" alt="${a.title}" style="width:100%;height:auto;display:block;">`:`<div class="blog-img-placeholder">${a.emoji||''}</div>`;
-    grid.innerHTML+=`<a class="blog-card rv" href="${a.url||'#'}"><div class="blog-img">${thumb}</div><div class="blog-meta"><span class="blog-cat">${a.category||'Conseils'}</span><span class="blog-date">${a.date||''}</span></div><h3 class="blog-title">${a.title}</h3><p class="blog-excerpt">${a.excerpt||''}</p><span class="blog-link">Lire l'article →</span></a>`;
-  });
-  document.querySelectorAll('.blog-card.rv').forEach(el=>obs.observe(el));
-}).catch(()=>{});
-
-// Netlify Identity
-if(window.netlifyIdentity){window.netlifyIdentity.on('init',user=>{if(!user){window.netlifyIdentity.on('login',()=>{document.location.href='/admin/';});}});}
+// ── Netlify Identity ────────────────────────────────
+if(window.netlifyIdentity){
+  window.netlifyIdentity.on('init', u => { if(!u){ window.netlifyIdentity.on('login', () => { document.location.href='/admin/'; }); } });
+}
 </script>
+
+<canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.4;"></canvas>
+
 <script>
+// ── Particules ──────────────────────────────────────
 (function(){
-  const canvas=document.getElementById("particles-canvas");
-  const ctx=canvas.getContext("2d");
-  let W,H,pts=[],lastScroll=0;
-  const COLORS=["rgba(232,84,26,","rgba(27,58,92,","rgba(232,84,26,","rgba(27,58,92,"];
-  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
-  resize();window.addEventListener("resize",resize,{passive:true});
-  function mkPt(){return{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+.5,c:COLORS[Math.floor(Math.random()*COLORS.length)],a:Math.random()*.5+.15};}
-  for(let i=0;i<70;i++)pts.push(mkPt());
-  window.addEventListener("scroll",()=>{
-    const delta=window.scrollY-lastScroll;
-    pts.forEach(p=>{p.y-=delta*0.3;if(p.y<-10)p.y=H+10;if(p.y>H+10)p.y=-10;});
-    lastScroll=window.scrollY;
-  },{passive:true});
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, pts = [], lastScroll = 0;
+  const COLORS = ['rgba(232,84,26,','rgba(27,58,92,'];
+  function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize, {passive:true});
+  function mkPt(){ return {x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.5, vy:(Math.random()-.5)*.5, r:Math.random()*2+.5, c:COLORS[Math.floor(Math.random()*2)], a:Math.random()*.5+.15}; }
+  for(let i=0;i<70;i++) pts.push(mkPt());
+  window.addEventListener('scroll', () => {
+    const delta = window.scrollY - lastScroll;
+    pts.forEach(p => { p.y -= delta * 0.3; if(p.y < -10) p.y = H+10; if(p.y > H+10) p.y = -10; });
+    lastScroll = window.scrollY;
+  }, {passive:true});
   function draw(){
     ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{
-      p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=p.c+p.a+")";ctx.fill();
+    pts.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if(p.x<0)p.x=W; if(p.x>W)p.x=0; if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle = p.c + p.a + ')'; ctx.fill();
     });
-    for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
-      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
-      ctx.strokeStyle=pts[i].c+(0.12*(1-d/130))+")";ctx.lineWidth=.5;ctx.stroke();}
-    }}
+    for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y, d=Math.sqrt(dx*dx+dy*dy);
+      if(d<130){ ctx.beginPath(); ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y);
+        ctx.strokeStyle = pts[i].c + (0.12*(1-d/130)) + ')'; ctx.lineWidth = .5; ctx.stroke(); }
+    }
     requestAnimationFrame(draw);
   }
   draw();
 })();
-</script>
-<script>
-// ── Parallaxe au scroll ──────────────────────────────
-(function(){
-  const parallaxEls = [
-    { sel: '#hero .hero-content', speed: 0.25 },
-    { sel: '#hero .hero-visual', speed: 0.4 },
-    { sel: '#situation .lbl', speed: 0.1 },
-    { sel: '#situation h2', speed: 0.12 },
-    { sel: '#pricing .lbl', speed: 0.1 },
-    { sel: '#pricing h2', speed: 0.12 },
-    { sel: '#cas .lbl', speed: 0.08 },
-    { sel: '#methode .lbl', speed: 0.1 },
-    { sel: '#blog .lbl', speed: 0.08 },
-    { sel: '#apropos .lbl', speed: 0.1 },
-    { sel: '#contact .lbl', speed: 0.08 },
-  ];
 
-  const els = parallaxEls.map(p => ({
-    el: document.querySelector(p.sel),
-    speed: p.speed
-  })).filter(p => p.el);
+// ── Parallaxe au scroll ─────────────────────────────
+(function(){
+  const els = [
+    {sel:'#hero .hero-content', speed:.25},
+    {sel:'#hero .hero-visual', speed:.4},
+    {sel:'#situation h2', speed:.1},
+    {sel:'#pricing h2', speed:.1},
+    {sel:'#methode h2', speed:.08},
+    {sel:'#apropos h2', speed:.1},
+    {sel:'#contact h2', speed:.08},
+  ].map(p => ({el:document.querySelector(p.sel), speed:p.speed})).filter(p=>p.el);
 
   window.addEventListener('scroll', () => {
-    const sy = window.scrollY;
-    els.forEach(({ el, speed }) => {
+    els.forEach(({el, speed}) => {
       const rect = el.getBoundingClientRect();
-      const offsetFromCenter = (rect.top + rect.height / 2) - window.innerHeight / 2;
-      el.style.transform = `translateY(${offsetFromCenter * speed * -0.3}px)`;
+      const offset = (rect.top + rect.height/2 - window.innerHeight/2) * speed * -0.3;
+      el.style.transform = 'translateY(' + offset + 'px)';
     });
-  }, { passive: true });
+  }, {passive:true});
 })();
 
-// ── Tilt 3D + élévation sur les cartes ──────────────
+// ── Tilt 3D + elevation sur les cartes ─────────────
 (function(){
-  const TILT_MAX = 12;
-  const cards = document.querySelectorAll('.sit-card, .price-card, .cas-card, .blog-card');
-
-  cards.forEach(card => {
+  const TILT = 12;
+  document.querySelectorAll('.sit-card,.price-card,.cas-card,.blog-card').forEach(card => {
     card.addEventListener('mousemove', e => {
-      const rect = card.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const dx = (e.clientX - cx) / (rect.width / 2);
-      const dy = (e.clientY - cy) / (rect.height / 2);
-      const rx = -dy * TILT_MAX;
-      const ry = dx * TILT_MAX;
-      card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(12px)`;
-      card.style.boxShadow = `${-ry * 1.5}px ${rx * 1.5}px 30px rgba(232,84,26,0.25), 0 8px 40px rgba(27,58,92,0.15)`;
+      const r = card.getBoundingClientRect();
+      const rx = -((e.clientY-(r.top+r.height/2))/(r.height/2))*TILT;
+      const ry = ((e.clientX-(r.left+r.width/2))/(r.width/2))*TILT;
+      card.style.transform = 'perspective(800px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateZ(12px)';
+      card.style.boxShadow = (-ry*1.5)+'px '+(rx*1.5)+'px 30px rgba(232,84,26,0.25),0 8px 40px rgba(27,58,92,0.15)';
     });
-
     card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+      card.style.transition = 'transform .4s ease, box-shadow .4s ease';
+      card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateZ(0)';
       card.style.boxShadow = '';
-      card.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease';
     });
-
-    card.addEventListener('mouseenter', () => {
-      card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
-    });
+    card.addEventListener('mouseenter', () => { card.style.transition = 'transform .1s ease, box-shadow .1s ease'; });
   });
 })();
 </script>
