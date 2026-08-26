@@ -96,7 +96,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-logo{text-decoration:none;display:inline-flex;align-items:center;}
 .nav-back{font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}
 .nav-back:hover{color:#1B3A5C;}
-main{max-width:760px;margin:0 auto;padding:8rem 4rem 6rem;}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:8rem 4rem 6rem;}
 .art-meta{display:flex;gap:.8rem;align-items:center;margin-bottom:2rem;}
 .art-cat{font-size:.68rem;font-weight:700;color:var(--accent);background:var(--accent-l);padding:.25rem .7rem;border-radius:20px;letter-spacing:.05em;}
 .art-date{font-size:.72rem;color:var(--muted);}
@@ -126,6 +126,7 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
 </style>
 </head>
 <body>
+<canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.45;"></canvas>
 <nav>
   <a href="/" class="nav-logo"><img src="/logo.svg" alt="JFL" width="40" height="40" style="display:block;"></a>
   <a href="/blog/" class="nav-back">← Tous les articles</a>
@@ -148,6 +149,56 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
   <div class="ft-copy">© 2025 Jean-François Lopresti</div>
   <div class="ft-logo">JFL</div>
 </footer>
+<script>
+(function(){
+  const canvas=document.getElementById("particles-canvas");
+  const ctx=canvas.getContext("2d");
+  let W,H,pts=[],lastScroll=0;
+  const COLORS=["rgba(232,84,26,","rgba(27,58,92,","rgba(232,84,26,","rgba(27,58,92,"];
+  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+  resize();window.addEventListener("resize",resize,{passive:true});
+  function mkPt(){return{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+.5,c:COLORS[Math.floor(Math.random()*COLORS.length)],a:Math.random()*.5+.15};}
+  for(let i=0;i<70;i++)pts.push(mkPt());
+  window.addEventListener("scroll",()=>{
+    const sy=window.scrollY;
+    const delta=sy-lastScroll;
+    pts.forEach(p=>{
+      p.y-=delta*0.3;
+      if(p.y<-10)p.y=H+10;
+      if(p.y>H+10)p.y=-10;
+    });
+    lastScroll=sy;
+  },{passive:true});
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.c+p.a+")";ctx.fill();
+    });
+    for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
+      ctx.strokeStyle=pts[i].c+(0.12*(1-d/130))+")";ctx.lineWidth=.5;ctx.stroke();}
+    }}
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+
+(function(){
+  // Parallaxe titre article
+  window.addEventListener('scroll', () => {
+    const h1 = document.querySelector('h1');
+    if(!h1) return;
+    const rect = h1.getBoundingClientRect();
+    const offset = (rect.top + rect.height/2 - window.innerHeight/2) * -0.05;
+    h1.style.transform = `translateY(${offset}px)`;
+  }, {passive:true});
+})();
+
 </body>
 </html>`;
 
