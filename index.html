@@ -660,7 +660,7 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
     <h3>Mentions <em>légales</em></h3>
     <p><strong>Éditeur du site</strong><br>Jean-François Lopresti<br>Micro-entrepreneur — Email : contact@jflopresti.fr</p>
     <p><strong>Site web</strong><br>https://jflopresti.fr</p>
-    <p><strong>Hébergement</strong><br>Netlify, Inc. — 44 Montgomery Street, Suite 300, San Francisco, California 94104, États-Unis</p>
+    <p><strong>Hébergement</strong><br>Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, États-Unis</p>
     <p><strong>TVA et fiscalité</strong></p>
     <ul style="list-style:none;padding:0;margin-bottom:.8rem;">
       <li style="padding:.3rem 0;border-bottom:1px solid var(--border);">Régime : Micro-entrepreneur en franchise de TVA (article 293 B du CGI).</li>
@@ -772,22 +772,17 @@ if(form){
 }
 
 // ── Modales légales ─────────────────────────────────
-['ml','pc','cgv'].forEach(id => {
-  const openBtn = document.getElementById(id+'Btn') || document.querySelector('[href="#'+id+'Modal"]') || document.querySelector('[data-modal="'+id+'"]');
-  const modal = document.getElementById(id+'Modal');
-  const closeBtn = document.getElementById(id+'Close');
-  if(modal && closeBtn){
-    if(openBtn) openBtn.addEventListener('click', e => { e.preventDefault(); modal.classList.add('open'); });
-    closeBtn.addEventListener('click', () => modal.classList.remove('open'));
-    modal.addEventListener('click', e => { if(e.target === modal) modal.classList.remove('open'); });
-  }
-});
-document.querySelectorAll('.ft-link').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if(target) target.classList.add('open');
-  });
+// ── Modales ─────────────────────────────────────────
+function openModal(id){var m=document.getElementById(id);if(m)m.classList.add('open');}
+function closeModal(id){var m=document.getElementById(id);if(m)m.classList.remove('open');}
+document.getElementById('ml-link').addEventListener('click',function(e){e.preventDefault();openModal('mlModal');});
+document.getElementById('pc-link').addEventListener('click',function(e){e.preventDefault();openModal('pcModal');});
+document.getElementById('cgv-link').addEventListener('click',function(e){e.preventDefault();openModal('cgvModal');});
+document.getElementById('mlClose').addEventListener('click',function(){closeModal('mlModal');});
+document.getElementById('pcClose').addEventListener('click',function(){closeModal('pcModal');});
+document.getElementById('cgvClose').addEventListener('click',function(){closeModal('cgvModal');});
+document.querySelectorAll('.modal-bg').forEach(function(m){
+  m.addEventListener('click',function(e){if(e.target===m)m.classList.remove('open');});
 });
 
 // ── Pré-remplissage formulaire ───────────────────────
