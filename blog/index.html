@@ -18,7 +18,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-logo{text-decoration:none;display:inline-flex;align-items:center;}
 .nav-back{font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}
 .nav-back:hover{color:#1B3A5C;}
-main{max-width:1100px;margin:0 auto;padding:8rem 4rem 6rem;}
+main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:8rem 4rem 6rem;}
 .lbl{font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.7rem;}
 .lbl::before{content:'';display:inline-block;width:28px;height:2px;background:var(--accent);border-radius:2px;}
 h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:.8rem;color:var(--text);}
@@ -44,10 +44,22 @@ h2.blog-title{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;col
 footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
 .ft-copy{font-size:.72rem;color:var(--muted);}
 .ft-logo{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800;color:#1B3A5C;}
-@media(max-width:900px){nav{padding:1rem 1.5rem;}main{padding:6rem 1.5rem 4rem;}.blog-grid{grid-template-columns:1fr;}footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}}
+@media(max-width:900px){nav{padding:1rem 1.5rem;}main{position:relative;z-index:1;padding:6rem 1.5rem 4rem;}.blog-grid{grid-template-columns:1fr;}footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}}
+
+.abo-card, .blog-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  will-change: transform;
+}
+.block {
+  will-change: transform;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 </style>
 </head>
 <body>
+<canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.45;"></canvas>
 <nav>
   <a href="/" class="nav-logo"><svg width="44" height="44" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-label="JFL" style="display:block;flex-shrink:0;">
   <defs><linearGradient id="jflg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E8541A"/><stop offset="100%" stop-color="#1B3A5C"/></linearGradient></defs>
@@ -99,5 +111,107 @@ fetch('/posts/index.json').then(r=>r.ok?r.json():[]).then(articles=>{
   });
 }).catch(()=>{});
 </script>
+<script>
+(function(){
+  const canvas=document.getElementById("particles-canvas");
+  const ctx=canvas.getContext("2d");
+  let W,H,pts=[],lastScroll=0,scrollOffset=0;
+  const COLORS=["rgba(232,84,26,","rgba(27,58,92,","rgba(232,84,26,","rgba(27,58,92,"];
+  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+  resize();window.addEventListener("resize",resize,{passive:true});
+  function mkPt(){return{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+.5,c:COLORS[Math.floor(Math.random()*COLORS.length)],a:Math.random()*.5+.15};}
+  for(let i=0;i<70;i++)pts.push(mkPt());
+
+  // Scroll : déplace les particules dans la direction du scroll
+  window.addEventListener("scroll",()=>{
+    const sy=window.scrollY;
+    const delta=sy-lastScroll;
+    pts.forEach(p=>{
+      p.y-=delta*0.3; // les particules montent quand on scroll vers le bas
+      if(p.y<-10)p.y=H+10;
+      if(p.y>H+10)p.y=-10;
+    });
+    lastScroll=sy;
+  },{passive:true});
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.c+p.a+")";ctx.fill();
+    });
+    for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
+      ctx.strokeStyle=pts[i].c+(0.12*(1-d/130))+")";ctx.lineWidth=.5;ctx.stroke();}
+    }}
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+  const ctx=canvas.getContext("2d");
+  let W,H,pts=[];
+  const COLORS=["rgba(232,84,26,","rgba(27,58,92,","rgba(232,84,26,","rgba(27,58,92,"];
+  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+  resize();window.addEventListener("resize",resize,{passive:true});
+  function mkPt(){return{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+.5,c:COLORS[Math.floor(Math.random()*COLORS.length)],a:Math.random()*.5+.15};}
+  for(let i=0;i<70;i++)pts.push(mkPt());
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.c+p.a+")";ctx.fill();
+    });
+    for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
+      ctx.strokeStyle=pts[i].c+(0.12*(1-d/130))+")";ctx.lineWidth=.5;ctx.stroke();}
+    }}
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+
+(function(){
+  const TILT_MAX = 10;
+  const cards = document.querySelectorAll('.abo-card, .blog-card, .block');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = (e.clientX - cx) / (rect.width / 2);
+      const dy = (e.clientY - cy) / (rect.height / 2);
+      const rx = -dy * TILT_MAX;
+      const ry = dx * TILT_MAX;
+      card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(10px)`;
+      card.style.boxShadow = `${-ry * 1.2}px ${rx * 1.2}px 28px rgba(232,84,26,0.22), 0 6px 32px rgba(27,58,92,0.12)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+      card.style.boxShadow = '';
+      card.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease';
+    });
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
+    });
+  });
+  // Parallaxe titres
+  const lbls = document.querySelectorAll('.lbl, h1, h2');
+  window.addEventListener('scroll', () => {
+    const sy = window.scrollY;
+    lbls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * -0.04;
+      el.style.transform = `translateY(${offset}px)`;
+    });
+  }, {passive:true});
+})();
+
 </body>
 </html>
