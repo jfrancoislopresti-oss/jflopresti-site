@@ -91,7 +91,7 @@ ${cover ? `<meta property="og:image" content="https://jflopresti.fr${cover}">` :
 <style>
 :root{--bg:#FFFFFF;--bg2:#F7F6F4;--bg3:#F0EEE9;--accent:#E8541A;--accent-h:#1B3A5C;--accent-l:#FEF0EB;--text:#1A1A1A;--muted:#6B6B6B;--border:#E5E3DF;--shadow-h:0 6px 28px rgba(232,84,26,0.18);}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;}
+body{background:linear-gradient(135deg, rgba(232,84,26,0.08) 0%, #FFFFFF 40%, rgba(27,58,92,0.1) 100%);background-attachment:fixed;color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
 .nav-logo{text-decoration:none;display:inline-flex;align-items:center;}
 .nav-back{font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}
@@ -102,7 +102,7 @@ main{max-width:760px;margin:0 auto;padding:8rem 4rem 6rem;}
 .art-date{font-size:.72rem;color:var(--muted);}
 .art-cover{width:100%;height:auto;display:block;margin-bottom:2.5rem;border:1.5px solid var(--border);border-radius:4px;}
 h1{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:1.5rem;color:var(--text);}
-.art-excerpt{font-size:1.05rem;color:var(--muted);line-height:1.8;margin-bottom:2.5rem;padding:.8rem 1rem .8rem 1.2rem;border-left:3px solid var(--accent);background:var(--bg2);}
+.art-excerpt{font-size:1.05rem;color:var(--muted);line-height:1.8;margin-bottom:2.5rem;padding:.8rem 1rem .8rem 1.2rem;border-left:3px solid var(--accent);background:rgba(255,255,255,0.85);}
 .art-body{font-size:.96rem;color:#3A3A3A;line-height:1.9;}
 .art-body h2{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;margin:2.5rem 0 .9rem;color:#1B3A5C;}
 .art-body h3{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;margin:2rem 0 .7rem;color:#1B3A5C;}
