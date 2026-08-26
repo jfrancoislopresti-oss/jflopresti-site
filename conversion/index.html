@@ -3,94 +3,65 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Transformer mes visiteurs en clients — Jean-François Lopresti</title>
-<meta name="description" content="Des visiteurs sur votre site mais peu de contacts ? J'optimise votre site pour convertir vos visiteurs en clients. À partir de 390€.">
+<meta name="description" content="Des visiteurs sur votre site mais peu de contacts ? J'optimise votre site pour convertir vos visiteurs en clients. À partir de 500€.">
 <link rel="canonical" href="https://jflopresti.fr/conversion/">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="shortcut icon" href="/favicon.svg">
-<meta name="theme-color" content="#E8541A">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FFFFFF;--bg2:#F7F6F4;--bg3:#F0EEE9;--accent:#E8541A;--accent-h:#1B3A5C;--accent-l:#FEF0EB;--text:#1A1A1A;--muted:#6B6B6B;--border:#E5E3DF;--shadow-h:0 6px 28px rgba(232,84,26,0.18);}
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-body{background:linear-gradient(to bottom, rgba(232,84,26,0.12) 0%, #FFFFFF 50%, rgba(27,58,92,0.13) 100%);background-attachment:fixed;color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+:root{--bg:#FFFFFF;--bg2:#F7F6F4;--accent:#E8541A;--accent-h:#1B3A5C;--text:#1A1A1A;--muted:#6B6B6B;--border:#E5E3DF;--card:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:linear-gradient(to bottom, rgba(232,84,26,0.12) 0%, #FFFFFF 50%, rgba(27,58,92,0.13) 100%);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
 .nav-logo{text-decoration:none;display:inline-flex;align-items:center;}
-.nav-back{font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}
+.nav-back{font-size:.8rem;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:.5rem;transition:color .2s;}
 .nav-back:hover{color:#1B3A5C;}
-main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:8rem 4rem 6rem;}
-.lbl{font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.7rem;}
-.lbl::before{content:'';display:inline-block;width:28px;height:2px;background:var(--accent);border-radius:2px;}
-h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.3rem;color:var(--text);}
+main{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:8rem 4rem 6rem;}
+.lbl{font-size:.72rem;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.2rem;font-weight:600;}
+h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.5rem;color:#1B3A5C;}
 h1 em{font-style:normal;color:var(--accent);}
-.accroche{font-size:1.05rem;color:var(--muted);line-height:1.8;max-width:680px;margin-bottom:3rem;padding-left:1rem;border-left:3px solid var(--accent);}
-.accroche em{color:var(--text);font-style:normal;font-weight:500;}
+h2{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;margin-bottom:1rem;color:#1B3A5C;}
+.accroche{font-size:1.05rem;color:var(--muted);line-height:1.8;max-width:680px;margin-bottom:3rem;border-left:3px solid var(--accent);padding-left:1.5rem;}
+.accroche em{color:var(--text);font-style:normal;}
 .blocks{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:3rem;}
-.block{background:rgba(255,255,255,0.88);border:1.5px solid var(--border);padding:2.2rem;border-radius:4px;}
-.block h2{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:.8rem;color:var(--text);}
+.block{background:rgba(255,255,255,0.88);border:1.5px solid var(--border);padding:2.2rem;border-radius:4px;border-top:3px solid var(--accent);}
 .block p{font-size:.92rem;color:var(--muted);line-height:1.8;}
-.block ul{list-style:none;margin-top:.8rem;}
-.block ul li{font-size:.88rem;color:var(--muted);padding:.42rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;}
+.block ul{list-style:none;margin-top:1rem;}
+.block ul li{font-size:.9rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.7rem;}
 .block ul li:last-child{border-bottom:none;}
-.block ul li::before{content:'✦';color:var(--accent);font-size:.5rem;flex-shrink:0;}
-.price-badge{font-size:1.4rem;font-weight:700;color:var(--accent);display:inline-block;margin-bottom:.3rem;}
-
-.abo-section{margin-top:3.5rem;padding-top:3rem;border-top:1.5px solid var(--border);}
-.abo-lbl{font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:.5rem;display:flex;align-items:center;gap:.7rem;}
-.abo-lbl::before{content:'';display:inline-block;width:28px;height:2px;background:var(--accent);border-radius:2px;}
-.abo-note{font-size:.85rem;color:var(--muted);font-style:italic;margin:1rem 0 2rem;line-height:1.6;}
-.abo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
-.abo-card{background:rgba(255,255,255,0.85);border:1.5px solid var(--border);padding:2rem;border-radius:4px;display:flex;flex-direction:column;transition:border-color .25s,box-shadow .25s;}
-.abo-card:hover{border-color:var(--accent);box-shadow:var(--shadow-h);}
-.abo-card-type{font-size:.7rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;}
-.abo-card-title{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:.3rem;}
-.abo-card-price{font-size:1.3rem;font-weight:700;color:var(--accent);margin-bottom:1.1rem;}
-.abo-card ul{list-style:none;margin-bottom:1.5rem;}
-.abo-card ul li{font-size:.85rem;color:var(--muted);padding:.38rem 0;border-bottom:1px solid var(--border);display:flex;gap:.6rem;align-items:center;}
-.abo-card ul li:last-child{border-bottom:none;}
-.abo-card ul li::before{content:'✦';color:var(--accent);font-size:.5rem;flex-shrink:0;}
-.abo-card p{font-size:.88rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;}
-.abo-cta-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.4rem;background:var(--accent);color:#fff;font-size:.8rem;font-weight:600;text-decoration:none;border-radius:3px;transition:background .2s;align-self:flex-start;margin-top:auto;}
-.abo-cta-primary:hover{background:var(--accent-h);}
-.abo-cta-outline{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.4rem;background:transparent;color:var(--text);font-size:.8rem;font-weight:600;text-decoration:none;border:1.5px solid var(--border);border-radius:3px;transition:all .2s;align-self:flex-start;margin-top:auto;}
-.abo-cta-outline:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-l);}
+.block ul li::before{content:'→';color:var(--accent);font-size:.8rem;flex-shrink:0;}
+.price-badge{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent);display:inline-block;margin-bottom:.8rem;}
+.abo-section{margin-bottom:3rem;}
+.abo-section h2{font-size:1rem;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.2rem;border-bottom:1px solid var(--border);padding-bottom:.8rem;}
+.abo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+.abo-card{background:rgba(255,255,255,0.85);border:1.5px solid var(--border);padding:1.8rem;border-radius:4px;}
+.abo-card h3{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:#1B3A5C;margin-bottom:.4rem;}
+.abo-price{font-size:1.2rem;font-weight:700;color:var(--accent);margin-bottom:.8rem;}
+.abo-card ul{list-style:none;}
+.abo-card ul li{font-size:.82rem;color:var(--muted);padding:.3rem 0;display:flex;align-items:center;gap:.5rem;}
+.abo-card ul li::before{content:'·';color:var(--accent);}
+.abo-card .btn-sm{display:inline-block;margin-top:1rem;padding:.5rem 1.2rem;background:var(--accent);color:#fff;font-size:.78rem;font-weight:600;text-decoration:none;border-radius:3px;}
 .cta-zone{background:linear-gradient(to bottom, rgba(232,84,26,0.12) 0%, rgba(27,58,92,0.12) 100%);border:1.5px solid var(--border);padding:3rem;text-align:center;border-radius:4px;}
-.cta-zone h2{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:.8rem;color:var(--text);}
-.cta-zone h2 em{font-style:normal;color:var(--accent);}
+.cta-zone h2{font-size:1.8rem;margin-bottom:1rem;}
 .cta-zone p{font-size:.95rem;color:var(--muted);margin-bottom:2rem;line-height:1.7;}
-.btn-main{position:relative;z-index:1;display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2.2rem;background:var(--accent);color:#fff;font-size:.88rem;font-weight:600;text-decoration:none;border-radius:3px;transition:background .2s,transform .2s,box-shadow .2s;}
-.btn-main:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:var(--shadow-h);}
-footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-.ft-copy{font-size:.72rem;color:var(--muted);}
-.ft-logo{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800;color:#1B3A5C;}
-@media(max-width:900px){nav{padding:1rem 1.5rem;}main{position:relative;z-index:1;padding:6rem 1.5rem 4rem;}footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}.abo-grid{grid-template-columns:1fr;}}
-
-.abo-card, .blog-card {
-  transform-style: preserve-3d;
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  will-change: transform;
-}
-.block {
-  will-change: transform;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+.btn-main{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2.5rem;background:var(--accent);color:#fff;font-size:.88rem;font-weight:600;text-decoration:none;border-radius:3px;transition:background .2s,transform .2s;}
+.btn-main:hover{background:#1B3A5C;transform:translateY(-2px);}
+footer{position:relative;z-index:1;padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.ft-copy{font-size:.75rem;color:var(--muted);}
+.ft-logo{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:800;color:#1B3A5C;}
+@media(max-width:900px){nav{padding:1rem 1.5rem;}main{padding:6rem 1.5rem 4rem;}footer{padding:1.5rem;flex-direction:column;text-align:center;}.abo-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-<canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.45;"></canvas>
 <nav>
-  <a href="/" class="nav-logo"><svg width="44" height="44" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-label="JFL" style="display:block;flex-shrink:0;">
-  <defs><linearGradient id="jflg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E8541A"/><stop offset="100%" stop-color="#1B3A5C"/></linearGradient></defs>
-  <rect width="80" height="80" rx="6" fill="url(#jflg)"/>
-  <text x="40" y="53" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="30" fill="#fff" text-anchor="middle" letter-spacing="-1">JFL</text>
-</svg></a>
+  <a href="/" class="nav-logo"><img src="/logo.svg" alt="JFL" width="36" height="36" style="display:block;"></a>
   <a href="/" class="nav-back">← Retour à l'accueil</a>
 </nav>
 <main>
   <div class="lbl">Amélioration du site</div>
   <h1>Des visiteurs, oui.<br><em>Mais pas assez de clients.</em></h1>
   <p class="accroche">Un visiteur qui arrive sur votre site a souvent 10 secondes pour décider s'il reste ou s'il part. Si votre message n'est pas clair ou si le bouton de contact est introuvable — <em>il repart. Et ne revient pas.</em></p>
+
   <div class="blocks">
     <div class="block">
       <h2>Ce que je fais pour vous</h2>
@@ -108,43 +79,40 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
     </div>
     <div class="block">
       <h2>Pour qui ?</h2>
-      <p>Entreprises qui ont du trafic sur leur site mais peu de demandes de contact. Toute structure qui veut rentabiliser sa présence en ligne sans augmenter son budget publicitaire.</p>
+      <p>Entreprises qui ont du trafic sur leur site mais peu de demandes de contact ou de ventes. Toute structure qui veut rentabiliser sa présence en ligne sans augmenter son budget publicitaire.</p>
     </div>
     <div class="block">
       <div class="price-badge">À partir de 500 €</div>
-      <p style="margin-top:.8rem;">Le tarif dépend de ce qui doit être amélioré. On commence par un diagnostic gratuit pour identifier les points de blocage.</p>
+      <p>Le tarif dépend de ce qui doit être amélioré. On commence toujours par un diagnostic gratuit pour identifier les points de blocage.</p>
     </div>
   </div>
 
   <div class="abo-section">
-    <div class="abo-lbl">Suivi & accompagnement</div>
-    <p class="abo-note">Réservé aux clients ayant souscrit une offre — pour continuer à progresser sans s'en occuper.</p>
+    <h2>Suivi &amp; accompagnement</h2>
+    <p style="font-size:.88rem;color:var(--muted);margin-bottom:1.2rem;">Réservé aux clients ayant souscrit une offre.</p>
     <div class="abo-grid">
       <div class="abo-card">
-        <div class="abo-card-type">Abonnement mensuel</div>
-        <div class="abo-card-title">Suivi mensuel</div>
-        <div class="abo-card-price">300 € / mois</div>
+        <h3>Abonnement mensuel</h3>
+        <div class="abo-price">Suivi mensuel<br>300 € / mois</div>
         <ul>
-          <li>Maintenance technique et corrections</li>
-          <li>Suivi de la visibilité sur Google</li>
-          <li>Améliorations selon vos demandes</li>
+          <li>Améliorations continues du site</li>
+          <li>Suivi des performances</li>
           <li>Rapport mensuel clair</li>
           <li>3h de support par mois</li>
         </ul>
-        <a href="/?situation=abonnement#contact" class="abo-cta-primary">En savoir plus →</a>
+        <a href="/?situation=abonnement#contact" class="btn-sm">En savoir plus →</a>
       </div>
       <div class="abo-card">
-        <div class="abo-card-type">Accompagnement personnalisé</div>
-        <div class="abo-card-title">Sur-mesure</div>
-        <div class="abo-card-price">Sur devis</div>
-        <p>Accompagnement personnalisé selon vos besoins et votre activité. Fréquence, périmètre et tarif définis ensemble.</p>
-        <a href="/?situation=abonnement#contact" class="abo-cta-outline">Discuter de mes besoins →</a>
+        <h3>Accompagnement personnalisé</h3>
+        <div class="abo-price">Sur-mesure<br>Sur devis</div>
+        <p style="font-size:.82rem;color:var(--muted);line-height:1.7;">Accompagnement personnalisé selon vos besoins. Fréquence, périmètre et tarif définis ensemble.</p>
+        <a href="/?situation=abonnement#contact" class="btn-sm">Discuter de mes besoins →</a>
       </div>
     </div>
   </div>
 
-  <div class="cta-zone" style="margin-top:3rem;">
-    <h2>Votre site peut faire<br><em>beaucoup mieux.</em></h2>
+  <div class="cta-zone">
+    <h2>Votre site peut faire<br><em style="font-style:normal;color:var(--accent);">beaucoup mieux.</em></h2>
     <p>Un premier échange gratuit pour voir ce qui vous fait perdre des clients, et comment y remédier rapidement.</p>
     <a href="/?situation=conversion#contact" class="btn-main">Faire un diagnostic gratuit →</a>
   </div>
@@ -153,75 +121,5 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
   <div class="ft-copy">© 2025 Jean-François Lopresti</div>
   <div class="ft-logo">JFL</div>
 </footer>
-<script>
-(function(){
-  const canvas=document.getElementById("particles-canvas");
-  const ctx=canvas.getContext("2d");
-  let W,H,pts=[],lastScroll=0;
-  const COLORS=["rgba(232,84,26,","rgba(27,58,92,","rgba(232,84,26,","rgba(27,58,92,"];
-  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
-  resize();window.addEventListener("resize",resize,{passive:true});
-  function mkPt(){return{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+.5,c:COLORS[Math.floor(Math.random()*COLORS.length)],a:Math.random()*.5+.15};}
-  for(let i=0;i<70;i++)pts.push(mkPt());
-  window.addEventListener("scroll",()=>{
-    const delta=window.scrollY-lastScroll;
-    pts.forEach(p=>{p.y-=delta*0.3;if(p.y<-10)p.y=H+10;if(p.y>H+10)p.y=-10;});
-    lastScroll=window.scrollY;
-  },{passive:true});
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{
-      p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=p.c+p.a+")";ctx.fill();
-    });
-    for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
-      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
-      ctx.strokeStyle=pts[i].c+(0.12*(1-d/130))+")";ctx.lineWidth=.5;ctx.stroke();}
-    }}
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
-</script>
-
-(function(){
-  const TILT_MAX = 10;
-  const cards = document.querySelectorAll('.abo-card, .blog-card, .block');
-  cards.forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const rect = card.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const dx = (e.clientX - cx) / (rect.width / 2);
-      const dy = (e.clientY - cy) / (rect.height / 2);
-      const rx = -dy * TILT_MAX;
-      const ry = dx * TILT_MAX;
-      card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(10px)`;
-      card.style.boxShadow = `${-ry * 1.2}px ${rx * 1.2}px 28px rgba(232,84,26,0.22), 0 6px 32px rgba(27,58,92,0.12)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
-      card.style.boxShadow = '';
-      card.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease';
-    });
-    card.addEventListener('mouseenter', () => {
-      card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
-    });
-  });
-  // Parallaxe titres
-  const lbls = document.querySelectorAll('.lbl, h1, h2');
-  window.addEventListener('scroll', () => {
-    const sy = window.scrollY;
-    lbls.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * -0.04;
-      el.style.transform = `translateY(${offset}px)`;
-    });
-  }, {passive:true});
-})();
-</script>
 </body>
 </html>
