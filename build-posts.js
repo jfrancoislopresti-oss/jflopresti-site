@@ -188,19 +188,21 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
 })();
 </script>
 
+<script>
 (function(){
-  // Parallaxe titre article
   window.addEventListener('scroll', () => {
     const h1 = document.querySelector('h1');
     if(!h1) return;
     const rect = h1.getBoundingClientRect();
     const offset = (rect.top + rect.height/2 - window.innerHeight/2) * -0.05;
-    h1.style.transform = `translateY(${offset}px)`;
+    h1.style.transform = 'translateY(' + offset + 'px)';
   }, {passive:true});
 })();
+</script>
 
 </body>
 </html>`;
+
 
   fs.writeFileSync(path.join(articleDir, 'index.html'), htmlContent);
 
