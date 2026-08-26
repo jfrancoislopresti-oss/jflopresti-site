@@ -199,8 +199,8 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
       const dy = (e.clientY - cy) / (rect.height / 2);
       const rx = -dy * TILT_MAX;
       const ry = dx * TILT_MAX;
-      card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(10px)`;
-      card.style.boxShadow = `${-ry * 1.2}px ${rx * 1.2}px 28px rgba(232,84,26,0.22), 0 6px 32px rgba(27,58,92,0.12)`;
+      card.style.transform = 'perspective(800px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateZ(10px)';
+      card.style.boxShadow = (-ry*1.2)+'px '+(rx*1.2)+'px 28px rgba(232,84,26,0.22),0 6px 32px rgba(27,58,92,0.12)';
     });
     card.addEventListener('mouseleave', () => {
       card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
@@ -218,7 +218,7 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
     lbls.forEach(el => {
       const rect = el.getBoundingClientRect();
       const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * -0.04;
-      el.style.transform = `translateY(${offset}px)`;
+      el.style.transform = 'translateY(' + offset + 'px)';
     });
   }, {passive:true});
 })();
