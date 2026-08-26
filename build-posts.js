@@ -91,7 +91,7 @@ ${cover ? `<meta property="og:image" content="https://jflopresti.fr${cover}">` :
 <style>
 :root{--bg:#FFFFFF;--bg2:#F7F6F4;--bg3:#F0EEE9;--accent:#E8541A;--accent-h:#1B3A5C;--accent-l:#FEF0EB;--text:#1A1A1A;--muted:#6B6B6B;--border:#E5E3DF;--shadow-h:0 6px 28px rgba(232,84,26,0.18);}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:linear-gradient(135deg, rgba(232,84,26,0.08) 0%, #FFFFFF 40%, rgba(27,58,92,0.1) 100%);background-attachment:fixed;color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;}
+body{background:linear-gradient(to bottom, rgba(232,84,26,0.12) 0%, #FFFFFF 50%, rgba(27,58,92,0.13) 100%);background-attachment:fixed;color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
 .nav-logo{text-decoration:none;display:inline-flex;align-items:center;}
 .nav-back{font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}
