@@ -731,7 +731,7 @@ fetch('/posts/index.json')
       var img = p.cover
         ? '<div class="blog-img"><img src="'+p.cover+'" alt="'+p.title+'" loading="lazy"></div>'
         : '<div class="blog-img"><div class="blog-img-placeholder">'+(p.emoji||'📝')+'</div></div>';
-      return '<a href="'+(p.url||'#')+'" class="blog-card rv">'+img+'<div class="blog-meta"><span class="blog-cat">'+(p.category||'')+'</span><span class="blog-date">'+(p.date||'')+'</span></div><div class="blog-title">'+(p.title||'')+'</div><div class="blog-excerpt">'+(p.excerpt||'')+'</div></a>';
+      return '<a href="'+(p.url||'#')+'" class="blog-card">'+img+'<div class="blog-meta"><span class="blog-cat">'+(p.category||'')+'</span><span class="blog-date">'+(p.date||'')+'</span></div><div class="blog-title">'+(p.title||'')+'</div><div class="blog-excerpt">'+(p.excerpt||'')+'</div></a>';
     }).join('');
   })
   .catch(function(){});
