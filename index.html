@@ -550,7 +550,6 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
   <h2 id="blog-title">Conseils & <em>ressources</em></h2>
   <p class="s-intro rv">Des articles simples pour comprendre comment développer votre activité en ligne, trouver plus de clients et améliorer votre site.</p>
   <div class="blog-grid" id="blogGrid">
-    <div class="blog-empty"><p>Les premiers articles arrivent bientôt.<br>Revenez dans quelques jours !</p></div>
   </div>
   <div class="blog-cta rv"><a href="/blog/" class="btn-outline">Voir tous les articles</a></div>
 </section>
@@ -719,6 +718,31 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
 </div>
 
 <script>
+
+// ── Chargement des articles ─────────────────────────
+(function(){
+  var grid = document.getElementById('blogGrid');
+  if(!grid) return;
+  fetch('/posts/index.json')
+    .then(function(r){ return r.json(); })
+    .then(function(posts){
+      var visible = posts.filter(function(p){ return p.published !== false; }).slice(0,3);
+      if(!visible.length){
+        grid.innerHTML = '<div class="blog-empty"><p>Les premiers articles arrivent bientôt.<br>Revenez dans quelques jours !</p></div>';
+        return;
+      }
+      grid.innerHTML = visible.map(function(p){
+        var img = p.cover
+          ? '<div class="blog-img"><img src="'+p.cover+'" alt="'+p.title+'" loading="lazy"></div>'
+          : '<div class="blog-img"><div class="blog-img-placeholder">'+p.emoji+'</div></div>';
+        return '<a href="/posts/'+p.filename+'/" class="blog-card rv">'+img+'<div class="blog-meta"><span class="blog-cat">'+p.category+'</span><span class="blog-date">'+p.date+'</span></div><div class="blog-title">'+p.title+'</div><div class="blog-excerpt">'+p.excerpt+'</div></a>';
+      }).join('');
+    })
+    .catch(function(){
+      grid.innerHTML = '<div class="blog-empty"><p>Les premiers articles arrivent bientôt.<br>Revenez dans quelques jours !</p></div>';
+    });
+})();
+
 // ── Reveal on scroll ────────────────────────────────
 const rvEls = document.querySelectorAll('.rv');
 const obs = new IntersectionObserver(entries => {
