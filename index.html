@@ -745,14 +745,15 @@ rvEls.forEach(el => obs.observe(el));
 
 // ── Nav mobile ──────────────────────────────────────
 const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenu = document.getElementById('mobileMenu');
 if(burger && mobileMenu){
-  burger.addEventListener('click', () => {
+  burger.addEventListener('click', function(){
     mobileMenu.classList.toggle('open');
+    burger.classList.toggle('open');
     burger.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
   });
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => { mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); });
+  mobileMenu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ mobileMenu.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); });
   });
 }
 
