@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page introuvable — Jean-François Lopresti</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;font-family:'Inter',sans-serif;color:#1A1A1A;background:linear-gradient(to bottom,rgba(232,84,26,0.12),#fff 50%,rgba(27,58,92,0.13));}
+.code{font-family:'Syne',sans-serif;font-size:6rem;font-weight:800;color:#E8541A;line-height:1;}
+h1{font-family:'Syne',sans-serif;font-size:1.6rem;color:#1B3A5C;margin:1rem 0.5rem;}
+p{color:#6B6B6B;margin-bottom:2rem;line-height:1.7;}
+a{display:inline-block;padding:1rem 2.2rem;background:#E8541A;color:#fff;text-decoration:none;font-weight:600;border-radius:3px;}
+a:hover{background:#1B3A5C;}
+</style>
+</head>
+<body>
+<div>
+  <div class="code">404</div>
+  <h1>Cette page n'existe pas</h1>
+  <p>Le lien est peut-être ancien ou mal tapé.</p>
+  <a href="/">Retour à l'accueil</a>
+</div>
+</body>
+</html>
