@@ -19,7 +19,7 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "DD/MM/YYYY", date_format: "DD/MM/YYYY", time_format: false }
-      - { label: "Catégorie", name: "category", widget: "select", options: ["Être visible sur Google", "Améliorer son site", "Trouver des clients", "Développer son activité"] }
+      - { label: "Catégorie", name: "category", widget: "select", options: ["Être visible sur Google", "Améliorer son site", "Trouver des clients", "Développer son activité", "Réseaux sociaux"] }
       - { label: "Image de couverture", name: "cover", widget: "image", required: false }
       - { label: "Emoji (si pas d'image)", name: "emoji", widget: "string", default: "📝", required: false }
       - { label: "Extrait", name: "excerpt", widget: "text" }
