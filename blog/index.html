@@ -60,44 +60,84 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
 </style>
 </head>
 <body>
+<canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.4;"></canvas>
+
+<nav>
+  <a href="/" style="text-decoration:none;display:inline-flex;align-items:center;">
+    <svg width="44" height="44" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+      <defs><linearGradient id="jflg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E8541A"/><stop offset="100%" stop-color="#1B3A5C"/></linearGradient></defs>
+      <rect width="80" height="80" rx="6" fill="url(#jflg)"/>
+      <text x="40" y="53" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="30" fill="#fff" text-anchor="middle" letter-spacing="-1">JFL</text>
+    </svg>
+  </a>
+  <a href="/" class="nav-back" style="font-size:.8rem;color:var(--muted);text-decoration:none;">← Retour à l'accueil</a>
+</nav>
+
+<main style="position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:8rem 4rem 6rem;">
+  <div class="lbl" style="font-size:.72rem;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.2rem;font-weight:600;">Blog</div>
+  <h1 style="font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:1rem;color:#1B3A5C;">Conseils &amp; <em style="font-style:normal;color:var(--accent);">ressources</em></h1>
+  <p style="font-size:1rem;color:var(--muted);line-height:1.8;max-width:680px;margin-bottom:2.5rem;">Des articles simples pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence et de PACA : créer son site, être visible sur Google, animer ses réseaux sociaux et trouver des clients en ligne.</p>
+
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-cat="all">Tous</button>
+  </div>
+
+  <div class="blog-grid" id="blogGrid">
+    <div class="empty">Chargement des articles…</div>
+  </div>
+</main>
+
+<footer>
+  <div class="ft-copy">© 2025 Jean-François Lopresti</div>
+  <div class="ft-logo">JFL</div>
+</footer>
 
 <script>
 (function(){
-  const canvas=document.getElementById("particles-canvas");
-  const ctx=canvas.getContext("2d");
-  let W,H,pts=[],lastScroll=0;
-  const COLORS=["rgba(232,84,26,","rgba(27,58,92,","rgba(232,84,26,","rgba(27,58,92,"];
-  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
-  resize();window.addEventListener("resize",resize,{passive:true});
-  function mkPt(){return{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+.5,c:COLORS[Math.floor(Math.random()*COLORS.length)],a:Math.random()*.5+.15};}
-  for(let i=0;i<70;i++)pts.push(mkPt());
-  window.addEventListener("scroll",()=>{
-    const delta=window.scrollY-lastScroll;
-    pts.forEach(p=>{p.y-=delta*0.3;if(p.y<-10)p.y=H+10;if(p.y>H+10)p.y=-10;});
-    lastScroll=window.scrollY;
-  },{passive:true});
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{
-      p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=p.c+p.a+")";ctx.fill();
-    });
-    for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
-      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
-      ctx.strokeStyle=pts[i].c+(0.12*(1-d/130))+")";ctx.lineWidth=.5;ctx.stroke();}
-    }}
-    requestAnimationFrame(draw);
+  var grid = document.getElementById('blogGrid');
+  var filters = document.getElementById('filters');
+  var posts = [];
+  function render(cat){
+    var list = posts.filter(function(p){ return p.published !== false && (cat === 'all' || p.category === cat); });
+    if(!list.length){ grid.innerHTML = '<div class="empty">Les premiers articles arrivent bientôt.</div>'; return; }
+    grid.innerHTML = list.map(function(p){
+      var img = p.cover
+        ? '<div class="blog-img"><img src="'+p.cover+'" alt="'+(p.title||'')+'" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>'
+        : '<div class="blog-img"><div class="blog-img-placeholder">'+(p.emoji||'📝')+'</div></div>';
+      return '<a href="'+(p.url||'#')+'" class="blog-card">'+img+
+        '<div class="blog-meta"><span class="blog-cat">'+(p.category||'')+'</span><span class="blog-date">'+(p.date||'')+'</span></div>'+
+        '<h2 class="blog-title">'+(p.title||'')+'</h2>'+
+        '<p class="blog-excerpt">'+(p.excerpt||'')+'</p>'+
+        '<span class="blog-link">Lire l\'article →</span></a>';
+    }).join('');
   }
-  draw();
+  fetch('/posts/index.json')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      posts = data;
+      var cats = [];
+      posts.forEach(function(p){ if(p.category && cats.indexOf(p.category) === -1) cats.push(p.category); });
+      cats.forEach(function(cat){
+        var b = document.createElement('button');
+        b.className = 'filter-btn'; b.textContent = cat; b.setAttribute('data-cat', cat);
+        filters.appendChild(b);
+      });
+      filters.addEventListener('click', function(e){
+        var btn = e.target.closest('.filter-btn'); if(!btn) return;
+        filters.querySelectorAll('.filter-btn').forEach(function(x){ x.classList.remove('active'); });
+        btn.classList.add('active');
+        render(btn.getAttribute('data-cat'));
+      });
+      render('all');
+    })
+    .catch(function(){ grid.innerHTML = '<div class="empty">Les premiers articles arrivent bientôt.</div>'; });
 })();
 </script>
-<canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.4;"></canvas>
+
 <script>
 (function(){
   var canvas = document.getElementById('particles-canvas');
+  if(!canvas) return;
   var ctx = canvas.getContext('2d');
   var W, H, pts = [], lastScroll = 0;
   var COLORS = ['rgba(232,84,26,','rgba(27,58,92,'];
@@ -127,36 +167,6 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
     requestAnimationFrame(draw);
   }
   draw();
-})();
-</script>
-<script>
-(function(){
-  var TILT_MAX = 10;
-  var cards = document.querySelectorAll('.abo-card, .blog-card, .block, .price-card');
-  cards.forEach(function(card){
-    card.addEventListener('mousemove', function(e){
-      var rect = card.getBoundingClientRect();
-      var rx = -((e.clientY-(rect.top+rect.height/2))/(rect.height/2))*TILT_MAX;
-      var ry = ((e.clientX-(rect.left+rect.width/2))/(rect.width/2))*TILT_MAX;
-      card.style.transform = 'perspective(800px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateZ(10px)';
-      card.style.boxShadow = (-ry*1.2)+'px '+(rx*1.2)+'px 28px rgba(232,84,26,0.22),0 6px 32px rgba(27,58,92,0.12)';
-    });
-    card.addEventListener('mouseleave', function(){
-      card.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease';
-      card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
-      card.style.boxShadow = '';
-    });
-    card.addEventListener('mouseenter', function(){
-      card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
-    });
-  });
-  window.addEventListener('scroll', function(){
-    document.querySelectorAll('h1, h2').forEach(function(el){
-      var rect = el.getBoundingClientRect();
-      var offset = (rect.top + rect.height/2 - window.innerHeight/2) * -0.04;
-      el.style.transform = 'translateY('+offset+'px)';
-    });
-  }, {passive:true});
 })();
 </script>
 </body>
