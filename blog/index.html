@@ -2,8 +2,9 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Jean-François Lopresti</title>
-<meta name="description" content="Articles simples sur la création de site, la visibilité sur Google et l'amélioration de votre présence digitale.">
+<title>Blog : site web, Google et réseaux sociaux pour artisans et indépendants — Alpes-de-Haute-Provence | Jean-François Lopresti</title>
+<meta name="description" content="Conseils simples pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence et de PACA : créer son site, être visible sur Google, animer ses réseaux sociaux et trouver des clients en ligne.">
+<link rel="canonical" href="https://jflopresti.fr/blog/">
 <link rel="canonical" href="https://jflopresti.fr/blog/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="shortcut icon" href="/favicon.svg">
@@ -59,58 +60,7 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
 </style>
 </head>
 <body>
-<canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.45;"></canvas>
-<nav>
-  <a href="/" class="nav-logo"><svg width="44" height="44" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-label="JFL" style="display:block;flex-shrink:0;">
-  <defs><linearGradient id="jflg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E8541A"/><stop offset="100%" stop-color="#1B3A5C"/></linearGradient></defs>
-  <rect width="80" height="80" rx="6" fill="url(#jflg)"/>
-  <text x="40" y="53" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="30" fill="#fff" text-anchor="middle" letter-spacing="-1">JFL</text>
-</svg></a>
-  <a href="/" class="nav-back">← Retour à l'accueil</a>
-</nav>
-<main>
-  <div class="lbl">Blog</div>
-  <h1>Conseils & <em>ressources</em></h1>
-  <p class="subtitle">Des articles simples pour comprendre comment développer votre activité en ligne, trouver plus de clients et améliorer votre site.</p>
-  <div class="filters" id="filters">
-    <button class="filter-btn active" data-cat="all">Tous</button>
-    <button class="filter-btn" data-cat="Être visible sur Google">Être visible sur Google</button>
-    <button class="filter-btn" data-cat="Améliorer son site">Améliorer son site</button>
-    <button class="filter-btn" data-cat="Trouver des clients">Trouver des clients</button>
-    <button class="filter-btn" data-cat="Développer son activité">Développer son activité</button>
-  </div>
-  <div class="blog-grid" id="grid">
-    <div class="empty"><p>Les premiers articles arrivent bientôt.<br>Revenez dans quelques jours !</p></div>
-  </div>
-</main>
-<footer>
-  <div class="ft-copy">© 2025 Jean-François Lopresti</div>
-  <div class="ft-logo">JFL</div>
-</footer>
-<script>
-fetch('/posts/index.json').then(r=>r.ok?r.json():[]).then(articles=>{
-  if(!articles||articles.length===0)return;
-  const grid=document.getElementById('grid');grid.innerHTML='';
-  articles.forEach((a,i)=>{
-    const card=document.createElement('a');
-    card.href=a.url||'#';
-    card.className='blog-card';
-    card.dataset.cat=a.category||'';
-    card.style.animationDelay=(i*.08)+'s';
-    const thumb=a.cover?`<img src="${a.cover}" alt="${a.title}" style="width:100%;height:auto;display:block;">`:`<div class="blog-img-placeholder"></div>`;
-    card.innerHTML=`<div class="blog-img">${thumb}</div><div class="blog-meta"><span class="blog-cat">${a.category||'Conseils'}</span><span class="blog-date">${a.date||''}</span></div><h2 class="blog-title">${a.title}</h2><p class="blog-excerpt">${a.excerpt||''}</p><span class="blog-link">Lire l'article →</span>`;
-    grid.appendChild(card);
-  });
-  document.querySelectorAll('.filter-btn').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-      const cat=btn.dataset.cat;
-      document.querySelectorAll('.blog-card').forEach(c=>{c.classList.toggle('hidden',cat!=='all'&&c.dataset.cat!==cat);});
-    });
-  });
-}).catch(()=>{});
-</script>
+
 <script>
 (function(){
   const canvas=document.getElementById("particles-canvas");
@@ -144,39 +94,67 @@ fetch('/posts/index.json').then(r=>r.ok?r.json():[]).then(articles=>{
   draw();
 })();
 </script>
-
+<canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.4;"></canvas>
+<script>
 (function(){
-  const TILT_MAX = 10;
-  const cards = document.querySelectorAll('.abo-card, .blog-card, .block');
-  cards.forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const rect = card.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const dx = (e.clientX - cx) / (rect.width / 2);
-      const dy = (e.clientY - cy) / (rect.height / 2);
-      const rx = -dy * TILT_MAX;
-      const ry = dx * TILT_MAX;
-      card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(10px)`;
-      card.style.boxShadow = `${-ry * 1.2}px ${rx * 1.2}px 28px rgba(232,84,26,0.22), 0 6px 32px rgba(27,58,92,0.12)`;
+  var canvas = document.getElementById('particles-canvas');
+  var ctx = canvas.getContext('2d');
+  var W, H, pts = [], lastScroll = 0;
+  var COLORS = ['rgba(232,84,26,','rgba(27,58,92,'];
+  function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize, {passive:true});
+  function mkPt(){ return {x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.5, vy:(Math.random()-.5)*.5, r:Math.random()*2+.5, c:COLORS[Math.floor(Math.random()*2)], a:Math.random()*.5+.15}; }
+  for(var i=0;i<60;i++) pts.push(mkPt());
+  window.addEventListener('scroll', function(){
+    var delta = window.scrollY - lastScroll;
+    pts.forEach(function(p){ p.y -= delta*0.3; if(p.y<-10)p.y=H+10; if(p.y>H+10)p.y=-10; });
+    lastScroll = window.scrollY;
+  }, {passive:true});
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(function(p){
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=W; if(p.x>W)p.x=0; if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.c+p.a+')'; ctx.fill();
     });
-    card.addEventListener('mouseleave', () => {
+    for(var i=0;i<pts.length;i++) for(var j=i+1;j<pts.length;j++){
+      var dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y, d=Math.sqrt(dx*dx+dy*dy);
+      if(d<120){ ctx.beginPath(); ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y);
+        ctx.strokeStyle=pts[i].c+(0.1*(1-d/120))+')'; ctx.lineWidth=.5; ctx.stroke(); }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+<script>
+(function(){
+  var TILT_MAX = 10;
+  var cards = document.querySelectorAll('.abo-card, .blog-card, .block, .price-card');
+  cards.forEach(function(card){
+    card.addEventListener('mousemove', function(e){
+      var rect = card.getBoundingClientRect();
+      var rx = -((e.clientY-(rect.top+rect.height/2))/(rect.height/2))*TILT_MAX;
+      var ry = ((e.clientX-(rect.left+rect.width/2))/(rect.width/2))*TILT_MAX;
+      card.style.transform = 'perspective(800px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateZ(10px)';
+      card.style.boxShadow = (-ry*1.2)+'px '+(rx*1.2)+'px 28px rgba(232,84,26,0.22),0 6px 32px rgba(27,58,92,0.12)';
+    });
+    card.addEventListener('mouseleave', function(){
+      card.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease';
       card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
       card.style.boxShadow = '';
-      card.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease';
     });
-    card.addEventListener('mouseenter', () => {
+    card.addEventListener('mouseenter', function(){
       card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
     });
   });
-  // Parallaxe titres
-  const lbls = document.querySelectorAll('.lbl, h1, h2');
-  window.addEventListener('scroll', () => {
-    const sy = window.scrollY;
-    lbls.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * -0.04;
-      el.style.transform = `translateY(${offset}px)`;
+  window.addEventListener('scroll', function(){
+    document.querySelectorAll('h1, h2').forEach(function(el){
+      var rect = el.getBoundingClientRect();
+      var offset = (rect.top + rect.height/2 - window.innerHeight/2) * -0.04;
+      el.style.transform = 'translateY('+offset+'px)';
     });
   }, {passive:true});
 })();
