@@ -2,6 +2,8 @@
 # En-tetes de securite - Cloudflare Pages lit ce fichier a la racine du site
 # UNE SEULE regle CSP pour tout le site : Cloudflare CUMULE les blocs CSP
 # (il ne les remplace pas), donc deux CSP differentes cassent le CMS /admin.
+# NB : pas de Cross-Origin-Opener-Policy -> casserait la connexion GitHub
+# du CMS (fenetre OAuth) en coupant le lien avec la fenetre /admin.
 # ==========================================================================
 
 /*
@@ -10,5 +12,4 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=(), accelerometer=(), gyroscope=()
-  Cross-Origin-Opener-Policy: same-origin
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; img-src 'self' data: blob: https://*.githubusercontent.com; font-src 'self' data: https://fonts.gstatic.com https://unpkg.com; connect-src 'self' https://api.web3forms.com https://api.github.com https://cms-oauth.jfrancoislopresti.workers.dev https://*.githubusercontent.com https://unpkg.com; frame-src 'self' blob:; child-src 'self' blob:; worker-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
