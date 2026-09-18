@@ -1,0 +1,13 @@
+# ==========================================================================
+# Redirections - Cloudflare Pages lit ce fichier a la racine du site
+# ==========================================================================
+
+# ---- Forcer le domaine racine (www -> apex) ----
+https://www.jflopresti.fr/*   https://jflopresti.fr/:splat   301!
+
+# ---- Bloquer l'exposition des fichiers source du depot ----
+# (Cloudflare publie actuellement la racine du depot : ces fichiers sont
+#  accessibles publiquement. On renvoie une 404.)
+/netlify.toml     /404      404
+/README.md        /404      404
+/build-posts.js   /404      404
