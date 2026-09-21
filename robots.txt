@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
 
 Sitemap: https://jflopresti.fr/sitemap.xml
-LLMs: https://jflopresti.fr/llms.txt
+# Résumé pour les IA : https://jflopresti.fr/llms.txt

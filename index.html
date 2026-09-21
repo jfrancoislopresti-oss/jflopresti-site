@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Création site web, SEO & Formation Réseaux Sociaux — Alpes-de-Haute-Provence (04) | Jean-François Lopresti</title>
-<meta name="description" content="Consultant en présence digitale dans les Alpes-de-Haute-Provence (04) et région PACA. Création de site web, référencement Google, animation réseaux sociaux et formation réseaux sociaux pour artisans, commerçants et indépendants à Manosque, Oraison, Forcalquier, Apt, Digne.">ion.">
+<title>Création site web &amp; SEO local à Manosque (04) | JF Lopresti</title>
+<meta name="description" content="Consultant à Manosque (04) : création de site web, référencement Google local et réseaux sociaux pour artisans, commerçants et indépendants. Diagnostic gratuit.">ion.">
 <meta name="author" content="Jean-François Lopresti">
 <link rel="canonical" href="https://jflopresti.fr/">
 <meta name="robots" content="index, follow">
@@ -13,7 +13,12 @@
 <meta property="og:title" content="Site web, Google & réseaux sociaux pour artisans et indépendants — Alpes-de-Haute-Provence | JFL">
 <meta property="og:description" content="Création de site, référencement Google, animation et formation réseaux sociaux. Consultant basé à Manosque, intervention dans le 04 et toute la région PACA. Diagnostic gratuit.">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="https://jflopresti.fr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Jean-François Lopresti — Présence digitale">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jflopresti.fr/og-image.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
 <meta name="theme-color" content="#E8541A">
@@ -32,7 +37,8 @@
   "description": "Consultant en présence digitale dans les Alpes-de-Haute-Provence (04) et région PACA. Création de site web, référencement Google local et amélioration de site pour artisans, commerçants et indépendants.",
   "url": "https://jflopresti.fr/",
   "email": "contact@jflopresti.fr",
-  "telephone": "",
+  "telephone": "+33646634073",
+  "image": "https://jflopresti.fr/og-image.png",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Manosque",
@@ -149,6 +155,7 @@ section,header{position:relative;padding:7rem 4rem;display:flex;flex-direction:c
 #hero{min-height:100vh;padding:0 4rem;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;background:#FFFFFF;}
 .hero-content{max-width:580px;}
 .hero-tag{font-size:.75rem;font-weight:600;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem;display:inline-flex;align-items:center;gap:.6rem;}
+h1 .hero-tag{display:flex;width:fit-content;font-family:'Inter',sans-serif;line-height:1.5;}
 .hero-tag::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;animation:blink 2s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
 h1{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,4vw,3.8rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.5rem;color:#1B3A5C;}
@@ -307,6 +314,8 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
 .ft-copy{font-size:.72rem;color:var(--muted);}
 .ft-links{display:flex;gap:1.5rem;}
 .ft-links a{font-size:.72rem;color:var(--muted);text-decoration:none;transition:color .2s;}
+.ft-btn{background:none;border:0;padding:0;font:inherit;font-size:.72rem;color:var(--muted);cursor:pointer;}
+.ft-btn:hover{color:var(--accent);}
 .ft-links a:hover{color:var(--accent);}
 .ft-logo{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800;color:#1B3A5C;}
 
@@ -380,6 +389,8 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
 .zone-dep{font-family:'Syne',sans-serif;font-weight:700;color:#1B3A5C;margin-bottom:1rem;font-size:.95rem;}
 .zone-col ul{list-style:none;}
 .zone-col li{font-size:.85rem;color:var(--muted);padding:.3rem 0;display:flex;gap:.6rem;align-items:center;}
+.zone-col li a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(232,84,26,.35);}
+.zone-col li a:hover{color:var(--accent);}
 .zone-col li::before{content:'📍';font-size:.7rem;}
 .faq-list{display:flex;flex-direction:column;gap:.8rem;margin-top:2.5rem;max-width:820px;}
 .faq-item{background:rgba(255,255,255,0.88);border:1.5px solid var(--border);border-radius:4px;padding:0;transition:border-color .2s;}
@@ -390,6 +401,21 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
 .faq-item[open] summary::after{transform:rotate(45deg);}
 .faq-item p{padding:0 1.5rem 1.3rem;font-size:.9rem;color:var(--muted);line-height:1.75;}
 @media(max-width:900px){.zone-grid{grid-template-columns:1fr;}}
+
+/* --- Pied de page SEO (liens services + zone) --- */
+.site-footer{position:relative;z-index:1;border-top:1.5px solid var(--border,#E5E3DF);background:#fff;padding:3rem 4rem 1.5rem;font-family:'Inter',sans-serif;}
+.sf-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem;}
+.sf-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:#1B3A5C;margin-bottom:.6rem;}
+.sf-grid p{font-size:.85rem;color:#595959;line-height:1.7;margin-bottom:.8rem;}
+.sf-t{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E8541A;margin-bottom:.8rem;}
+.sf-grid ul{list-style:none;}
+.sf-grid li{margin-bottom:.45rem;}
+.sf-grid a{font-size:.88rem;color:#3A3A3A;text-decoration:none;}
+.sf-grid a:hover{color:#E8541A;}
+.sf-tel{font-weight:700;color:#1B3A5C!important;font-size:1rem!important;}
+.sf-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid #E5E3DF;font-size:.8rem;color:#595959;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem;}
+.sf-bottom a{color:#595959;}
+@media(max-width:900px){.site-footer{padding:2.5rem 1.5rem 1.5rem;}.sf-grid{grid-template-columns:1fr;gap:1.8rem;}}
 </style>
 </head>
 <body>
@@ -429,8 +455,7 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
 <!-- HERO -->
 <header id="hero">
   <div class="hero-content">
-    <div class="hero-tag">Consultant digital · Manosque · Alpes-de-Haute-Provence · PACA</div>
-    <h1>Trouvez plus de clients grâce à votre <em>présence en ligne</em></h1>
+    <h1><span class="hero-tag">Création de site web, SEO &amp; réseaux sociaux · Manosque (04) · PACA</span>Trouvez plus de clients grâce à votre <em>présence en ligne</em></h1>
     <p class="hero-sub">Pas de site ? Invisible sur Google ? Des visiteurs mais pas de clients ? Des réseaux sociaux à l'abandon ?<br><em>Je crée, rends visible, anime et rentabilise votre présence digitale — dans les Alpes-de-Haute-Provence et partout en PACA.</em></p>
     <div class="hero-btns">
       <a href="/creation-site/" class="btn-outline">Créer mon site</a>
@@ -692,8 +717,7 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
   <div class="lbl">05 — Blog</div>
   <h2 id="blog-title">Conseils & <em>ressources</em></h2>
   <p class="s-intro rv">Des articles simples pour développer votre activité en ligne : être trouvé sur Google, animer vos réseaux sociaux, améliorer votre site et trouver plus de clients dans le 04 et en PACA.</p>
-  <div class="blog-grid" id="blogGrid">
-  </div>
+  <div class="blog-grid" id="blogGrid"><!-- POSTS:START --><a href="/posts/site-internet-ou-réseaux-sociaux-que-choisir-quand-on-démarre/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-4-.png" alt=" Site internet ou réseaux sociaux : que choisir quand on démarre ?" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Trouver des clients</span><span class="blog-date">16/07/2026</span></div><div class="blog-title"> Site internet ou réseaux sociaux : que choisir quand on démarre ?</div><div class="blog-excerpt">Facebook, Instagram, site web... Quand on démarre une activité, difficile de savoir par où commencer. Voici une réponse simple et honnête.</div></a><a href="/posts/pourquoi-votre-site-napparaît-pas-sur-google-et-comment-y-remédier/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-1-.png" alt="Pourquoi votre site n'apparaît pas sur Google (et comment y remédier)" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Être visible sur Google</span><span class="blog-date">16/07/2026</span></div><div class="blog-title">Pourquoi votre site n'apparaît pas sur Google (et comment y remédier)</div><div class="blog-excerpt">Vous avez un site, mais personne ne vous trouve sur Google. Voici les vraies raisons — et les actions concrètes pour y remédier, sans jargon.</div></a><a href="/posts/pourquoi-vos-visiteurs-partent-sans-vous-contacter-et-comment-y-remédier/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-3-.png" alt="Pourquoi vos visiteurs partent sans vous contacter (et comment y remédier)" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Améliorer son site</span><span class="blog-date">16/07/2026</span></div><div class="blog-title">Pourquoi vos visiteurs partent sans vous contacter (et comment y remédier)</div><div class="blog-excerpt">Vous avez du trafic sur votre site mais peu de demandes de contact. Voici les 5 erreurs les plus fréquentes — et comment les corriger.</div></a><!-- POSTS:END --></div>
   <div class="blog-cta rv"><a href="/blog/" class="btn-outline">Voir tous les articles</a></div>
 </section>
 
@@ -706,11 +730,11 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
   <div class="zone-grid">
     <div class="zone-col rv">
       <div class="zone-dep">Alpes-de-Haute-Provence (04)</div>
-      <ul><li>Manosque</li><li>Oraison</li><li>Forcalquier</li><li>Digne-les-Bains</li><li>Sisteron</li><li>Gréoux-les-Bains</li></ul>
+      <ul><li><a href="/creation-site-web-manosque/">Manosque</a></li><li><a href="/creation-site-web-oraison/">Oraison</a></li><li><a href="/creation-site-web-forcalquier/">Forcalquier</a></li><li><a href="/creation-site-web-digne-les-bains/">Digne-les-Bains</a></li><li><a href="/creation-site-web-sisteron/">Sisteron</a></li><li>Gréoux-les-Bains</li></ul>
     </div>
     <div class="zone-col rv d1">
       <div class="zone-dep">Vaucluse (84)</div>
-      <ul><li>Apt</li><li>Pertuis</li><li>Cavaillon</li><li>L'Isle-sur-la-Sorgue</li><li>Avignon</li><li>Pays du Luberon</li></ul>
+      <ul><li>Apt</li><li><a href="/creation-site-web-pertuis/">Pertuis</a></li><li>Cavaillon</li><li>L'Isle-sur-la-Sorgue</li><li>Avignon</li><li>Pays du Luberon</li></ul>
     </div>
     <div class="zone-col rv d2">
       <div class="zone-dep">Région PACA &amp; distance</div>
@@ -773,7 +797,11 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
       <h2 id="contact-title" class="ct-head rv">Parlons de<br><em>votre projet</em></h2>
       <p class="ct-sub rv d1">Premier échange gratuit et sans engagement. Décrivez votre situation en quelques mots, je vous réponds sous 24h.</p>
       <div class="ct-links rv d2">
-        <a href="mailto:contact@jflopresti.fr" class="ct-link prim">
+        <a href="tel:+33646634073" class="ct-link prim">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          06 46 63 40 73
+        </a>
+        <a href="mailto:contact@jflopresti.fr" class="ct-link sec">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           contact@jflopresti.fr
         </a>
@@ -824,13 +852,24 @@ footer{padding:2.5rem 4rem;border-top:1.5px solid var(--border);display:flex;jus
 
 </main>
 
+<div class="site-footer">
+  <div class="sf-grid">
+    <div>
+      <div class="sf-logo">Jean-François Lopresti</div>
+      <p>Consultant en présence digitale basé à Manosque (04). Création de site web, référencement Google local, animation et formation réseaux sociaux pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence et de la région PACA.</p>
+      <p><a class="sf-tel" href="tel:+33646634073">06 46 63 40 73</a><br><a href="mailto:contact@jflopresti.fr">contact@jflopresti.fr</a><br>Manosque, Alpes-de-Haute-Provence</p>
+    </div>
+    <div class="sf-col" role="navigation" aria-label="Services"><div class="sf-t">Services</div><ul><li><a href="/creation-site/">Création de site web</a></li><li><a href="/attirer-visiteurs/">Référencement Google local</a></li><li><a href="/conversion/">Amélioration de site web</a></li><li><a href="/formation-reseaux-sociaux/">Formation réseaux sociaux</a></li><li><a href="/abonnement/">Gestion site &amp; réseaux sociaux</a></li><li><a href="/blog/">Blog &amp; conseils</a></li></ul></div>
+    <div class="sf-col" role="navigation" aria-label="Zone d'intervention"><div class="sf-t">Où j'interviens</div><ul><li><a href="/creation-site-web-manosque/">Site internet &amp; SEO à Manosque</a></li><li><a href="/creation-site-web-forcalquier/">Site internet &amp; SEO à Forcalquier</a></li><li><a href="/creation-site-web-oraison/">Site internet &amp; SEO à Oraison</a></li><li><a href="/creation-site-web-digne-les-bains/">Site internet &amp; SEO à Digne-les-Bains</a></li><li><a href="/creation-site-web-sisteron/">Site internet &amp; SEO à Sisteron</a></li><li><a href="/creation-site-web-pertuis/">Site internet &amp; SEO à Pertuis</a></li></ul></div>
+  </div>
+</div>
 <footer>
   <div class="ft-left">
     <div class="ft-copy">© 2026 Jean-François Lopresti — Tous droits réservés</div>
     <div class="ft-links">
-      <a href="#" id="ml-link">Mentions légales</a>
-      <a href="#" id="pc-link">Politique de confidentialité</a>
-      <a href="#" id="cgv-link">CGV</a>
+      <button type="button" id="ml-link" class="ft-btn">Mentions légales</button>
+      <button type="button" id="pc-link" class="ft-btn">Politique de confidentialité</button>
+      <button type="button" id="cgv-link" class="ft-btn">CGV</button>
     </div>
   </div>
   <div class="ft-logo">JFL</div>
