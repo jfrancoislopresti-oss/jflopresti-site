@@ -2,10 +2,20 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog : site web, Google et réseaux sociaux pour artisans et indépendants — Alpes-de-Haute-Provence | Jean-François Lopresti</title>
-<meta name="description" content="Conseils simples pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence et de PACA : créer son site, être visible sur Google, animer ses réseaux sociaux et trouver des clients en ligne.">
+<title>Blog : site web, Google et réseaux sociaux pour pros du 04</title>
+<meta name="description" content="Conseils simples pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence : créer son site, être visible sur Google, animer ses réseaux.">
 <link rel="canonical" href="https://jflopresti.fr/blog/">
-<link rel="canonical" href="https://jflopresti.fr/blog/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jean-François Lopresti — Présence digitale">
+<meta property="og:url" content="https://jflopresti.fr/blog/">
+<meta property="og:title" content="Blog : site web, Google et réseaux sociaux pour pros du 04">
+<meta property="og:description" content="Conseils simples pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence : créer son site, être visible sur Google, animer ses réseaux.">
+<meta property="og:image" content="https://jflopresti.fr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jflopresti.fr/og-image.png">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="shortcut icon" href="/favicon.svg">
 <meta name="theme-color" content="#E8541A">
@@ -57,7 +67,23 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
   will-change: transform;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* --- Pied de page SEO (liens services + zone) --- */
+.site-footer{position:relative;z-index:1;border-top:1.5px solid var(--border,#E5E3DF);background:#fff;padding:3rem 4rem 1.5rem;font-family:'Inter',sans-serif;}
+.sf-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem;}
+.sf-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:#1B3A5C;margin-bottom:.6rem;}
+.sf-grid p{font-size:.85rem;color:#595959;line-height:1.7;margin-bottom:.8rem;}
+.sf-t{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E8541A;margin-bottom:.8rem;}
+.sf-grid ul{list-style:none;}
+.sf-grid li{margin-bottom:.45rem;}
+.sf-grid a{font-size:.88rem;color:#3A3A3A;text-decoration:none;}
+.sf-grid a:hover{color:#E8541A;}
+.sf-tel{font-weight:700;color:#1B3A5C!important;font-size:1rem!important;}
+.sf-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid #E5E3DF;font-size:.8rem;color:#595959;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem;}
+.sf-bottom a{color:#595959;}
+@media(max-width:900px){.site-footer{padding:2.5rem 1.5rem 1.5rem;}.sf-grid{grid-template-columns:1fr;gap:1.8rem;}}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://jflopresti.fr/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://jflopresti.fr/blog/"}]}</script>
 </head>
 <body>
 <canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.4;"></canvas>
@@ -82,14 +108,20 @@ footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justi
     <button class="filter-btn active" data-cat="all">Tous</button>
   </div>
 
-  <div class="blog-grid" id="blogGrid">
-    <div class="empty">Chargement des articles…</div>
-  </div>
+  <div class="blog-grid" id="blogGrid"><!-- POSTS:START --><a href="/posts/site-internet-ou-réseaux-sociaux-que-choisir-quand-on-démarre/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-4-.png" alt=" Site internet ou réseaux sociaux : que choisir quand on démarre ?" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Trouver des clients</span><span class="blog-date">16/07/2026</span></div><h2 class="blog-title"> Site internet ou réseaux sociaux : que choisir quand on démarre ?</h2><p class="blog-excerpt">Facebook, Instagram, site web... Quand on démarre une activité, difficile de savoir par où commencer. Voici une réponse simple et honnête.</p><span class="blog-link">Lire l'article →</span></a><a href="/posts/pourquoi-votre-site-napparaît-pas-sur-google-et-comment-y-remédier/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-1-.png" alt="Pourquoi votre site n'apparaît pas sur Google (et comment y remédier)" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Être visible sur Google</span><span class="blog-date">16/07/2026</span></div><h2 class="blog-title">Pourquoi votre site n'apparaît pas sur Google (et comment y remédier)</h2><p class="blog-excerpt">Vous avez un site, mais personne ne vous trouve sur Google. Voici les vraies raisons — et les actions concrètes pour y remédier, sans jargon.</p><span class="blog-link">Lire l'article →</span></a><a href="/posts/pourquoi-vos-visiteurs-partent-sans-vous-contacter-et-comment-y-remédier/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-3-.png" alt="Pourquoi vos visiteurs partent sans vous contacter (et comment y remédier)" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Améliorer son site</span><span class="blog-date">16/07/2026</span></div><h2 class="blog-title">Pourquoi vos visiteurs partent sans vous contacter (et comment y remédier)</h2><p class="blog-excerpt">Vous avez du trafic sur votre site mais peu de demandes de contact. Voici les 5 erreurs les plus fréquentes — et comment les corriger.</p><span class="blog-link">Lire l'article →</span></a><a href="/posts/fiche-google-business-le-premier-réflexe-pour-être-trouvé-localement/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-2-.png" alt="Fiche Google Business : le premier réflexe pour être trouvé localement" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Être visible sur Google</span><span class="blog-date">16/07/2026</span></div><h2 class="blog-title">Fiche Google Business : le premier réflexe pour être trouvé localement</h2><p class="blog-excerpt">La fiche Google Business est gratuite, rapide à créer et souvent plus efficace qu'un site web pour apparaître dans les recherches locales. Voici comment la mettre en place.</p><span class="blog-link">Lire l'article →</span></a><a href="/posts/combien-coûte-vraiment-un-site-professionnel-ce-que-personne-ne-vous-dit/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-5-.png" alt="Combien coûte vraiment un site professionnel ? Ce que personne ne vous dit" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Développer son activité</span><span class="blog-date">16/07/2026</span></div><h2 class="blog-title">Combien coûte vraiment un site professionnel ? Ce que personne ne vous dit</h2><p class="blog-excerpt">Site à 100€, site à 5 000€... Les fourchettes de prix sont énormes. Voici une explication claire de ce qui fait vraiment la différence — et comment choisir.</p><span class="blog-link">Lire l'article →</span></a><!-- POSTS:END --></div>
 </main>
 
-<footer>
-  <div class="ft-copy">© 2026 Jean-François Lopresti</div>
-  <div class="ft-logo">JFL</div>
+<footer class="site-footer">
+  <div class="sf-grid">
+    <div>
+      <div class="sf-logo">Jean-François Lopresti</div>
+      <p>Consultant en présence digitale basé à Manosque (04). Création de site web, référencement Google local, animation et formation réseaux sociaux pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence et de la région PACA.</p>
+      <p><a class="sf-tel" href="tel:+33646634073">06 46 63 40 73</a><br><a href="mailto:contact@jflopresti.fr">contact@jflopresti.fr</a><br>Manosque, Alpes-de-Haute-Provence</p>
+    </div>
+    <div class="sf-col" role="navigation" aria-label="Services"><div class="sf-t">Services</div><ul><li><a href="/creation-site/">Création de site web</a></li><li><a href="/attirer-visiteurs/">Référencement Google local</a></li><li><a href="/conversion/">Amélioration de site web</a></li><li><a href="/formation-reseaux-sociaux/">Formation réseaux sociaux</a></li><li><a href="/abonnement/">Gestion site &amp; réseaux sociaux</a></li><li><a href="/blog/">Blog &amp; conseils</a></li></ul></div>
+    <div class="sf-col" role="navigation" aria-label="Zone d'intervention"><div class="sf-t">Où j'interviens</div><ul><li><a href="/creation-site-web-manosque/">Site internet &amp; SEO à Manosque</a></li><li><a href="/creation-site-web-forcalquier/">Site internet &amp; SEO à Forcalquier</a></li><li><a href="/creation-site-web-oraison/">Site internet &amp; SEO à Oraison</a></li><li><a href="/creation-site-web-digne-les-bains/">Site internet &amp; SEO à Digne-les-Bains</a></li><li><a href="/creation-site-web-sisteron/">Site internet &amp; SEO à Sisteron</a></li><li><a href="/creation-site-web-pertuis/">Site internet &amp; SEO à Pertuis</a></li></ul></div>
+  </div>
+  <div class="sf-bottom"><span>© 2026 Jean-François Lopresti</span><a href="/#contact">Demander un diagnostic gratuit →</a></div>
 </footer>
 
 <script>
