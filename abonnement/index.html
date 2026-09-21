@@ -2,14 +2,25 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abonnement Animation Réseaux Sociaux & Site Web — Alpes-de-Haute-Provence (04) | Jean-François Lopresti</title>
-<meta name="description" content="Abonnement mensuel pour l'animation de vos réseaux sociaux (Facebook, Instagram, LinkedIn) et la maintenance de votre site web dans le 04 et PACA. 3 ou 5 posts par semaine. À partir de 500€/mois. Manosque, Oraison, Forcalquier, Digne.">
+<title>Community manager &amp; gestion de site à Manosque (04) | JFL</title>
+<meta name="description" content="Je gère votre site et vos réseaux sociaux chaque semaine : 3 ou 5 posts, maintenance, suivi SEO. Abonnement dès 500 €/mois, sans engagement minimum.">
 <meta name="keywords" content="animation réseaux sociaux manosque, gestion réseaux sociaux 04, community manager alpes de haute provence, animation facebook instagram manosque, gestion réseaux sociaux oraison, community manager forcalquier, animation réseaux sociaux paca, animation site web manosque, maintenance site web 04">
 <meta name="geo.region" content="FR-04">
 <meta name="geo.placename" content="Manosque, Alpes-de-Haute-Provence">
 <meta name="geo.position" content="43.8359;5.7880">
 <meta name="ICBM" content="43.8359, 5.7880">
 <link rel="canonical" href="https://jflopresti.fr/abonnement/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jean-François Lopresti — Présence digitale">
+<meta property="og:url" content="https://jflopresti.fr/abonnement/">
+<meta property="og:title" content="Community manager &amp; gestion de site à Manosque (04) | JFL">
+<meta property="og:description" content="Je gère votre site et vos réseaux sociaux chaque semaine : 3 ou 5 posts, maintenance, suivi SEO. Abonnement dès 500 €/mois, sans engagement minimum.">
+<meta property="og:image" content="https://jflopresti.fr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jflopresti.fr/og-image.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -82,6 +93,36 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
 .ft-copy{font-size:.75rem;color:var(--muted);}
 .ft-logo{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:800;color:#1B3A5C;}
 @media(max-width:900px){nav{padding:1rem 1.5rem;}main{padding:6rem 1.5rem 4rem;}footer{padding:1.5rem;flex-direction:column;text-align:center;}.abo-grid{grid-template-columns:1fr;}}
+
+/* --- Pied de page SEO (liens services + zone) --- */
+.site-footer{position:relative;z-index:1;border-top:1.5px solid var(--border,#E5E3DF);background:#fff;padding:3rem 4rem 1.5rem;font-family:'Inter',sans-serif;}
+.sf-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem;}
+.sf-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:#1B3A5C;margin-bottom:.6rem;}
+.sf-grid p{font-size:.85rem;color:#595959;line-height:1.7;margin-bottom:.8rem;}
+.sf-t{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E8541A;margin-bottom:.8rem;}
+.sf-grid ul{list-style:none;}
+.sf-grid li{margin-bottom:.45rem;}
+.sf-grid a{font-size:.88rem;color:#3A3A3A;text-decoration:none;}
+.sf-grid a:hover{color:#E8541A;}
+.sf-tel{font-weight:700;color:#1B3A5C!important;font-size:1rem!important;}
+.sf-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid #E5E3DF;font-size:.8rem;color:#595959;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem;}
+.sf-bottom a{color:#595959;}
+@media(max-width:900px){.site-footer{padding:2.5rem 1.5rem 1.5rem;}.sf-grid{grid-template-columns:1fr;gap:1.8rem;}}
+
+/* --- FAQ visible --- */
+.faq-vis{margin-bottom:3rem;}
+.faq-vis>h2{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;color:#1B3A5C;margin-bottom:1rem;}
+.faq-vis details{background:rgba(255,255,255,.88);border:1.5px solid var(--border,#E5E3DF);border-radius:4px;margin-bottom:.7rem;}
+.faq-vis summary{cursor:pointer;padding:1.1rem 1.4rem;font-weight:600;font-size:.95rem;color:#1A1A1A;list-style:none;display:flex;justify-content:space-between;gap:1rem;}
+.faq-vis summary::-webkit-details-marker{display:none;}
+.faq-vis summary::after{content:'+';color:#E8541A;font-weight:700;font-size:1.2rem;line-height:1;}
+.faq-vis details[open] summary::after{content:'–';}
+.faq-vis details p{padding:0 1.4rem 1.2rem;font-size:.92rem;color:#595959;line-height:1.8;}
+.tel-cta{display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;font-weight:700;color:#1B3A5C;text-decoration:none;font-size:1rem;}
+.tel-cta:hover{color:#E8541A;}
+.zone-links a{color:#E8541A;font-weight:600;text-decoration:none;}
+.zone-links a:hover{text-decoration:underline;}
+h1 .lbl{display:block;font-family:'Inter',sans-serif;line-height:1.5;letter-spacing:.18em;}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -90,6 +131,7 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
 {"@type":"Question","name":"Y a-t-il un engagement de durée ?","acceptedAnswer":{"@type":"Answer","text":"Non, l'abonnement est sans engagement minimum et résiliable à tout moment."}}
 ]}
 </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://jflopresti.fr/"}, {"@type": "ListItem", "position": 2, "name": "Gestion site & réseaux sociaux", "item": "https://jflopresti.fr/abonnement/"}]}</script>
 </head>
 <body>
 <nav>
@@ -104,8 +146,7 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
 </nav>
 
 <main>
-  <div class="lbl">Abonnements mensuels</div>
-  <h1>Votre présence en ligne,<br><em>gérée pour vous.</em></h1>
+  <h1><span class="lbl">Community manager &amp; gestion de site à Manosque (04)</span>Votre présence en ligne,<br><em>gérée pour vous.</em></h1>
   <p class="accroche">Publier régulièrement sur les réseaux, maintenir un site à jour, suivre votre visibilité Google… <em>C'est un travail de fond qui demande du temps et des compétences. Je m'en occupe à votre place.</em></p>
 
   <div class="abo-grid">
@@ -163,17 +204,33 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
     </div>
   </div>
 
+  <div class="blocks"><div class="block zone-links">
+      <h2>Un community manager local dans les Alpes-de-Haute-Provence</h2>
+      <p>Je gère les réseaux sociaux et le site des professionnels de <a href="/creation-site-web-manosque/">Manosque</a>, <a href="/creation-site-web-forcalquier/">Forcalquier</a>, <a href="/creation-site-web-oraison/">Oraison</a>, <a href="/creation-site-web-digne-les-bains/">Digne-les-Bains</a>, <a href="/creation-site-web-sisteron/">Sisteron</a> et <a href="/creation-site-web-pertuis/">Pertuis</a> : des publications qui parlent de votre quartier, de vos saisons et de vos clients, pas des contenus génériques.</p>
+    </div></div>
+
+  <section class="faq-vis" aria-label="Questions fréquentes"><h2>Questions fréquentes</h2><details><summary>Combien coûte l&#x27;animation de réseaux sociaux pour un artisan à Manosque ?</summary><p>L&#x27;abonnement Essentiel est à 500 €/mois (3 publications par semaine sur Facebook, Instagram et LinkedIn, maintenance du site, suivi SEO, 3h de support). L&#x27;abonnement Premium est à 800 €/mois (5 publications par semaine, 5h de support, rapport de performance détaillé).</p></details><details><summary>Faut-il avoir un site créé par Jean-François Lopresti pour souscrire ?</summary><p>Non. L&#x27;abonnement est accessible à toute entreprise des Alpes-de-Haute-Provence et de la région PACA, quel que soit le prestataire qui a créé le site.</p></details><details><summary>Y a-t-il un engagement de durée ?</summary><p>Non, l&#x27;abonnement est sans engagement minimum et résiliable à tout moment.</p></details></section>
+
   <div class="cta-zone">
     <h2>Prêt à déléguer<br><em style="font-style:normal;color:var(--accent);">votre présence en ligne ?</em></h2>
     <p>Un premier échange gratuit pour voir ce qui correspond le mieux à votre activité et vos objectifs.</p>
     <a href="/?situation=abonnement#contact" class="btn-main" style="width:auto;display:inline-flex;">Démarrer — diagnostic gratuit →</a>
+    <p style="margin-top:1.2rem;margin-bottom:0;"><a class="tel-cta" href="tel:+33646634073">Ou appelez-moi directement : 06 46 63 40 73</a></p>
     <p style="margin-top:1.5rem;font-size:.85rem;color:var(--muted);">Vous préférez apprendre à le faire vous-même ? <a href="/formation-reseaux-sociaux/" style="color:var(--accent);font-weight:600;">Découvrez la formation réseaux sociaux →</a></p>
   </div>
 </main>
 
-<footer>
-  <div class="ft-copy">© 2026 Jean-François Lopresti</div>
-  <div class="ft-logo">JFL</div>
+<footer class="site-footer">
+  <div class="sf-grid">
+    <div>
+      <div class="sf-logo">Jean-François Lopresti</div>
+      <p>Consultant en présence digitale basé à Manosque (04). Création de site web, référencement Google local, animation et formation réseaux sociaux pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence et de la région PACA.</p>
+      <p><a class="sf-tel" href="tel:+33646634073">06 46 63 40 73</a><br><a href="mailto:contact@jflopresti.fr">contact@jflopresti.fr</a><br>Manosque, Alpes-de-Haute-Provence</p>
+    </div>
+    <div class="sf-col" role="navigation" aria-label="Services"><div class="sf-t">Services</div><ul><li><a href="/creation-site/">Création de site web</a></li><li><a href="/attirer-visiteurs/">Référencement Google local</a></li><li><a href="/conversion/">Amélioration de site web</a></li><li><a href="/formation-reseaux-sociaux/">Formation réseaux sociaux</a></li><li><a href="/abonnement/">Gestion site &amp; réseaux sociaux</a></li><li><a href="/blog/">Blog &amp; conseils</a></li></ul></div>
+    <div class="sf-col" role="navigation" aria-label="Zone d'intervention"><div class="sf-t">Où j'interviens</div><ul><li><a href="/creation-site-web-manosque/">Site internet &amp; SEO à Manosque</a></li><li><a href="/creation-site-web-forcalquier/">Site internet &amp; SEO à Forcalquier</a></li><li><a href="/creation-site-web-oraison/">Site internet &amp; SEO à Oraison</a></li><li><a href="/creation-site-web-digne-les-bains/">Site internet &amp; SEO à Digne-les-Bains</a></li><li><a href="/creation-site-web-sisteron/">Site internet &amp; SEO à Sisteron</a></li><li><a href="/creation-site-web-pertuis/">Site internet &amp; SEO à Pertuis</a></li></ul></div>
+  </div>
+  <div class="sf-bottom"><span>© 2026 Jean-François Lopresti</span><a href="/#contact">Demander un diagnostic gratuit →</a></div>
 </footer>
 </body>
 </html>
