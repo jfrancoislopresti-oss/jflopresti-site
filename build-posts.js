@@ -285,6 +285,7 @@ ${SITE_FOOTER}
   draw();
 })();
 </script>
+<script src="/lang.js" defer></script>
 </body>
 </html>`;
 
