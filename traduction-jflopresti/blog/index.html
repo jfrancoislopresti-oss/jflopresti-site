@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog : site web, Google et réseaux sociaux pour pros du 04</title>
+<meta name="description" content="Conseils simples pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence : créer son site, être visible sur Google, animer ses réseaux.">
+<link rel="canonical" href="https://jflopresti.fr/blog/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jean-François Lopresti — Présence digitale">
+<meta property="og:url" content="https://jflopresti.fr/blog/">
+<meta property="og:title" content="Blog : site web, Google et réseaux sociaux pour pros du 04">
+<meta property="og:description" content="Conseils simples pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence : créer son site, être visible sur Google, animer ses réseaux.">
+<meta property="og:image" content="https://jflopresti.fr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jflopresti.fr/og-image.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta name="theme-color" content="#E8541A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFFFF;--bg2:#F7F6F4;--bg3:#F0EEE9;--accent:#E8541A;--accent-h:#1B3A5C;--accent-l:#FEF0EB;--text:#1A1A1A;--muted:#6B6B6B;--border:#E5E3DF;--shadow-h:0 6px 28px rgba(232,84,26,0.18);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:linear-gradient(to bottom, rgba(232,84,26,0.12) 0%, #FFFFFF 50%, rgba(27,58,92,0.13) 100%);background-attachment:fixed;color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-logo{text-decoration:none;display:inline-flex;align-items:center;}
+.nav-back{font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}
+.nav-back:hover{color:#1B3A5C;}
+main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:8rem 4rem 6rem;}
+.lbl{font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.7rem;}
+.lbl::before{content:'';display:inline-block;width:28px;height:2px;background:var(--accent);border-radius:2px;}
+h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:.8rem;color:var(--text);}
+h1 em{font-style:normal;color:var(--accent);}
+.subtitle{font-size:1rem;color:var(--muted);margin-bottom:2.5rem;max-width:560px;line-height:1.7;}
+.filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.filter-btn{font-size:.75rem;font-weight:600;padding:.45rem 1rem;background:transparent;border:1.5px solid var(--border);color:var(--muted);cursor:pointer;border-radius:20px;transition:all .2s;}
+.filter-btn:hover,.filter-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(232,84,26,0.12);}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.blog-card{background:rgba(255,255,255,0.88);border:1.5px solid var(--border);overflow:hidden;transition:border-color .25s,transform .25s;display:flex;flex-direction:column;text-decoration:none;color:inherit;border-radius:4px;}
+.blog-card:hover{border-color:var(--accent);transform:translateY(-3px);}
+.blog-img{width:100%;background:var(--bg3);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
+.blog-img img{width:100%;height:auto;display:block;}
+.blog-img-placeholder{padding:2.5rem 0;font-size:1.5rem;color:var(--muted);opacity:.3;}
+.blog-meta{display:flex;gap:.7rem;align-items:center;padding:1rem 1.3rem .4rem;}
+.blog-cat{font-size:.65rem;font-weight:700;color:var(--accent);background:var(--accent-l);padding:.2rem .6rem;border-radius:20px;}
+.blog-date{font-size:.65rem;color:var(--muted);}
+h2.blog-title{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:#1B3A5C;padding:.4rem 1.3rem .7rem;line-height:1.3;}
+.blog-excerpt{font-size:.8rem;color:var(--muted);line-height:1.65;padding:0 1.3rem 1rem;flex:1;}
+.blog-link{display:inline-flex;align-items:center;gap:.4rem;margin:auto 1.3rem 1.3rem;font-size:.78rem;font-weight:600;color:var(--accent);}
+.empty{text-align:center;padding:5rem 2rem;color:var(--muted);grid-column:1/-1;}
+.hidden{display:none;}
+footer{padding:2rem 4rem;border-top:1.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.ft-copy{font-size:.72rem;color:var(--muted);}
+.ft-logo{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800;color:#1B3A5C;}
+@media(max-width:900px){nav{padding:1rem 1.5rem;}main{position:relative;z-index:1;padding:6rem 1.5rem 4rem;}.blog-grid{grid-template-columns:1fr;}footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}}
+
+.abo-card, .blog-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  will-change: transform;
+}
+.block {
+  will-change: transform;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Pied de page SEO (liens services + zone) --- */
+.site-footer{position:relative;z-index:1;border-top:1.5px solid var(--border,#E5E3DF);background:#fff;padding:3rem 4rem 1.5rem;font-family:'Inter',sans-serif;}
+.sf-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem;}
+.sf-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:#1B3A5C;margin-bottom:.6rem;}
+.sf-grid p{font-size:.85rem;color:#595959;line-height:1.7;margin-bottom:.8rem;}
+.sf-t{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E8541A;margin-bottom:.8rem;}
+.sf-grid ul{list-style:none;}
+.sf-grid li{margin-bottom:.45rem;}
+.sf-grid a{font-size:.88rem;color:#3A3A3A;text-decoration:none;}
+.sf-grid a:hover{color:#E8541A;}
+.sf-tel{font-weight:700;color:#1B3A5C!important;font-size:1rem!important;}
+.sf-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid #E5E3DF;font-size:.8rem;color:#595959;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem;}
+.sf-bottom a{color:#595959;}
+@media(max-width:900px){.site-footer{padding:2.5rem 1.5rem 1.5rem;}.sf-grid{grid-template-columns:1fr;gap:1.8rem;}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://jflopresti.fr/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://jflopresti.fr/blog/"}]}</script>
+</head>
+<body>
+<canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.4;"></canvas>
+
+<nav>
+  <a href="/" style="text-decoration:none;display:inline-flex;align-items:center;">
+    <svg width="44" height="44" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+      <defs><linearGradient id="jflg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E8541A"/><stop offset="100%" stop-color="#1B3A5C"/></linearGradient></defs>
+      <rect width="80" height="80" rx="6" fill="url(#jflg)"/>
+      <text x="40" y="53" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="30" fill="#fff" text-anchor="middle" letter-spacing="-1">JFL</text>
+    </svg>
+  </a>
+  <a href="/" class="nav-back" style="font-size:.8rem;color:var(--muted);text-decoration:none;">← Retour à l'accueil</a>
+</nav>
+
+<main style="position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:8rem 4rem 6rem;">
+  <div class="lbl" style="font-size:.72rem;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.2rem;font-weight:600;">Blog</div>
+  <h1 style="font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:1rem;color:#1B3A5C;">Conseils &amp; <em style="font-style:normal;color:var(--accent);">ressources</em></h1>
+  <p style="font-size:1rem;color:var(--muted);line-height:1.8;max-width:680px;margin-bottom:2.5rem;">Des articles simples pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence et de PACA : créer son site, être visible sur Google, animer ses réseaux sociaux et trouver des clients en ligne.</p>
+
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-cat="all">Tous</button>
+  </div>
+
+  <div class="blog-grid" id="blogGrid"><!-- POSTS:START --><a href="/posts/site-internet-ou-réseaux-sociaux-que-choisir-quand-on-démarre/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-4-.png" alt=" Site internet ou réseaux sociaux : que choisir quand on démarre ?" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Trouver des clients</span><span class="blog-date">16/07/2026</span></div><h2 class="blog-title"> Site internet ou réseaux sociaux : que choisir quand on démarre ?</h2><p class="blog-excerpt">Facebook, Instagram, site web... Quand on démarre une activité, difficile de savoir par où commencer. Voici une réponse simple et honnête.</p><span class="blog-link">Lire l'article →</span></a><a href="/posts/pourquoi-votre-site-napparaît-pas-sur-google-et-comment-y-remédier/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-1-.png" alt="Pourquoi votre site n'apparaît pas sur Google (et comment y remédier)" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Être visible sur Google</span><span class="blog-date">16/07/2026</span></div><h2 class="blog-title">Pourquoi votre site n'apparaît pas sur Google (et comment y remédier)</h2><p class="blog-excerpt">Vous avez un site, mais personne ne vous trouve sur Google. Voici les vraies raisons — et les actions concrètes pour y remédier, sans jargon.</p><span class="blog-link">Lire l'article →</span></a><a href="/posts/pourquoi-vos-visiteurs-partent-sans-vous-contacter-et-comment-y-remédier/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-3-.png" alt="Pourquoi vos visiteurs partent sans vous contacter (et comment y remédier)" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Améliorer son site</span><span class="blog-date">16/07/2026</span></div><h2 class="blog-title">Pourquoi vos visiteurs partent sans vous contacter (et comment y remédier)</h2><p class="blog-excerpt">Vous avez du trafic sur votre site mais peu de demandes de contact. Voici les 5 erreurs les plus fréquentes — et comment les corriger.</p><span class="blog-link">Lire l'article →</span></a><a href="/posts/fiche-google-business-le-premier-réflexe-pour-être-trouvé-localement/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-2-.png" alt="Fiche Google Business : le premier réflexe pour être trouvé localement" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Être visible sur Google</span><span class="blog-date">16/07/2026</span></div><h2 class="blog-title">Fiche Google Business : le premier réflexe pour être trouvé localement</h2><p class="blog-excerpt">La fiche Google Business est gratuite, rapide à créer et souvent plus efficace qu'un site web pour apparaître dans les recherches locales. Voici comment la mettre en place.</p><span class="blog-link">Lire l'article →</span></a><a href="/posts/combien-coûte-vraiment-un-site-professionnel-ce-que-personne-ne-vous-dit/" class="blog-card"><div class="blog-img"><img src="/images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-5-.png" alt="Combien coûte vraiment un site professionnel ? Ce que personne ne vous dit" loading="lazy"></div><div class="blog-meta"><span class="blog-cat">Développer son activité</span><span class="blog-date">16/07/2026</span></div><h2 class="blog-title">Combien coûte vraiment un site professionnel ? Ce que personne ne vous dit</h2><p class="blog-excerpt">Site à 100€, site à 5 000€... Les fourchettes de prix sont énormes. Voici une explication claire de ce qui fait vraiment la différence — et comment choisir.</p><span class="blog-link">Lire l'article →</span></a><!-- POSTS:END --></div>
+</main>
+
+<footer class="site-footer">
+  <div class="sf-grid">
+    <div>
+      <div class="sf-logo">Jean-François Lopresti</div>
+      <p>Consultant en présence digitale basé à Manosque (04). Création de site web, référencement Google local, animation et formation réseaux sociaux pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence et de la région PACA.</p>
+      <p><a class="sf-tel" href="tel:+33646634073">06 46 63 40 73</a><br><a href="mailto:contact@jflopresti.fr">contact@jflopresti.fr</a><br>Manosque, Alpes-de-Haute-Provence</p>
+    </div>
+    <div class="sf-col" role="navigation" aria-label="Services"><div class="sf-t">Services</div><ul><li><a href="/creation-site/">Création de site web</a></li><li><a href="/attirer-visiteurs/">Référencement Google local</a></li><li><a href="/conversion/">Amélioration de site web</a></li><li><a href="/formation-reseaux-sociaux/">Formation réseaux sociaux</a></li><li><a href="/abonnement/">Gestion site &amp; réseaux sociaux</a></li><li><a href="/blog/">Blog &amp; conseils</a></li></ul></div>
+    <div class="sf-col" role="navigation" aria-label="Zone d'intervention"><div class="sf-t">Où j'interviens</div><ul><li><a href="/creation-site-web-manosque/">Site internet &amp; SEO à Manosque</a></li><li><a href="/creation-site-web-forcalquier/">Site internet &amp; SEO à Forcalquier</a></li><li><a href="/creation-site-web-oraison/">Site internet &amp; SEO à Oraison</a></li><li><a href="/creation-site-web-digne-les-bains/">Site internet &amp; SEO à Digne-les-Bains</a></li><li><a href="/creation-site-web-sisteron/">Site internet &amp; SEO à Sisteron</a></li><li><a href="/creation-site-web-pertuis/">Site internet &amp; SEO à Pertuis</a></li></ul></div>
+  </div>
+  <div class="sf-bottom"><span>© 2026 Jean-François Lopresti</span><a href="/#contact">Demander un diagnostic gratuit →</a></div>
+</footer>
+
+<script>
+(function(){
+  var grid = document.getElementById('blogGrid');
+  var filters = document.getElementById('filters');
+  var posts = [];
+  function render(cat){
+    var list = posts.filter(function(p){ return p.published !== false && (cat === 'all' || p.category === cat); });
+    if(!list.length){ grid.innerHTML = '<div class="empty">Les premiers articles arrivent bientôt.</div>'; return; }
+    grid.innerHTML = list.map(function(p){
+      var img = p.cover
+        ? '<div class="blog-img"><img src="'+p.cover+'" alt="'+(p.title||'')+'" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>'
+        : '<div class="blog-img"><div class="blog-img-placeholder">'+(p.emoji||'📝')+'</div></div>';
+      return '<a href="'+(p.url||'#')+'" class="blog-card">'+img+
+        '<div class="blog-meta"><span class="blog-cat">'+(p.category||'')+'</span><span class="blog-date">'+(p.date||'')+'</span></div>'+
+        '<h2 class="blog-title">'+(p.title||'')+'</h2>'+
+        '<p class="blog-excerpt">'+(p.excerpt||'')+'</p>'+
+        '<span class="blog-link">Lire l\'article →</span></a>';
+    }).join('');
+  }
+  fetch('/posts/index.json')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      posts = data;
+      var cats = [];
+      posts.forEach(function(p){ if(p.category && cats.indexOf(p.category) === -1) cats.push(p.category); });
+      cats.forEach(function(cat){
+        var b = document.createElement('button');
+        b.className = 'filter-btn'; b.textContent = cat; b.setAttribute('data-cat', cat);
+        filters.appendChild(b);
+      });
+      filters.addEventListener('click', function(e){
+        var btn = e.target.closest('.filter-btn'); if(!btn) return;
+        filters.querySelectorAll('.filter-btn').forEach(function(x){ x.classList.remove('active'); });
+        btn.classList.add('active');
+        render(btn.getAttribute('data-cat'));
+      });
+      render('all');
+    })
+    .catch(function(){ grid.innerHTML = '<div class="empty">Les premiers articles arrivent bientôt.</div>'; });
+})();
+</script>
+
+<script>
+(function(){
+  var canvas = document.getElementById('particles-canvas');
+  if(!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W, H, pts = [], lastScroll = 0;
+  var COLORS = ['rgba(232,84,26,','rgba(27,58,92,'];
+  function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize, {passive:true});
+  function mkPt(){ return {x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.5, vy:(Math.random()-.5)*.5, r:Math.random()*2+.5, c:COLORS[Math.floor(Math.random()*2)], a:Math.random()*.5+.15}; }
+  for(var i=0;i<60;i++) pts.push(mkPt());
+  window.addEventListener('scroll', function(){
+    var delta = window.scrollY - lastScroll;
+    pts.forEach(function(p){ p.y -= delta*0.3; if(p.y<-10)p.y=H+10; if(p.y>H+10)p.y=-10; });
+    lastScroll = window.scrollY;
+  }, {passive:true});
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(function(p){
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=W; if(p.x>W)p.x=0; if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.c+p.a+')'; ctx.fill();
+    });
+    for(var i=0;i<pts.length;i++) for(var j=i+1;j<pts.length;j++){
+      var dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y, d=Math.sqrt(dx*dx+dy*dy);
+      if(d<120){ ctx.beginPath(); ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y);
+        ctx.strokeStyle=pts[i].c+(0.1*(1-d/120))+')'; ctx.lineWidth=.5; ctx.stroke(); }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+<script src="/lang.js" defer></script>
+</body>
+</html>
