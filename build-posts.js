@@ -32,6 +32,10 @@ const STATIC_PAGES = [
   ['/creation-site-web-digne-les-bains/', '0.8', 'monthly'],
   ['/creation-site-web-sisteron/', '0.8', 'monthly'],
   ['/creation-site-web-pertuis/', '0.8', 'monthly'],
+  ['/creation-site-web-greoux-les-bains/', '0.8', 'monthly'],
+  ['/creation-site-web-apt/', '0.8', 'monthly'],
+  ['/creation-site-restaurant/', '0.9', 'monthly'],
+  ['/creation-site-artisan/', '0.9', 'monthly'],
   ['/blog/', '0.8', 'weekly'],
 ];
 
@@ -94,8 +98,8 @@ const SITE_FOOTER = `<footer class="site-footer">
       <p>Consultant en présence digitale basé à Manosque (04). Création de site web, référencement Google local, animation et formation réseaux sociaux pour les artisans, commerçants et indépendants des Alpes-de-Haute-Provence et de la région PACA.</p>
       <p><a class="sf-tel" href="tel:${PHONE_TEL}">${PHONE}</a><br><a href="mailto:contact@jflopresti.fr">contact@jflopresti.fr</a><br>Manosque, Alpes-de-Haute-Provence</p>
     </div>
-    <div class="sf-col" role="navigation" aria-label="Services"><div class="sf-t">Services</div><ul><li><a href="/creation-site/">Création de site web</a></li><li><a href="/attirer-visiteurs/">Référencement Google local</a></li><li><a href="/conversion/">Amélioration de site web</a></li><li><a href="/formation-reseaux-sociaux/">Formation réseaux sociaux</a></li><li><a href="/abonnement/">Gestion site &amp; réseaux sociaux</a></li><li><a href="/blog/">Blog &amp; conseils</a></li></ul></div>
-    <div class="sf-col" role="navigation" aria-label="Zone d'intervention"><div class="sf-t">Où j'interviens</div><ul><li><a href="/creation-site-web-manosque/">Site internet &amp; SEO à Manosque</a></li><li><a href="/creation-site-web-forcalquier/">Site internet &amp; SEO à Forcalquier</a></li><li><a href="/creation-site-web-oraison/">Site internet &amp; SEO à Oraison</a></li><li><a href="/creation-site-web-digne-les-bains/">Site internet &amp; SEO à Digne-les-Bains</a></li><li><a href="/creation-site-web-sisteron/">Site internet &amp; SEO à Sisteron</a></li><li><a href="/creation-site-web-pertuis/">Site internet &amp; SEO à Pertuis</a></li></ul></div>
+    <div class="sf-col" role="navigation" aria-label="Services"><div class="sf-t">Services</div><ul><li><a href="/creation-site/">Création de site web</a></li><li><a href="/attirer-visiteurs/">Référencement Google local</a></li><li><a href="/conversion/">Amélioration de site web</a></li><li><a href="/formation-reseaux-sociaux/">Formation réseaux sociaux</a></li><li><a href="/abonnement/">Gestion site &amp; réseaux sociaux</a></li><li><a href="/creation-site-restaurant/">Site internet pour restaurant</a></li><li><a href="/creation-site-artisan/">Site internet pour artisan</a></li><li><a href="/blog/">Blog &amp; conseils</a></li></ul></div>
+    <div class="sf-col" role="navigation" aria-label="Zone d'intervention"><div class="sf-t">Où j'interviens</div><ul><li><a href="/creation-site-web-manosque/">Site internet &amp; SEO à Manosque</a></li><li><a href="/creation-site-web-forcalquier/">Site internet &amp; SEO à Forcalquier</a></li><li><a href="/creation-site-web-oraison/">Site internet &amp; SEO à Oraison</a></li><li><a href="/creation-site-web-digne-les-bains/">Site internet &amp; SEO à Digne-les-Bains</a></li><li><a href="/creation-site-web-sisteron/">Site internet &amp; SEO à Sisteron</a></li><li><a href="/creation-site-web-pertuis/">Site internet &amp; SEO à Pertuis</a></li><li><a href="/creation-site-web-greoux-les-bains/">Site internet &amp; SEO à Gréoux-les-Bains</a></li><li><a href="/creation-site-web-apt/">Site internet &amp; SEO à Apt</a></li></ul></div>
   </div>
   <div class="sf-bottom"><span>© ${new Date().getFullYear()} Jean-François Lopresti</span><a href="/#contact">Demander un diagnostic gratuit →</a></div>
 </footer>`;

@@ -196,8 +196,12 @@
     watch();
     var p = new URLSearchParams(location.search).get('lang'), s = null;
     try { s = localStorage.getItem('lang'); } catch (e) {}
-    var lang = (p === 'en' || p === 'fr') ? p : (s === 'en' || s === 'fr') ? s :
-      ((navigator.language || 'fr').toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en');
+    // SEO : le français est TOUJOURS la langue par défaut. On ne bascule en
+    // anglais que sur demande explicite (?lang=en ou clic sur le bouton).
+    // Ne jamais se baser sur navigator.language : Googlebot est en "en-US"
+    // et indexerait alors le site en anglais.
+    var bot = /bot|crawl|spider|slurp|lighthouse|google|bing|yandex|duckduck|baidu/i.test(navigator.userAgent || '');
+    var lang = bot ? 'fr' : (p === 'en' || p === 'fr') ? p : (s === 'en' || s === 'fr') ? s : 'fr';
     if (lang === 'en') toEnglish();
   }
 
