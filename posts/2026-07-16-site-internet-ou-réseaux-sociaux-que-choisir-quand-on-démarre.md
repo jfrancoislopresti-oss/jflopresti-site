@@ -1,5 +1,6 @@
 ---
 title: " Site internet ou réseaux sociaux : que choisir quand on démarre ?"
+seo_title: "Site internet ou réseaux sociaux : que choisir ?"
 date: 16/07/2026
 category: Trouver des clients
 cover: /images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-4-.png

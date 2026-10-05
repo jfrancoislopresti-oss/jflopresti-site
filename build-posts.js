@@ -139,6 +139,11 @@ const articles = files.map(filename => {
   const emoji = meta.emoji || '📝';
   const title = meta.title || 'Article';
   const excerpt = meta.excerpt || '';
+  // SEO : <title> court (champ seo_title du CMS, sinon titre coupé) et description ≤ 155 caractères
+  const SUFFIX = ' | JF Lopresti';
+  const cutAtWord = (s, n) => s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…';
+  const seoTitle = (() => { const t = meta.seo_title || title; return t.length + SUFFIX.length <= 66 ? t + SUFFIX : cutAtWord(t, 66 - SUFFIX.length) + SUFFIX; })();
+  const seoDesc = cutAtWord(meta.seo_description || excerpt, 155);
   const dateIso = isoDate(meta.date, filename);
   const image = cover ? SITE + encodeURI(cover) : OG_IMAGE;
 
@@ -178,15 +183,15 @@ const articles = files.map(filename => {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${esc(title)} | Jean-François Lopresti</title>
-<meta name="description" content="${esc(excerpt)}">
+<title>${esc(seoTitle)}</title>
+<meta name="description" content="${esc(seoDesc)}">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="${fullUrl}">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Jean-François Lopresti — Présence digitale">
 <meta property="og:url" content="${fullUrl}">
 <meta property="og:title" content="${esc(title)}">
-<meta property="og:description" content="${esc(excerpt)}">
+<meta property="og:description" content="${esc(seoDesc)}">
 <meta property="og:image" content="${image}">
 <meta property="og:locale" content="fr_FR">
 <meta property="article:published_time" content="${dateIso}">

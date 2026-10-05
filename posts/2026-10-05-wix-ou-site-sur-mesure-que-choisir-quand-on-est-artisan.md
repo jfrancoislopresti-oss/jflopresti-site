@@ -1,5 +1,6 @@
 ---
 title: "Wix, Squarespace ou site sur mesure : que choisir quand on est artisan ?"
+seo_title: "Wix, Squarespace ou sur mesure ? Guide artisan"
 date: 05/10/2026
 category: Améliorer son site
 cover: /images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-3-.png

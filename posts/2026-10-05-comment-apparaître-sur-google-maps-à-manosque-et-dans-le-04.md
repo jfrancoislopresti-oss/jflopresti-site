@@ -1,12 +1,12 @@
 ---
 title: "Comment apparaître sur Google Maps à Manosque et dans le 04"
+seo_title: "Apparaître sur Google Maps à Manosque (04)"
 date: 05/10/2026
 category: Être visible sur Google
 cover: /images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-1-.png
 emoji: 📝
-excerpt: Quand on cherche un plombier, un restaurant ou un créateur de site près de
-  chez soi, Google affiche d'abord une carte et trois fiches. Voici comment y
-  figurer quand on est professionnel à Manosque ou dans les Alpes-de-Haute-Provence.
+excerpt: Quand on cherche un artisan près de chez soi, Google affiche d'abord une carte
+  et trois fiches. Voici comment y figurer à Manosque et dans le 04.
 published: true
 ---
 Tapez « plombier Manosque » ou « restaurant Forcalquier » dans Google : avant les sites web classiques, vous voyez une carte et trois fiches d'entreprises. C'est le « pack local », celui de Google Maps. Pour un artisan, un commerçant ou un indépendant du 04, y figurer est souvent plus rentable que de viser la première place des résultats classiques.

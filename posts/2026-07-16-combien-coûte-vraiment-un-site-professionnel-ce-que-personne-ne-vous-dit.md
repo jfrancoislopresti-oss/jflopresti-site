@@ -1,5 +1,6 @@
 ---
 title: Combien coûte vraiment un site professionnel ? Ce que personne ne vous dit
+seo_title: "Combien coûte vraiment un site professionnel ?"
 date: 16/07/2026
 category: Développer son activité
 cover: /images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-5-.png

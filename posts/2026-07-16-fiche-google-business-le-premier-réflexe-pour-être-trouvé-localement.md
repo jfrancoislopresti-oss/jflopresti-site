@@ -1,5 +1,6 @@
 ---
 title: "Fiche Google Business : le premier réflexe pour être trouvé localement"
+seo_title: "Fiche Google Business : le premier réflexe local"
 date: 16/07/2026
 category: Être visible sur Google
 cover: /images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-2-.png

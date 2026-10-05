@@ -18,6 +18,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Titre pour Google (50 caractères max, facultatif)", name: "seo_title", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "datetime", format: "DD/MM/YYYY", date_format: "DD/MM/YYYY", time_format: false }
       - { label: "Catégorie", name: "category", widget: "select", options: ["Être visible sur Google", "Améliorer son site", "Trouver des clients", "Développer son activité", "Réseaux sociaux"] }
       - { label: "Image de couverture", name: "cover", widget: "image", required: false }

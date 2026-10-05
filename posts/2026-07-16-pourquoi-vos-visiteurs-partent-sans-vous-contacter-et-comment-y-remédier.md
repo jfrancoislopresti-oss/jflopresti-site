@@ -1,5 +1,6 @@
 ---
 title: Pourquoi vos visiteurs partent sans vous contacter (et comment y remédier)
+seo_title: "Pourquoi vos visiteurs partent sans vous contacter"
 date: 16/07/2026
 category: Améliorer son site
 cover: /images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-3-.png

@@ -1,5 +1,6 @@
 ---
 title: Pourquoi votre site n'apparaît pas sur Google (et comment y remédier)
+seo_title: "Pourquoi votre site n'apparaît pas sur Google"
 date: 16/07/2026
 category: Être visible sur Google
 cover: /images/uploads/pourquoi-votre-site-n-apparaît-pas-sur-google-et-comment-y-remédier-vous-avez-fait-créer-votre-site.-vous-êtes-fier-du-résultat.-et-pourtant-quand-vous-tapez-votre-métier-sur-google-vous-n-a-1-.png
