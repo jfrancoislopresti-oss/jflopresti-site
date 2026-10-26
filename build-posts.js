@@ -40,6 +40,15 @@ const STATIC_PAGES = [
   ['/creation-site-producteur-local/', '0.8', 'monthly'],
   ['/creation-site-profession-liberale/', '0.8', 'monthly'],
   ['/prix-creation-site-internet/', '0.9', 'monthly'],
+  ['/site-internet-restaurant-manosque/', '0.7', 'monthly'],
+  ['/site-internet-restaurant-forcalquier/', '0.7', 'monthly'],
+  ['/site-internet-restaurant-oraison/', '0.7', 'monthly'],
+  ['/site-internet-restaurant-sisteron/', '0.7', 'monthly'],
+  ['/site-internet-restaurant-digne-les-bains/', '0.7', 'monthly'],
+  ['/site-internet-gite-greoux-les-bains/', '0.7', 'monthly'],
+  ['/site-internet-artisan-manosque/', '0.7', 'monthly'],
+  ['/site-internet-artisan-forcalquier/', '0.7', 'monthly'],
+  ['/site-internet-osteopathe-manosque/', '0.7', 'monthly'],
   ['/blog/', '0.8', 'weekly'],
 ];
 
@@ -105,6 +114,7 @@ const SITE_FOOTER = `<footer class="site-footer">
     <div class="sf-col" role="navigation" aria-label="Services"><div class="sf-t">Services</div><ul><li><a href="/creation-site/">Création de site web</a></li><li><a href="/attirer-visiteurs/">Référencement Google local</a></li><li><a href="/conversion/">Amélioration de site web</a></li><li><a href="/formation-reseaux-sociaux/">Formation réseaux sociaux</a></li><li><a href="/abonnement/">Gestion site &amp; réseaux sociaux</a></li><li><a href="/creation-site-restaurant/">Site internet pour restaurant</a></li><li><a href="/creation-site-artisan/">Site internet pour artisan</a></li><li><a href="/creation-site-hebergement/">Site internet gîte &amp; hôtel</a></li><li><a href="/creation-site-producteur-local/">Site internet producteur local</a></li><li><a href="/creation-site-profession-liberale/">Site internet profession libérale</a></li><li><a href="/prix-creation-site-internet/">Prix d'un site internet</a></li><li><a href="/blog/">Blog &amp; conseils</a></li></ul></div>
     <div class="sf-col" role="navigation" aria-label="Zone d'intervention"><div class="sf-t">Où j'interviens</div><ul><li><a href="/creation-site-web-manosque/">Site internet &amp; SEO à Manosque</a></li><li><a href="/creation-site-web-forcalquier/">Site internet &amp; SEO à Forcalquier</a></li><li><a href="/creation-site-web-oraison/">Site internet &amp; SEO à Oraison</a></li><li><a href="/creation-site-web-digne-les-bains/">Site internet &amp; SEO à Digne-les-Bains</a></li><li><a href="/creation-site-web-sisteron/">Site internet &amp; SEO à Sisteron</a></li><li><a href="/creation-site-web-pertuis/">Site internet &amp; SEO à Pertuis</a></li><li><a href="/creation-site-web-greoux-les-bains/">Site internet &amp; SEO à Gréoux-les-Bains</a></li><li><a href="/creation-site-web-apt/">Site internet &amp; SEO à Apt</a></li></ul></div>
   </div>
+  <div class="sf-niche" style="max-width:1100px;margin:1.5rem auto 0;"><div class="sf-t">Par métier et par ville</div><p style="line-height:2;"><a href="/site-internet-restaurant-manosque/">Site internet Restaurant Manosque</a> · <a href="/site-internet-restaurant-forcalquier/">Site internet Restaurant Forcalquier</a> · <a href="/site-internet-restaurant-oraison/">Site internet Restaurant Oraison</a> · <a href="/site-internet-restaurant-sisteron/">Site internet Restaurant Sisteron</a> · <a href="/site-internet-restaurant-digne-les-bains/">Site internet Restaurant Digne-les-Bains</a> · <a href="/site-internet-gite-greoux-les-bains/">Site internet Gîte Gréoux-les-Bains</a> · <a href="/site-internet-artisan-manosque/">Site internet Artisan Manosque</a> · <a href="/site-internet-artisan-forcalquier/">Site internet Artisan Forcalquier</a> · <a href="/site-internet-osteopathe-manosque/">Site internet Ostéopathe Manosque</a></p></div>
   <div class="sf-bottom"><span>© ${new Date().getFullYear()} Jean-François Lopresti</span><a href="/#contact">Demander un diagnostic gratuit →</a></div>
 </footer>`;
 
